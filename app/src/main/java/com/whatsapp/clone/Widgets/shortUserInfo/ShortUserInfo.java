@@ -1,6 +1,7 @@
 package com.whatsapp.clone.Widgets.shortUserInfo;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -57,7 +58,7 @@ public class ShortUserInfo extends LinearLayoutCompat {
     public void setProfile( ){
         ivProfile.setImageDrawable(getResources().getDrawable(R.drawable.ktm));
     }
-    public void setScan(int drawable){
+    public void setScan(Drawable drawable){
     ivScan.setImageResource(R.drawable.qrcode);
     }
 }

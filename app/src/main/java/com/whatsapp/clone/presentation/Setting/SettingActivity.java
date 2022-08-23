@@ -27,7 +27,7 @@ public class SettingActivity extends AppCompatActivity {
     mShortInfo.setTitle("SRINATH");
     mShortInfo.setDescription("Rest at the end not on the middle ");
     mShortInfo.setProfile();
-    mShortInfo.setScan(R.id.ivScan);
+    mShortInfo.setScan(getResources().getDrawable(R.drawable.qrcode));
     }
 
     private void onConfigActionBar() {
