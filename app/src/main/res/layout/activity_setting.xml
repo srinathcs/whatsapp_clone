@@ -44,6 +44,10 @@
         android:id="@+id/sInvite"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+    <com.whatsapp.clone.widgets.settingItemMeta.SettingItemMeta
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/siMeta"/>
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>

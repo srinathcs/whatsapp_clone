@@ -14,7 +14,7 @@ import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.core.content.res.ResourcesCompat;
 
 import com.whatsapp.clone.R;
-import com.whatsapp.clone.widgets.accountItemView.ui.utils.AccountItem;
+//import com.whatsapp.clone.widgets.accountItemView.ui.utils.AccountItem;
 
 public class AccountItemView extends LinearLayoutCompat {
     private Context mContext;
@@ -50,7 +50,7 @@ public class AccountItemView extends LinearLayoutCompat {
         tvASTitle.setText(title);
     }
 
-    public void setItemInfo(AccountItem type){
+   /* public void setItemInfo(AccountItem type){
         switch(type){
             case PRIVACY:
                 onPrivacySetup();
@@ -73,7 +73,7 @@ public class AccountItemView extends LinearLayoutCompat {
         }
     }
 
-    public void onPrivacySetup(){
+   */ public void onPrivacySetup(){
         setTitle(mContext.getString(R.string.title_privacy));
         setIcon(ResourcesCompat.getDrawable(getResources(),R.drawable.ic_lock,mContext.getTheme()));
     }

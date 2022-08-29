@@ -44,7 +44,4 @@ public class SettingInviteView extends LinearLayoutCompat {
     public void setIcon(Drawable drawable){
         ivSettingIcon.setImageDrawable(drawable);
     }
-
-
-
 }
