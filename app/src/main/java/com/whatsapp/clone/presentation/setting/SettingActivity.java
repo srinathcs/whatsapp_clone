@@ -13,6 +13,7 @@ import com.whatsapp.clone.R;
 import com.whatsapp.clone.widgets.settingInviteView.SettingInviteView;
 import com.whatsapp.clone.widgets.settingItemView.listener.ItemClickListener;
 import com.whatsapp.clone.widgets.settingItemView.ui.SettingItemView;
+import com.whatsapp.clone.widgets.settingItemView.ui.utils.SettingItemType;
 import com.whatsapp.clone.widgets.userInfo.UserInfoView;
 
 public class SettingActivity extends AppCompatActivity {
@@ -64,9 +65,7 @@ public class SettingActivity extends AppCompatActivity {
     }
 
     private void onSettingItemViewSetup() {
-        mItemView.setTitle(getString(R.string.setting_account));
-        mItemView.setDescription(getString(R.string.setting_account_description));
-        mItemView.setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_key, getTheme()));
+        mItemView.setType(SettingItemType.ACCOUNT);
         mItemView.setItemClickListener(new ItemClickListener() {
             @Override
             public void onClicked() {
@@ -76,32 +75,23 @@ public class SettingActivity extends AppCompatActivity {
     }
 
     private void onSettingChatSetup() {
-        mSettingItemViewChat.setTitle(getString(R.string.setting_chat));
-        mSettingItemViewChat.setDescription(getString(R.string.setting_chat_description));
-        mSettingItemViewChat.setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_chat, getTheme()));
+        mSettingItemViewChat.setType(SettingItemType.CHAT);
     }
 
     private void onSettingNotificationSetup() {
-        mItemViewNotification.setTitle(getString(R.string.setting_notification));
-        mItemViewNotification.setDescription(getString(R.string.setting_notification_description));
-        mItemViewNotification.setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_bell, getTheme()));
+        mItemViewNotification.setType(SettingItemType.NOTIFICATIONS);
     }
 
     private void onSettingDataSetup() {
-        mItemViewData.setTitle(getString(R.string.setting_data));
-        mItemViewData.setDescription(getString(R.string.setting_data_description));
-        mItemViewData.setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_storage, getTheme()));
+        mItemViewData.setType(SettingItemType.STORAGE_DATA);
     }
 
     private void onSettingHelpSetup() {
-        mItemViewHelp.setTitle(getString(R.string.setting_help));
-        mItemViewHelp.setDescription(getString(R.string.setting_help_description));
-        mItemViewHelp.setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_help, getTheme()));
+        mItemViewHelp.setType(SettingItemType.HELP);
     }
     private void onSettingInviteSetup() {
         mSettingInvite.setIcon(ResourcesCompat.getDrawable(getResources(),R.drawable.ic_friend,getTheme()));
         mSettingInvite.setTitle(getString(R.string.setting_invite));
-
 
     }
 

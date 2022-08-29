@@ -11,9 +11,11 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.appcompat.widget.LinearLayoutCompat;
+import androidx.core.content.res.ResourcesCompat;
 
 import com.whatsapp.clone.R;
 import com.whatsapp.clone.widgets.settingItemView.listener.ItemClickListener;
+import com.whatsapp.clone.widgets.settingItemView.ui.utils.SettingItemType;
 
 public class SettingItemView extends LinearLayoutCompat {
     private Context mContext;
@@ -72,5 +74,53 @@ public class SettingItemView extends LinearLayoutCompat {
 
     public void setItemClickListener(ItemClickListener listener){
         this.mItemClickListener = listener;
+    }
+
+    public void setType(SettingItemType type){
+        switch (type){
+            case ACCOUNT:
+                onAccountSetup();
+                break;
+            case CHAT:
+                onChatSetup();
+                break;
+            case NOTIFICATIONS:
+                onNotificationSetup();
+                break;
+            case STORAGE_DATA:
+                onStorageDataSetup();
+                break;
+            case HELP:
+                onHelp();
+                break;
+        }
+
+    }
+
+    private void onAccountSetup(){
+        setTitle(mContext.getString(R.string.setting_account));
+        setDescription(mContext.getString(R.string.setting_account_description));
+        setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_key, mContext.getTheme()));
+    }
+
+    private void onChatSetup(){
+        setTitle(mContext.getString(R.string.setting_chat));
+        setDescription(mContext.getString(R.string.setting_chat_description));
+        setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_chat, mContext.getTheme()));
+    }
+    private void onNotificationSetup(){
+        setTitle(mContext.getString(R.string.setting_notification));
+        setDescription(mContext.getString(R.string.setting_notification_description));
+        setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_bell,mContext.getTheme()));
+    }
+    private void onStorageDataSetup(){
+        setTitle(mContext.getString(R.string.setting_data));
+        setDescription(mContext.getString(R.string.setting_data_description));
+        setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_storage, mContext.getTheme()));
+    }
+    private void onHelp(){
+        setTitle(mContext.getString(R.string.setting_help));
+        setDescription(mContext.getString(R.string.setting_help_description));
+        setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_help, mContext.getTheme()));
     }
 }
