@@ -14,7 +14,7 @@ import com.whatsapp.clone.widgets.settingInviteView.SettingInviteView;
 import com.whatsapp.clone.widgets.settingItemMeta.SettingItemMeta;
 import com.whatsapp.clone.widgets.settingItemView.listener.ItemClickListener;
 import com.whatsapp.clone.widgets.settingItemView.ui.SettingItemView;
-//import com.whatsapp.clone.widgets.settingItemView.ui.utils.SettingItemType;
+import com.whatsapp.clone.widgets.settingItemView.ui.utils.SettingItemType;
 import com.whatsapp.clone.widgets.userInfo.UserInfoView;
 
 public class SettingActivity extends AppCompatActivity {
@@ -31,11 +31,11 @@ public class SettingActivity extends AppCompatActivity {
         intiView();
         onActionBarConfig();
         onUserInfoSetup();
-        /*onSettingItemViewSetup();
+        onSettingItemViewSetup();
         onSettingChatSetup();
         onSettingNotificationSetup();
         onSettingDataSetup();
-        onSettingHelpSetup();*/
+        onSettingHelpSetup();
         onSettingInviteSetup();
         onSettingMetaSetup();
 
@@ -68,7 +68,7 @@ public class SettingActivity extends AppCompatActivity {
         mUserInfo.setImageProfile(ResourcesCompat.getDrawable(getResources(), R.drawable.ktm, getTheme()));
     }
 
-    /*private void onSettingItemViewSetup() {
+    private void onSettingItemViewSetup() {
         mItemView.setType(SettingItemType.ACCOUNT);
         mItemView.setItemClickListener(new ItemClickListener() {
             @Override
@@ -92,7 +92,7 @@ public class SettingActivity extends AppCompatActivity {
 
     private void onSettingHelpSetup() {
         mItemViewHelp.setType(SettingItemType.HELP);
-    }*/
+    }
     private void onSettingInviteSetup() {
         mSettingInvite.setIcon(ResourcesCompat.getDrawable(getResources(),R.drawable.ic_friend,getTheme()));
         mSettingInvite.setTitle(getString(R.string.setting_invite));

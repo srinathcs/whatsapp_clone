@@ -11,7 +11,8 @@ import androidx.appcompat.widget.LinearLayoutCompat;
 
 import com.whatsapp.clone.R;
 import com.whatsapp.clone.widgets.accountItemView.AccountItemView;
-//import com.whatsapp.clone.widgets.accountItemView.ui.utils.AccountItem;
+import com.whatsapp.clone.widgets.accountItemView.ui.utils.AccountItem;
+
 
 
 
@@ -32,12 +33,12 @@ public class AccountSettingActivity extends LinearLayoutCompat {
         this.mContext = context;
 
         intiView();
-        /*onSettingPrivacySetup();
+        onSettingPrivacySetup();
         onSettingSecuritySetup();
         onSettingTwoStepVerificationSetup();
         onSettingChangeNumberSetup();
         onSettingRequestAccInfoSetup();
-        onDeleteMyAccountSetup();*/
+        onDeleteMyAccountSetup();
     }
 
     private void intiView() {
@@ -52,7 +53,7 @@ public class AccountSettingActivity extends LinearLayoutCompat {
 
     }
 
-    /*public void onSettingPrivacySetup() {
+    public void onSettingPrivacySetup() {
         mItemViewPrivacy.setItemInfo(AccountItem.PRIVACY);
     }
 
@@ -76,6 +77,6 @@ public class AccountSettingActivity extends LinearLayoutCompat {
     private void onDeleteMyAccountSetup() {
         mItemViewDeleteAcc.setItemInfo(AccountItem.DELETE_MY_ACCOUNT);
     }
-*/
+
 }
 

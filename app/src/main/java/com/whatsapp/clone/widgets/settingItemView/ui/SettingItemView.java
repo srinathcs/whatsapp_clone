@@ -15,7 +15,7 @@ import androidx.core.content.res.ResourcesCompat;
 
 import com.whatsapp.clone.R;
 import com.whatsapp.clone.widgets.settingItemView.listener.ItemClickListener;
-//import com.whatsapp.clone.widgets.settingItemView.ui.utils.SettingItemType;
+import com.whatsapp.clone.widgets.settingItemView.ui.utils.SettingItemType;
 
 public class SettingItemView extends LinearLayoutCompat {
     private Context mContext;
@@ -76,7 +76,7 @@ public class SettingItemView extends LinearLayoutCompat {
         this.mItemClickListener = listener;
     }
 
-   /* public void setType(SettingItemType type){
+    public void setType(SettingItemType type){
         switch (type){
             case ACCOUNT:
                 onAccountSetup();
@@ -95,7 +95,7 @@ public class SettingItemView extends LinearLayoutCompat {
                 break;
         }
 
-    }*/
+    }
 
     private void onAccountSetup(){
         setTitle(mContext.getString(R.string.setting_account));
