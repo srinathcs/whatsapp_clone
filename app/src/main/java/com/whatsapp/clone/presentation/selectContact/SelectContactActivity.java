@@ -1,23 +1,60 @@
 package com.whatsapp.clone.presentation.selectContact;
 
 import android.content.Context;
-import android.util.AttributeSet;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.LinearLayoutCompat;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 
-public class SelectContactActivity extends LinearLayoutCompat {
+import com.whatsapp.clone.R;
+import com.whatsapp.clone.widgets.selectContactView.SelectContactView;
+import com.whatsapp.clone.widgets.selectContactView.ui.utils.SelectContact;
+
+public class SelectContactActivity extends AppCompatActivity {
     Context mContext;
-    public SelectContactActivity(@NonNull Context mContext) {
-        this(mContext,null);
+    private SelectContactView mSelectContactGroup,mSelectContactNew;
+    ActionBar actionBar;
+
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.actitvity_select_contact);
+        initViews();
+        onActionbarConfig();
+        onSelectContactGroupSetup();
+        onSelectContactNewSetup();
     }
 
-    public SelectContactActivity(@NonNull Context context, @Nullable AttributeSet attrs) {
-        this(context, attrs,0);
+
+    @Override
+    public boolean onCreateOptionsMenu(@NonNull Menu menu) {
+        MenuInflater menuInflater =getMenuInflater();
+        menuInflater.inflate(R.menu.contact_menu,menu);
+        return super.onCreateOptionsMenu(menu);
     }
 
-    public SelectContactActivity(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
+    private void initViews() {
+        mSelectContactGroup=findViewById(R.id.new_grp);
+        mSelectContactNew=findViewById(R.id.new_contact);
+    }
+    private void onActionbarConfig(){
+        actionBar = getSupportActionBar();
+        ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#008069"));
+        actionBar.setBackgroundDrawable(colorDrawable);
+        actionBar.setTitle(R.string.contact_title);
+        actionBar.setDisplayHomeAsUpEnabled(true);
+    }
+    public void onSelectContactGroupSetup(){
+        mSelectContactGroup.setType(SelectContact.NEW_GROUP);
+    }
+    public void onSelectContactNewSetup(){
+        mSelectContactNew.setType(SelectContact.NEW_CONTACT);
     }
 }

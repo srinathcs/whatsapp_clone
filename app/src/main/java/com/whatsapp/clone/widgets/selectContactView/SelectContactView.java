@@ -5,7 +5,6 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatImageView;
@@ -56,7 +55,7 @@ public class SelectContactView extends LinearLayoutCompat {
     public void setIvQr(Drawable drawable){
         ivQr.setImageDrawable(drawable);
     }
-    public void setContact(SelectContact type){
+    public void setType(SelectContact type){
         switch (type){
             case NEW_GROUP:
                 onNewGroupSetup();
@@ -75,6 +74,6 @@ public class SelectContactView extends LinearLayoutCompat {
     private void onNewContactSetup() {
         setTitle(mContext.getString(R.string.new_contact));
         setCivIcon(ResourcesCompat.getDrawable(getResources(),R.drawable.ic_new_contact, mContext.getTheme()));
-        setIvQr(ResourcesCompat.getDrawable(getResources(),R.drawable.ic_qr_code, mContext.getTheme()));
+        setIvQr(ResourcesCompat.getDrawable(getResources(),R.drawable.ic_qr_svg, mContext.getTheme()));
     }
 }

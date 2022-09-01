@@ -11,8 +11,8 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ivIcon"
-        android:layout_width="@dimen/dp22"
-        android:layout_height="@dimen/dp22"
+        android:layout_width="@dimen/dp20"
+        android:layout_height="@dimen/dp20"
         android:layout_marginStart="@dimen/dp23" />
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -20,7 +20,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
-        android:textSize="@dimen/sp17" />
+        android:layout_marginStart="@dimen/dp20"
+        android:textSize="@dimen/sp15" />
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>

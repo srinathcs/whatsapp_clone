@@ -23,5 +23,10 @@
     <dimen name="dp185">185dp</dimen>
     <dimen name="dp16">16dp</dimen>
     <dimen name="dp3">3dp</dimen>
+    <dimen name="dp200">200dp</dimen>
+    <dimen name="dp160">160dp</dimen>
+    <dimen name="dp140">140dp</dimen>
+    <dimen name="dp110">110dp</dimen>
+    <dimen name="dp112">112dp</dimen>
 
 </resources>

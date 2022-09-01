@@ -1,9 +1,12 @@
 package com.whatsapp.clone.widgets.accountItemView;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import androidx.appcompat.app.ActionBar;
 import android.view.View;
 
 import androidx.annotation.NonNull;
@@ -20,6 +23,7 @@ public class AccountItemView extends LinearLayoutCompat {
     private Context mContext;
     private AppCompatImageView ivASIcon;
     private AppCompatTextView tvASTitle;
+    private ActionBar actionBar;
 
     public AccountItemView(@NonNull Context mContext) {
         this(mContext, null);

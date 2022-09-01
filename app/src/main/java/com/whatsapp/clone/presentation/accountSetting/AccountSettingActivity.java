@@ -1,12 +1,19 @@
 package com.whatsapp.clone.presentation.accountSetting;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.os.Bundle;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.LinearLayoutCompat;
 
 import com.whatsapp.clone.R;
@@ -14,25 +21,17 @@ import com.whatsapp.clone.widgets.accountItemView.AccountItemView;
 import com.whatsapp.clone.widgets.accountItemView.ui.utils.AccountItem;
 
 
-
-
-public class AccountSettingActivity extends LinearLayoutCompat {
+public class AccountSettingActivity extends AppCompatActivity {
+    ActionBar actionBar;
     Context mContext;
     private AccountItemView mItemViewPrivacy, mItemViewSecurity, mItemViewTwoStep, mItemViewChangeNum, mItemViewReqAccInfo, mItemViewDeleteAcc;
 
-    public AccountSettingActivity(@NonNull Context mContext) {
-        this(mContext, null);
-    }
-
-    public AccountSettingActivity(@NonNull Context context, @Nullable AttributeSet attrs) {
-        this(context, attrs, 0);
-    }
-
-    public AccountSettingActivity(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-        this.mContext = context;
-
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_account_item);
         intiView();
+        onActionbarConfig();
         onSettingPrivacySetup();
         onSettingSecuritySetup();
         onSettingTwoStepVerificationSetup();
@@ -41,15 +40,24 @@ public class AccountSettingActivity extends LinearLayoutCompat {
         onDeleteMyAccountSetup();
     }
 
+
     private void intiView() {
-        LayoutInflater inflater = LayoutInflater.from(mContext);
-        View mView = inflater.inflate(R.layout.activity_account_item, this, true);
-        mItemViewPrivacy = mView.findViewById(R.id.aivPrivacy);
+
+        mItemViewPrivacy = findViewById(R.id.aivPrivacy);
         mItemViewSecurity = findViewById(R.id.aivSecurity);
         mItemViewTwoStep = findViewById(R.id.aivVerification);
         mItemViewChangeNum = findViewById(R.id.aivChangeNum);
         mItemViewReqAccInfo = findViewById(R.id.aivRequestInfo);
         mItemViewDeleteAcc = findViewById(R.id.aivDeleteAcc);
+
+    }
+
+    private void onActionbarConfig() {
+        actionBar = getSupportActionBar();
+        ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#008069"));
+        actionBar.setBackgroundDrawable(colorDrawable);
+        actionBar.setTitle(R.string.acc_setting);
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
     }
 
