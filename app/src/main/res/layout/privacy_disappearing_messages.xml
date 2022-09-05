@@ -11,7 +11,7 @@
         android:orientation="vertical">
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvDisappearing"
+            android:id="@+id/tv_Disappearing"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="@dimen/sp15"
@@ -19,20 +19,20 @@
             tools:text="@tools:sample/first_names" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvTitle"
+            android:id="@+id/tv_Title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:text="@tools:sample/last_names" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvDescription"
+            android:id="@+id/tv_Description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:text="@tools:sample/full_names" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvEvent"
+        android:id="@+id/tv_Event"
         android:layout_width="@dimen/dp10"
         android:layout_height="wrap_content" />
 

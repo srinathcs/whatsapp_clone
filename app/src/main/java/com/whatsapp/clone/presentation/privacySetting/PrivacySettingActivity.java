@@ -7,13 +7,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.whatsapp.clone.R;
 import com.whatsapp.clone.widgets.settingPrivacy.DisappearingMessage;
-import com.whatsapp.clone.widgets.settingPrivacy.PersonalInfo;
 import com.whatsapp.clone.widgets.settingPrivacy.PrivacyItemView;
 import com.whatsapp.clone.widgets.settingPrivacy.ReadReceipts;
 import com.whatsapp.clone.widgets.settingPrivacy.ui.utils.PrivacyItem;
 
 public class PrivacySettingActivity extends AppCompatActivity {
-    private PersonalInfo mPersonalInfo;
+
     private PrivacyItemView mPrivacyItemLastSeen, mPrivacyItemProfile, mPrivacyItemAbout, mPrivateItemStatus, mPrivacyItemGroups, mPrivacyItemLiveLocation, mPrivacyItemBlockContact, mPrivacyFingerPrint;
     private ReadReceipts mReadReceipts;
     private DisappearingMessage mDisappearingMessage;
@@ -23,14 +22,13 @@ public class PrivacySettingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting_privacy);
         initView();
-        onMyPersonInfo();
         onReadReceipts();
         onDisappearingSetup();
         onConfigSetup();
     }
 
     private void initView() {
-        mPersonalInfo = findViewById(R.id.privacy_personal);
+
         mPrivacyItemLastSeen = findViewById(R.id.last_seen);
         mPrivacyItemProfile = findViewById(R.id.profile_photo);
         mPrivacyItemAbout = findViewById(R.id.about);
@@ -54,10 +52,7 @@ public class PrivacySettingActivity extends AppCompatActivity {
         mPrivacyFingerPrint.setType(PrivacyItem.FINGERPRINT_LOCK);
     }
 
-    private void onMyPersonInfo() {
-        mPersonalInfo.setTitle(getString(R.string.disappearing_title));
-        mPersonalInfo.setDescription(getString(R.string.personal_info_descrp));
-    }
+
 
     private void onReadReceipts() {
         mReadReceipts.SetTitle(getString(R.string.read_receipts));
@@ -65,10 +60,10 @@ public class PrivacySettingActivity extends AppCompatActivity {
     }
 
     private void onDisappearingSetup() {
-        mDisappearingMessage.setDisappearing(getString(R.string.disappearing));
-        mDisappearingMessage.setTitle(getString(R.string.disappearing_title));
-        mDisappearingMessage.setDescription(getString(R.string.disappearing_description));
-        mDisappearingMessage.setEvent(getString(R.string.disappearing_event));
+        mDisappearingMessage.setDisappearing(getString(R.string.tv_disappearing));
+        mDisappearingMessage.setTitle(getString(R.string.tv_Title));
+        mDisappearingMessage.setDescription(getString(R.string.tv_Description));
+        mDisappearingMessage.setEvent(getString(R.string.tv_Event));
     }
 
 }

@@ -28,6 +28,7 @@ public class PersonalInfo extends LinearLayoutCompat {
         super(context, attrs, defStyleAttr);
         this.mContext = context;
         initViews();
+        intiWidgets();
     }
 
     private void initViews() {
@@ -35,6 +36,11 @@ public class PersonalInfo extends LinearLayoutCompat {
         View mView = inflater.inflate(R.layout.privacy_personal_info, this, true);
         tvTitle = mView.findViewById(R.id.tvTitle);
         tvDescription = mView.findViewById(R.id.tvDescription);
+    }
+
+    private void intiWidgets(){
+        setTitle(mContext.getString(R.string.tv_Title));
+        setDescription(mContext.getString(R.string.personal_info_descrp));
     }
 
     public void setTitle(String title) {

@@ -34,9 +34,10 @@ public class DisappearingMessage extends LinearLayoutCompat {
     private void initView() {
         LayoutInflater inflater = LayoutInflater.from(mContext);
         View mView = inflater.inflate(R.layout.privacy_disappearing_messages, this, true);
-        tvTitle = mView.findViewById(R.id.tvTitle);
-        tvDescription = mView.findViewById(R.id.tvDescription);
-        tvDisappearing = mView.findViewById(R.id.tvDisappearing);
+        tvTitle = mView.findViewById(R.id.tv_Title);
+        tvDescription = mView.findViewById(R.id.tv_Description);
+        tvDisappearing = mView.findViewById(R.id.tv_Disappearing);
+        tvEvent=mView.findViewById(R.id.tv_Event);
     }
 
     public void setTitle(String title) {
