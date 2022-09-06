@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/dp20"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatRadioButton
+        android:id="@+id/rbEveryone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp15"
+        android:layout_marginTop="@dimen/dp5"
+        android:textSize="@dimen/sp15"
+        android:paddingLeft="@dimen/dp15"
+        tools:text="@tools:sample/first_names" />
+
+    <androidx.appcompat.widget.AppCompatRadioButton
+        android:id="@+id/rbMyContact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp15"
+        android:textSize="@dimen/sp15"
+        android:paddingLeft="@dimen/dp15" />
+
+    <androidx.appcompat.widget.AppCompatRadioButton
+        android:id="@+id/rbMyContactExcept"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp15"
+        android:textSize="@dimen/sp15"
+        android:paddingLeft="@dimen/dp15" />
+
+    <androidx.appcompat.widget.AppCompatRadioButton
+        android:id="@+id/rbNobody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp15"
+        android:textSize="@dimen/sp15"
+        android:paddingLeft="@dimen/dp15" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

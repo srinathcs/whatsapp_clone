@@ -23,7 +23,6 @@ public class AccountItemView extends LinearLayoutCompat {
     private Context mContext;
     private AppCompatImageView ivASIcon;
     private AppCompatTextView tvASTitle;
-    private ActionBar actionBar;
 
     public AccountItemView(@NonNull Context mContext) {
         this(mContext, null);

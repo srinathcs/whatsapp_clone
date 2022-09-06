@@ -23,7 +23,6 @@ import com.whatsapp.clone.widgets.accountItemView.ui.utils.AccountItem;
 
 public class AccountSettingActivity extends AppCompatActivity {
     ActionBar actionBar;
-    Context mContext;
     private AccountItemView mItemViewPrivacy, mItemViewSecurity, mItemViewTwoStep, mItemViewChangeNum, mItemViewReqAccInfo, mItemViewDeleteAcc;
 
     @Override

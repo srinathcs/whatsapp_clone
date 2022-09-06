@@ -49,7 +49,6 @@ public class PrivacySettingActivity extends AppCompatActivity {
         actionBar.setBackgroundDrawable(colorDrawable);
         actionBar.setDisplayHomeAsUpEnabled(true);
     }
-
     private void onConfigSetup() {
         mPrivacyItemLastSeen.setType(PrivacyItem.LAST_SEEN);
         mPrivacyItemProfile.setType(PrivacyItem.PROFILE_PHOTO);
