@@ -29,6 +29,7 @@ public class DisappearingMessage extends LinearLayoutCompat {
         super(context, attrs, defStyleAttr);
         this.mContext = context;
         initView();
+        initWidgets();
     }
 
     private void initView() {
@@ -38,6 +39,12 @@ public class DisappearingMessage extends LinearLayoutCompat {
         tvDescription = mView.findViewById(R.id.tv_Description);
         tvDisappearing = mView.findViewById(R.id.tv_Disappearing);
         tvEvent=mView.findViewById(R.id.tv_Event);
+    }
+    public void initWidgets(){
+        setDisappearing(mContext.getString(R.string.tv_disappearing));
+        setTitle(mContext.getString(R.string.tv_Title));
+        setDescription(mContext.getString(R.string.tv_Description));
+        setEvent(mContext.getString(R.string.tv_Event));
     }
 
     public void setTitle(String title) {

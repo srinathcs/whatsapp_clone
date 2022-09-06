@@ -39,7 +39,7 @@ public class PersonalInfo extends LinearLayoutCompat {
     }
 
     private void intiWidgets(){
-        setTitle(mContext.getString(R.string.tv_Title));
+        setTitle(mContext.getString(R.string.personal_info));
         setDescription(mContext.getString(R.string.personal_info_descrp));
     }
 

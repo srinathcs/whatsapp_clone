@@ -30,6 +30,7 @@ public class ReadReceipts extends LinearLayoutCompat {
         super(context, attrs, defStyleAttr);
         this.mContext = context;
         initView();
+        initWidgets();
     }
 
     private void initView() {
@@ -39,7 +40,10 @@ public class ReadReceipts extends LinearLayoutCompat {
         tvDescription = mView.findViewById(R.id.tvDescription);
         scSwitch = mView.findViewById(R.id.sc_receipts);
     }
-
+    public void initWidgets(){
+        SetTitle(mContext.getString(R.string.read_receipts));
+        SetDescription(mContext.getString(R.string.read_receipts_description));
+    }
     public void SetTitle(String title) {
         tvTitle.setText(title);
     }

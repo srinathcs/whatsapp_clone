@@ -28,5 +28,12 @@
     <dimen name="dp140">140dp</dimen>
     <dimen name="dp110">110dp</dimen>
     <dimen name="dp112">112dp</dimen>
+    <dimen name="dp8">8dp</dimen>
+    <dimen name="dp6">6dp</dimen>
+    <dimen name="dp2">2dp</dimen>
+    <dimen name="sp16">16sp</dimen>
+    <dimen name="dp50">50dp</dimen>
+    <dimen name="sp_12">12sp</dimen>
+    <dimen name="dp28">28dp</dimen>
 
 </resources>

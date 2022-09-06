@@ -1,8 +1,11 @@
 package com.whatsapp.clone.presentation.privacySetting;
 
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.whatsapp.clone.R;
@@ -16,14 +19,14 @@ public class PrivacySettingActivity extends AppCompatActivity {
     private PrivacyItemView mPrivacyItemLastSeen, mPrivacyItemProfile, mPrivacyItemAbout, mPrivateItemStatus, mPrivacyItemGroups, mPrivacyItemLiveLocation, mPrivacyItemBlockContact, mPrivacyFingerPrint;
     private ReadReceipts mReadReceipts;
     private DisappearingMessage mDisappearingMessage;
+    ActionBar actionBar;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting_privacy);
         initView();
-        onReadReceipts();
-        onDisappearingSetup();
+        onActionbarSetup();
         onConfigSetup();
     }
 
@@ -40,6 +43,12 @@ public class PrivacySettingActivity extends AppCompatActivity {
         mPrivacyItemBlockContact = findViewById(R.id.block_contact);
         mPrivacyFingerPrint = findViewById(R.id.finger_print);
     }
+    private void onActionbarSetup(){
+        actionBar=getSupportActionBar();
+        ColorDrawable colorDrawable=new ColorDrawable(Color.parseColor("#008069"));
+        actionBar.setBackgroundDrawable(colorDrawable);
+        actionBar.setDisplayHomeAsUpEnabled(true);
+    }
 
     private void onConfigSetup() {
         mPrivacyItemLastSeen.setType(PrivacyItem.LAST_SEEN);
@@ -51,19 +60,4 @@ public class PrivacySettingActivity extends AppCompatActivity {
         mPrivacyItemBlockContact.setType(PrivacyItem.BLOCKED_CONTACTS);
         mPrivacyFingerPrint.setType(PrivacyItem.FINGERPRINT_LOCK);
     }
-
-
-
-    private void onReadReceipts() {
-        mReadReceipts.SetTitle(getString(R.string.read_receipts));
-        mReadReceipts.SetDescription(getString(R.string.read_receipts_description));
-    }
-
-    private void onDisappearingSetup() {
-        mDisappearingMessage.setDisappearing(getString(R.string.tv_disappearing));
-        mDisappearingMessage.setTitle(getString(R.string.tv_Title));
-        mDisappearingMessage.setDescription(getString(R.string.tv_Description));
-        mDisappearingMessage.setEvent(getString(R.string.tv_Event));
-    }
-
 }

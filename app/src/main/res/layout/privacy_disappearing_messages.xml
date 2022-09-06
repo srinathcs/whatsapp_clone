@@ -3,37 +3,61 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
+    android:orientation="vertical">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/gray_85" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_Disappearing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp20"
+        android:textSize="@dimen/sp15"
+        android:layout_margin="@dimen/dp20"
+        android:textStyle="bold"
+        tools:text="@tools:sample/first_names" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp20"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp15"
+        tools:text="@tools:sample/last_names" />
+
 
     <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="@dimen/dp110"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginEnd="@dimen/dp20"
+        android:orientation="horizontal">
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tv_Disappearing"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/sp15"
-            android:textStyle="bold"
-            tools:text="@tools:sample/first_names" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tv_Title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:text="@tools:sample/last_names" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_Description"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             tools:text="@tools:sample/full_names" />
-    </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_Event"
-        android:layout_width="@dimen/dp10"
-        android:layout_height="wrap_content" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_Event"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp12"
+
+            tools:text="@tools:sample/cities" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/gray_85" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
