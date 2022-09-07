@@ -77,7 +77,7 @@ public class AccountItemView extends LinearLayoutCompat {
     }
 
     public void onPrivacySetup(){
-        setTitle(mContext.getString(R.string.title_privacy));
+        setTitle(getContext().getString(R.string.title_privacy));
         setIcon(ResourcesCompat.getDrawable(getResources(),R.drawable.ic_lock,mContext.getTheme()));
     }
     private void onSecuritySetup() {

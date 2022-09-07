@@ -28,6 +28,7 @@ public class PrivacyItemView extends LinearLayoutCompat {
     public PrivacyItemView(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         this.mContext = context;
+
         initView();
     }
 

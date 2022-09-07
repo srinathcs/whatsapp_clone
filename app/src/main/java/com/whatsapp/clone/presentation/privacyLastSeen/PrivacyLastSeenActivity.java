@@ -3,6 +3,7 @@ package com.whatsapp.clone.presentation.privacyLastSeen;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
@@ -16,24 +17,34 @@ import com.whatsapp.clone.widgets.settingPrivacyLastSeen.ui.utils.LastSeenItem;
 
 
 public class PrivacyLastSeenActivity extends AppCompatActivity {
-    private SettingPrivacyLastSeen mLastSeenEveryone, mLastSeenMyContact, mLastSeenMyContactExcept, mLastSeenNobody;
-    AppCompatRadioButton rbEveryone, rbMyContact, rbMyContactExcept, rbNobody;
     ActionBar actionBar;
+    SettingPrivacyLastSeen rb_mEveryone, rb_mMyContact, rb_mMyContactExcept, rb_mNobody;
+    AppCompatTextView tvTitle, tvDescription;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_privacy_lastseen);
         initView();
+        initViewWidgets();
         onActionbarSetup();
         onConfigSetup();
+
     }
 
     private void initView() {
-        rbEveryone = findViewById(R.id.rbEveryone);
-        rbMyContact = findViewById(R.id.rbMyContact);
-        rbMyContactExcept = findViewById(R.id.rbMyContactExcept);
-        rbNobody = findViewById(R.id.rbNobody);
+        tvTitle = findViewById(R.id.tvTitle);
+        tvDescription = findViewById(R.id.tvDescription);
+        rb_mEveryone = findViewById(R.id.rbEveryone);
+        rb_mMyContact = findViewById(R.id.rbMyContact);
+        rb_mMyContactExcept = findViewById(R.id.rbMyContactExcept);
+        rb_mNobody = findViewById(R.id.rbNobody);
+
+    }
+
+    private void initViewWidgets() {
+        setTvTitle(getString(R.string.tvTitle));
+        setTvDescription(getString(R.string.tvDescription));
     }
 
     private void onActionbarSetup() {
@@ -45,9 +56,17 @@ public class PrivacyLastSeenActivity extends AppCompatActivity {
     }
 
     public void onConfigSetup() {
-        rbEveryone.setText(R.string.rb_everyone);
-        rbMyContact.setText(R.string.rb_myContacts);
-        rbMyContactExcept.setText(R.string.rb_myContacts_excepts);
-        rbNobody.setText(R.string.rb_nobody);
+        rb_mEveryone.setType(LastSeenItem.EVERYONE);
+        rb_mMyContact.setType(LastSeenItem.MY_CONTACT);
+        rb_mMyContactExcept.setType(LastSeenItem.MY_CONTACT_EXCEPT);
+        rb_mNobody.setType(LastSeenItem.NOBODY);
+    }
+
+    public void setTvTitle(String title) {
+        tvTitle.setText(title);
+    }
+
+    public void setTvDescription(String Description) {
+        tvDescription.setText(Description);
     }
 }

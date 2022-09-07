@@ -86,4 +86,3 @@ public class AccountSettingActivity extends AppCompatActivity {
     }
 
 }
-
