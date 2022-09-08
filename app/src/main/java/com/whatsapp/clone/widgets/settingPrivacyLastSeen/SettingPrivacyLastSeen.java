@@ -4,6 +4,8 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.CompoundButton;
+import android.widget.RadioButton;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -12,6 +14,7 @@ import androidx.appcompat.widget.AppCompatTextView;
 import androidx.appcompat.widget.LinearLayoutCompat;
 
 import com.whatsapp.clone.R;
+import com.whatsapp.clone.presentation.privacyLastSeen.PrivacyLastSeenActivity;
 import com.whatsapp.clone.widgets.settingPrivacyLastSeen.ui.utils.LastSeenItem;
 
 public class SettingPrivacyLastSeen extends LinearLayoutCompat {
@@ -30,15 +33,16 @@ public class SettingPrivacyLastSeen extends LinearLayoutCompat {
         super(context, attrs, defStyleAttr);
         this.mContext = context;
         initView();
-
     }
 
     private void initView() {
         LayoutInflater inflater = LayoutInflater.from(mContext);
         View mView = inflater.inflate(R.layout.privacy_lastseen, this, true);
-        mRbLastSeen =mView.findViewById(R.id.rbLastSeen);
+        mRbLastSeen = mView.findViewById(R.id.rbLastSeen);
+
     }
-    public void setTitle(String title){
+
+    public void setTitle(String title) {
         mRbLastSeen.setText(title);
     }
 
@@ -74,4 +78,5 @@ public class SettingPrivacyLastSeen extends LinearLayoutCompat {
     public void onNobodySetup() {
         setTitle(getContext().getString(R.string.rb_nobody));
     }
+
 }

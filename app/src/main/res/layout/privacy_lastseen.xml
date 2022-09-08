@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,12 +10,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dp15"
-        android:onClick="onRadioButtonClicked"
         android:layout_marginTop="@dimen/dp5"
-        android:textSize="@dimen/sp15"
         android:paddingLeft="@dimen/dp15"
+        android:textSize="@dimen/sp15"
         tools:text="@tools:sample/first_names" />
-
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>
