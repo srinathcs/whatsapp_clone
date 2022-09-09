@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.whatsapp.clone.widgets.userInfo.UserInfoView
+        android:id="@+id/uiProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.whatsapp.clone.widgets.settingItemView.ui.SettingItemView
+        android:id="@+id/sivAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.whatsapp.clone.widgets.settingItemView.ui.SettingItemView
+        android:id="@+id/sivChat"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.whatsapp.clone.widgets.settingItemView.ui.SettingItemView
+        android:id="@+id/sivNotification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        />
+
+    <com.whatsapp.clone.widgets.settingItemView.ui.SettingItemView
+        android:id="@+id/sivData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.whatsapp.clone.widgets.settingItemView.ui.SettingItemView
+        android:id="@+id/sivHelp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.whatsapp.clone.widgets.settingInviteView.SettingInviteView
+        android:id="@+id/sInvite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.whatsapp.clone.widgets.settingItemMeta.SettingItemMeta
+        android:id="@+id/siMeta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

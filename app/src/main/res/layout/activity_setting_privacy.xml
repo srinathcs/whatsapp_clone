@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <com.whatsapp.clone.widgets.settingPrivacy.PersonalInfo
+        android:id="@+id/privacy_personal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp15"/>
+
+    <com.whatsapp.clone.widgets.settingPrivacy.PrivacyItemView
+        android:id="@+id/last_seen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp15"/>
+
+    <com.whatsapp.clone.widgets.settingPrivacy.PrivacyItemView
+        android:id="@+id/profile_photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp15"/>
+
+    <com.whatsapp.clone.widgets.settingPrivacy.PrivacyItemView
+        android:id="@+id/about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp15"/>
+
+    <com.whatsapp.clone.widgets.settingPrivacy.PrivacyItemView
+        android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp15"/>
+
+    <com.whatsapp.clone.widgets.settingPrivacy.ReadReceipts
+        android:id="@+id/read_receipt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp15"/>
+
+    <com.whatsapp.clone.widgets.settingPrivacy.DisappearingMessage
+        android:id="@+id/disappearing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.whatsapp.clone.widgets.settingPrivacy.PrivacyItemView
+        android:id="@+id/groups"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp15"/>
+
+    <com.whatsapp.clone.widgets.settingPrivacy.PrivacyItemView
+        android:id="@+id/live_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp15"/>
+
+    <com.whatsapp.clone.widgets.settingPrivacy.PrivacyItemView
+        android:id="@+id/block_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp15"/>
+
+    <com.whatsapp.clone.widgets.settingPrivacy.PrivacyItemView
+        android:id="@+id/finger_print"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp15"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</ScrollView>
