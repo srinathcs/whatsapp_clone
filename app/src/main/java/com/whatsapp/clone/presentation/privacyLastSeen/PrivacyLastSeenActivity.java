@@ -3,14 +3,12 @@ package com.whatsapp.clone.presentation.privacyLastSeen;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.view.View;
+import android.widget.CompoundButton;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatRadioButton;
 import androidx.appcompat.widget.AppCompatTextView;
-import androidx.appcompat.widget.LinearLayoutCompat;
 
 import com.whatsapp.clone.R;
 import com.whatsapp.clone.widgets.settingPrivacyLastSeen.SettingPrivacyLastSeen;
@@ -19,7 +17,7 @@ import com.whatsapp.clone.widgets.settingPrivacyLastSeen.ui.utils.LastSeenItem;
 
 public class PrivacyLastSeenActivity extends AppCompatActivity {
     ActionBar actionBar;
-    SettingPrivacyLastSeen rb_mEveryone, rb_mMyContact, rb_mMyContactExcept, rb_mNobody;
+    SettingPrivacyLastSeen rbEveryone, rbMyContact, rbContactExcept, rbNobody;
     AppCompatTextView tvTitle, tvDescription;
 
     @Override
@@ -30,21 +28,21 @@ public class PrivacyLastSeenActivity extends AppCompatActivity {
         initViewWidgets();
         onActionbarSetup();
         onConfigSetup();
-        onRadioButtonClicked();
+        onRadioButtonSetup();
     }
 
     private void initView() {
         tvTitle = findViewById(R.id.tvTitle);
         tvDescription = findViewById(R.id.tvDescription);
-        rb_mEveryone = findViewById(R.id.rbEveryone);
-        rb_mMyContact = findViewById(R.id.rbMyContact);
-        rb_mMyContactExcept = findViewById(R.id.rbMyContactExcept);
-        rb_mNobody = findViewById(R.id.rbNobody);
+        rbEveryone = findViewById(R.id.rbEveryone);
+        rbMyContact = findViewById(R.id.rbMyContact);
+        rbContactExcept = findViewById(R.id.rbMyContactExcept);
+        rbNobody = findViewById(R.id.rbNobody);
     }
 
     private void initViewWidgets() {
-        setTvTitle(getString(R.string.tvTitle));
-        setTvDescription(getString(R.string.tvDescription));
+        setTitle(getString(R.string.tvTitle));
+        setDescription(getString(R.string.tvDescription));
     }
 
     private void onActionbarSetup() {
@@ -56,55 +54,61 @@ public class PrivacyLastSeenActivity extends AppCompatActivity {
     }
 
     public void onConfigSetup() {
-        rb_mEveryone.setType(LastSeenItem.EVERYONE);
-        rb_mMyContact.setType(LastSeenItem.MY_CONTACT);
-        rb_mMyContactExcept.setType(LastSeenItem.MY_CONTACT_EXCEPT);
-        rb_mNobody.setType(LastSeenItem.NOBODY);
-
+        rbEveryone.setType(LastSeenItem.EVERYONE);
+        rbMyContact.setType(LastSeenItem.MY_CONTACT);
+        rbContactExcept.setType(LastSeenItem.MY_CONTACT_EXCEPT);
+        rbNobody.setType(LastSeenItem.NOBODY);
     }
 
-    public void setTvTitle(String title) {
+    private void setTitle(String title) {
         tvTitle.setText(title);
     }
 
-    public void setTvDescription(String Description) {
+    private void setDescription(String Description) {
         tvDescription.setText(Description);
     }
 
-    public void onRadioButtonClicked() {
-        rb_mEveryone.setOnClickListener(this::onClick);
-        rb_mMyContact.setOnClickListener(this::onClick);
-        rb_mMyContactExcept.setOnClickListener(this::onClick);
-        rb_mNobody.setOnClickListener(this::onClick);
-
+    private void onRadioButtonSetup(){
+        rbEveryone.setRadioButtonListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){
+                    rbMyContact.unSelectRadioButton();
+                    rbContactExcept.unSelectRadioButton();
+                    rbNobody.unSelectRadioButton();
+                }
+            }
+        });
+        rbMyContact.setRadioButtonListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){
+                    rbEveryone.unSelectRadioButton();
+                    rbContactExcept.unSelectRadioButton();
+                    rbNobody.unSelectRadioButton();
+                }
+            }
+        });
+        rbContactExcept.setRadioButtonListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){
+                    rbEveryone.unSelectRadioButton();
+                    rbMyContact.unSelectRadioButton();
+                    rbNobody.unSelectRadioButton();
+                }
+            }
+        });
+        rbNobody.setRadioButtonListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){
+                    rbEveryone.unSelectRadioButton();
+                    rbMyContact.unSelectRadioButton();
+                    rbContactExcept.unSelectRadioButton();
+                }
+            }
+        });
     }
 
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.rbEveryone:
-                rb_mEveryone.setSelected(true);
-                rb_mMyContact.setSelected(false);
-                rb_mMyContactExcept.setSelected(false);
-                rb_mNobody.setSelected(false);
-                break;
-            case R.id.rbMyContact:
-                rb_mEveryone.setSelected(false);
-                rb_mMyContact.setSelected(true);
-                rb_mMyContactExcept.setSelected(false);
-                rb_mNobody.setSelected(true);
-                break;
-            case R.id.rbMyContactExcept:
-                rb_mEveryone.setSelected(false);
-                rb_mMyContact.setSelected(false);
-                rb_mMyContactExcept.setSelected(true);
-                rb_mNobody.setSelected(false);
-                break;
-            case R.id.rbNobody:
-                rb_mEveryone.setSelected(false);
-                rb_mMyContact.setSelected(false);
-                rb_mMyContactExcept.setSelected(false);
-                rb_mNobody.setSelected(true);
-                break;
-        }
-    }
 }
