@@ -13,6 +13,7 @@
         android:layout_marginTop="@dimen/dp5"
         android:paddingLeft="@dimen/dp15"
         android:textSize="@dimen/sp15"
+        android:buttonTint="@color/green"
         tools:text="@tools:sample/first_names" />
 
 
