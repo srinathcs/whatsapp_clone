@@ -35,5 +35,9 @@
     <dimen name="dp50">50dp</dimen>
     <dimen name="sp_12">12sp</dimen>
     <dimen name="dp28">28dp</dimen>
+    <dimen name="dp60">60dp</dimen>
+    <dimen name="dp100">100dp</dimen>
+    <dimen name="dp120">120dp</dimen>
+    <dimen name="dp130">130dp</dimen>
 
 </resources>
