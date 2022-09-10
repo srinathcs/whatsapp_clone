@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/dp20"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold" />
+
+    <com.whatsapp.clone.widgets.settingPrivacyLastSeen.SettingPrivacyLastSeen
+        android:id="@+id/profileEveryone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.whatsapp.clone.widgets.settingPrivacyLastSeen.SettingPrivacyLastSeen
+        android:id="@+id/profileMyContact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.whatsapp.clone.widgets.settingPrivacyLastSeen.SettingPrivacyLastSeen
+        android:id="@+id/profileContactExcept"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.whatsapp.clone.widgets.settingPrivacyLastSeen.SettingPrivacyLastSeen
+        android:id="@+id/profileNobody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
