@@ -1,10 +1,7 @@
 package com.whatsapp.clone.widgets.settingPrivacyLastSeen;
 
-import static android.content.ContentValues.TAG;
-
 import android.content.Context;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.CompoundButton;
@@ -33,8 +30,6 @@ public class SettingPrivacyLastSeen extends LinearLayoutCompat {
         super(context, attrs, defStyleAttr);
         this.mContext = context;
         initView();
-
-
     }
 
     private void initView() {
@@ -68,22 +63,28 @@ public class SettingPrivacyLastSeen extends LinearLayoutCompat {
             case NOBODY:
                 onNobodySetup();
                 break;
+            case  ONLY_SHARE_WITH:
+                onOnlyShareSetup();
+                break;
         }
     }
 
     public void onEveryOneSetup() {
-        setTitle(getContext().getString(R.string.rb_everyone));
+        setTitle(getContext().getString(R.string.rbEveryone));
     }
 
     public void onMyContactSetup() {
-        setTitle(getContext().getString(R.string.rb_myContacts));
+        setTitle(getContext().getString(R.string.rbMyContacts));
     }
 
     public void onMyContactExceptSetup() {
-        setTitle(getContext().getString(R.string.rb_myContacts_excepts));
+        setTitle(getContext().getString(R.string.rbContactsExcepts));
     }
 
     public void onNobodySetup() {
-        setTitle(getContext().getString(R.string.rb_nobody));
+        setTitle(getContext().getString(R.string.rbNobody));
+    }
+    public void onOnlyShareSetup(){
+        setTitle(getContext().getString(R.string.rbOnlyShare));
     }
 }

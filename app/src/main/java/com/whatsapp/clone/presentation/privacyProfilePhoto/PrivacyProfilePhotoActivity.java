@@ -1,4 +1,4 @@
-package com.whatsapp.clone.presentation.privacyLastSeen;
+package com.whatsapp.clone.presentation.privacyProfilePhoto;
 
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -14,16 +14,15 @@ import com.whatsapp.clone.R;
 import com.whatsapp.clone.widgets.settingPrivacyLastSeen.SettingPrivacyLastSeen;
 import com.whatsapp.clone.widgets.settingPrivacyLastSeen.ui.utils.LastSeenItem;
 
-
-public class PrivacyLastSeenActivity extends AppCompatActivity {
+public class PrivacyProfilePhotoActivity extends AppCompatActivity {
     ActionBar actionBar;
     SettingPrivacyLastSeen rbEveryone, rbMyContact, rbContactExcept, rbNobody;
-    AppCompatTextView tvTitle, tvDescription;
+    AppCompatTextView tvTitle;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_privacy_lastseen);
+        setContentView(R.layout.activity_privacy_profile);
         initView();
         initViewWidgets();
         onActionbarSetup();
@@ -33,23 +32,21 @@ public class PrivacyLastSeenActivity extends AppCompatActivity {
 
     private void initView() {
         tvTitle = findViewById(R.id.tvTitle);
-        tvDescription = findViewById(R.id.tvDescription);
-        rbEveryone = findViewById(R.id.rbEveryone);
-        rbMyContact = findViewById(R.id.rbMyContact);
-        rbContactExcept = findViewById(R.id.rbMyContactExcept);
-        rbNobody = findViewById(R.id.rbNobody);
+        rbEveryone = findViewById(R.id.profileEveryone);
+        rbMyContact = findViewById(R.id.profileMyContact);
+        rbContactExcept = findViewById(R.id.profileContactExcept);
+        rbNobody = findViewById(R.id.profileNobody);
     }
 
     private void initViewWidgets() {
-        setTitle(getString(R.string.tvTitle));
-        setDescription(getString(R.string.tvDescription));
+        setTitle(getString(R.string.profiletitle));
     }
 
     private void onActionbarSetup() {
         actionBar = getSupportActionBar();
         ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#008069"));
         actionBar.setBackgroundDrawable(colorDrawable);
-        actionBar.setTitle(R.string.title_last_seen);
+        actionBar.setTitle(R.string.profilephoto);
         actionBar.setDisplayHomeAsUpEnabled(true);
     }
 
@@ -62,10 +59,6 @@ public class PrivacyLastSeenActivity extends AppCompatActivity {
 
     private void setTitle(String title) {
         tvTitle.setText(title);
-    }
-
-    private void setDescription(String Description) {
-        tvDescription.setText(Description);
     }
 
     private void onRadioButtonSetup() {
@@ -110,5 +103,4 @@ public class PrivacyLastSeenActivity extends AppCompatActivity {
             }
         });
     }
-
 }
