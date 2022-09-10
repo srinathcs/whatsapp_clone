@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:title="search"
+        android:id="@+id/search"
+        android:orderInCategory="100"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_search"/>
+    <item android:title="New group"
+        android:id="@+id/menu"
+        android:orderInCategory="1"
+        app:showAsAction="never"
+        />
+    <item android:title="New broadcast"
+        android:id="@+id/menuNewBc"
+        android:orderInCategory="2"
+        app:showAsAction="never"/>
+    <item
+        android:title="Linked device"
+        android:id="@+id/menuLD"
+        android:orderInCategory="3"
+        app:showAsAction="never"/>
+    <item
+        android:title="Starred messages"
+        android:id="@+id/menuSm"
+        android:orderInCategory="4"
+        app:showAsAction="never"/>
+    <item
+        android:title="Payments"
+        android:id="@+id/menuPay"
+        android:orderInCategory="5"
+        app:showAsAction="never"/>
+    <item
+        android:title="Settings"
+        android:id="@+id/menuSetting"
+        android:orderInCategory="6"
+        app:showAsAction="never"/>
+</menu>
