@@ -41,8 +41,10 @@ public class SettingPrivacyLink extends LinearLayoutCompat {
     }
 
     private void initWidget() {
+        String webView ="<html><body><p>When enabled all new individual chats will start with \n disappearing messages set ti the selected duration.\nThis setting will not affect your existing chats.</p></body></html>";
         wvDefaultMessage.getSettings().setJavaScriptEnabled(true);
         wvDefaultMessage.setWebViewClient(new WebViewClient());
+        wvDefaultMessage.loadData(webView,"text/html",null);
         wvDefaultMessage.loadUrl("https://stackoverflow.com/questions/6206245/how-to-programmatically-set-edit-content-of-webview");
     }
 }
