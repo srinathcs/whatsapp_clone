@@ -48,6 +48,7 @@ public class SettingPrivacyLink extends LinearLayoutCompat {
         wvDefaultMessage.getSettings().setJavaScriptEnabled(true);
         wvDefaultMessage.loadData(str, "text/html", "UTF-8");
         wvDefaultMessage.setVerticalScrollBarEnabled(false);
+
         wvDefaultMessage.getSettings().setTextZoom(85);
 
     }
