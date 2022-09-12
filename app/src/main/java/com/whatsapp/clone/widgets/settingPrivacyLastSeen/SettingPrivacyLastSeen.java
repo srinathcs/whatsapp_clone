@@ -66,6 +66,18 @@ public class SettingPrivacyLastSeen extends LinearLayoutCompat {
             case  ONLY_SHARE_WITH:
                 onOnlyShareSetup();
                 break;
+            case HOURS:
+                onHourSetup();
+                break;
+            case DAYS:
+                onDays();
+                break;
+            case DAY:
+                onDay();
+                break;
+            case OFF:
+                onOff();
+                break;
         }
     }
 
@@ -86,5 +98,17 @@ public class SettingPrivacyLastSeen extends LinearLayoutCompat {
     }
     public void onOnlyShareSetup(){
         setTitle(getContext().getString(R.string.rbOnlyShare));
+    }
+    public void onHourSetup(){
+        setTitle(getContext().getString(R.string.rbhours24));
+    }
+    public void onDays(){
+        setTitle((getContext().getString(R.string.rb7days)));
+    }
+    public void onDay(){
+        setTitle(getContext().getString(R.string.rbdays90));
+    }
+    public void onOff(){
+        setTitle(getContext().getString(R.string.rboff));
     }
 }

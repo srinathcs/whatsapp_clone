@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civIcon"
+        android:layout_width="@dimen/dp100"
+        android:layout_height="@dimen/dp100"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp15"
+        app:civ_circle_background_color="@color/black"
+        tools:srcCompat="@tools:sample/avatars[2]" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp40"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp16"
+        android:layout_marginTop="@dimen/dp55"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_85"
+        android:layout_marginTop="@dimen/dp18"/>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp20"
+        android:layout_marginStart="@dimen/dp25"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

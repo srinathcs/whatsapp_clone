@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/dp20"
+    android:orientation="vertical">
+
+    <com.whatsapp.clone.widgets.settingPrivacyDefaultTime.SettingPrivacyMessage
+        android:id="@+id/message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.whatsapp.clone.widgets.settingPrivacyLastSeen.SettingPrivacyLastSeen
+        android:id="@+id/rbHours"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.whatsapp.clone.widgets.settingPrivacyLastSeen.SettingPrivacyLastSeen
+        android:id="@+id/rbDays"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.whatsapp.clone.widgets.settingPrivacyLastSeen.SettingPrivacyLastSeen
+        android:id="@+id/rbDay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.whatsapp.clone.widgets.settingPrivacyLastSeen.SettingPrivacyLastSeen
+        android:id="@+id/rbOff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.whatsapp.clone.widgets.settingPrivacyDefaultTime.SettingPrivacyLink
+        android:id="@+id/wvDefault"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

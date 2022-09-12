@@ -73,5 +73,16 @@
     <string name="groupTitle">Who can add me to groups</string>
     <string name="groupDescription">Admins who can\'t add ypu to a group chat will have the option of inviting you privately instead</string>
     <string name="titleGroup">Group</string>
+    <string name="tvDefaultTitle">Start new chats with disappearing messages</string>
+    <string name="just">hai</string>
+    <string name="rbhours24">24 hours</string>
+    <string name="rb7days">7 days</string>
+    <string name="rbdays90">90 days</string>
+    <string name="rboff">Off</string>
+    <string name="titleMessageDefault">Default message timer</string>
+    <string name="privacyLive">Live location</string>
+    <string name="tvTitleLive">You aren\'t sharing live location in any chats</string>
+    <string name="tvDescriptionLive">Live location requires background location. You can manage this in your device settings.</string>
+
 
 </resources>
