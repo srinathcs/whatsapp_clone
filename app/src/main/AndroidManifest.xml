@@ -13,7 +13,7 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
-            android:name=".presentation.privacyLiveLocation.privacyLiveLocationActivity"
+            android:name=".presentation.privacyFingerPrint.PrivacyFingerPrintActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
