@@ -4,8 +4,8 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.webkit.WebChromeClient;
 import android.webkit.WebView;
-import android.webkit.WebViewClient;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -41,10 +41,14 @@ public class SettingPrivacyLink extends LinearLayoutCompat {
     }
 
     private void initWidget() {
-        String webView ="<html><body><p>When enabled all new individual chats will start with \n disappearing messages set ti the selected duration.\nThis setting will not affect your existing chats.</p></body></html>";
+        String str = " ";
+        str += "<font color='gray'>" +"When enabled all new individual chats will start with disappearing messages set it the selected duration.This setting will not affect your existing chats.</font>";
+        str += "<a href=\"https://faq.whatsapp.com/2739621239657218/?locale=en_US\"> <font color='027eb5'> Learn more</a></font>";
+        wvDefaultMessage.setWebChromeClient(new WebChromeClient());
         wvDefaultMessage.getSettings().setJavaScriptEnabled(true);
-        wvDefaultMessage.setWebViewClient(new WebViewClient());
-        wvDefaultMessage.loadData(webView,"text/html",null);
-        wvDefaultMessage.loadUrl("https://stackoverflow.com/questions/6206245/how-to-programmatically-set-edit-content-of-webview");
+        wvDefaultMessage.loadData(str, "text/html", "UTF-8");
+        wvDefaultMessage.setVerticalScrollBarEnabled(false);
+        wvDefaultMessage.getSettings().setTextZoom(85);
+
     }
 }
