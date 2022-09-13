@@ -1,12 +1,10 @@
 package com.whatsapp.clone.presentation.selectContact;
 
-import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
-import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -18,14 +16,13 @@ import com.whatsapp.clone.widgets.selectContactView.SelectContactView;
 import com.whatsapp.clone.widgets.selectContactView.ui.utils.SelectContact;
 
 public class SelectContactActivity extends AppCompatActivity {
-    Context mContext;
     private SelectContactView mSelectContactGroup,mSelectContactNew;
     ActionBar actionBar;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.actitvity_select_contact);
+        setContentView(R.layout.activity_select_contact);
         initViews();
         onActionbarConfig();
         onSelectContactGroupSetup();

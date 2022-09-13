@@ -15,7 +15,7 @@ import com.whatsapp.clone.R;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class privacyLiveLocationActivity extends AppCompatActivity {
+public class PrivacyLiveLocationActivity extends AppCompatActivity {
     CircleImageView cvIcon;
     ActionBar actionBar;
     AppCompatTextView tvTitle,tvDescription;

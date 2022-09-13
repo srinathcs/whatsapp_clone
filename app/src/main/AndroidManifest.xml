@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.whatsapp.clone">
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -13,7 +14,7 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
-            android:name=".presentation.privacyLiveLocation.privacyLiveLocationActivity"
+            android:name=".presentation.privacySetting.PrivacySettingActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,6 +22,38 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".presentation.privacyLastSeen.PrivacyLastSeenActivity"
+            android:label="@string/app_name" />
+
+        <activity
+            android:name=".presentation.privacyProfilePhoto.PrivacyProfilePhotoActivity"
+            android:label="@string/app_name" />
+
+        <activity
+            android:name=".presentation.privacyAbout.PrivacyAboutActivity"
+            android:label="@string/app_name" />
+
+        <activity
+            android:name=".presentation.privacyStatus.PrivacyStatusActivity"
+            android:label="@string/app_name" />
+
+        <activity
+            android:name=".presentation.privacySettingDefaultMessage.PrivacySettingDefaultMessageActivity"
+            android:label="@string/app_name" />
+
+        <activity
+            android:name=".presentation.privacyGroup.PrivacyGroupActivity"
+            android:label="@string/app_name" />
+
+        <activity
+            android:name=".presentation.privacyLiveLocation.PrivacyLiveLocationActivity"
+            android:label="@string/app_name" />
+
+        <activity
+            android:name=".presentation.privacyFingerPrint.PrivacyFingerPrintActivity"
+            android:label="@string/app_name" />
+
     </application>
 
 </manifest>
