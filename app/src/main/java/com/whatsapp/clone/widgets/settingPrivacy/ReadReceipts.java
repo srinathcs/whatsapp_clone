@@ -38,7 +38,7 @@ public class ReadReceipts extends LinearLayoutCompat {
         View mView = inflater.inflate(R.layout.privacy_read_receipts, this, true);
         tvTitle = mView.findViewById(R.id.tvTitle);
         tvDescription = mView.findViewById(R.id.tvDescription);
-        scSwitch = mView.findViewById(R.id.sc_receipts);
+        scSwitch = mView.findViewById(R.id.scReceipts);
     }
     public void initWidgets(){
         SetTitle(mContext.getString(R.string.read_receipts));

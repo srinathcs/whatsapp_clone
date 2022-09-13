@@ -86,6 +86,8 @@
     <string name="fingerprintTitle">Unlock with fingerprint</string>
     <string name="fingerprintDescription">When enabled you\'ll need to use fingerprint to open WhatsApp. You can Still answer calls if WhatsApp is locked</string>
     <string name="fingerprintTitlebar">Fingerprint lock</string>
+    <string name="securityTitle">Show security notification on this phone</string>
+    <string name="titleSecurity">Security</string>
 
 
 </resources>
