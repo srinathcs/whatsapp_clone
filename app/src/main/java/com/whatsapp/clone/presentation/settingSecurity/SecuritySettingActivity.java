@@ -34,7 +34,7 @@ public class SecuritySettingActivity extends AppCompatActivity {
         actionBar = getSupportActionBar();
         ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#008069"));
         actionBar.setBackgroundDrawable(colorDrawable);
-        actionBar.setTitle(R.string.titleSecurity);
+        actionBar.setTitle(R.string.twoStepTitle);
         actionBar.setDisplayHomeAsUpEnabled(true);
     }
 }
