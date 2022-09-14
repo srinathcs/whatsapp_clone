@@ -103,6 +103,9 @@
     <string name="oldTitle">Enter your old phone number with country code:</string>
     <string name="newPhoneTitle">Enter your new phone number with country code:</string>
     <string name="titleChangeNum">Change number</string>
+    <string name="titleRequestAcc">Request account info</string>
+    <string name="reqAccItemTitle">Request Sent</string>
+    <string name="reqAccItemDescription">Ready by 17 September 2022</string>
 
 
 </resources>
