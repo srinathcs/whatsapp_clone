@@ -88,6 +88,11 @@
     <string name="fingerprintTitlebar">Fingerprint lock</string>
     <string name="securityTitle">Show security notification on this phone</string>
     <string name="titleSecurity">Security</string>
+    <string name="twoStepDescription">Two-step verification is enabled. You\'ll need to enter your PIN when registering yor phone number with WhatsApp again</string>
+    <string name="titleDisable">Disable</string>
+    <string name="titleChangePin">Change PIN</string>
+    <string name="titleChangeEmail">Change email address</string>
+    <string name="twoStepTitle">Two-step-verification</string>
 
 
 </resources>
