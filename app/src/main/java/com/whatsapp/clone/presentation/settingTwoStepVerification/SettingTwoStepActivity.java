@@ -1,4 +1,4 @@
-package com.whatsapp.clone.presentation.SettingTwoStepVerification;
+package com.whatsapp.clone.presentation.settingTwoStepVerification;
 
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;

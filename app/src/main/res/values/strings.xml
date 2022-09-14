@@ -93,6 +93,16 @@
     <string name="titleChangePin">Change PIN</string>
     <string name="titleChangeEmail">Change email address</string>
     <string name="twoStepTitle">Two-step-verification</string>
+    <string name="changeNumTitle"><![CDATA[Change your phone number will migrate your account info, group & settings.]]></string>
+    <string name="changeNumDescription">Before proceeding, please confirm that you are able to receive SMS or calls at your new number</string>
+    <string name="changeNumSettingDescription"><![CDATA[If you have both a new phone & a new number, first change your number on your old phone.]]></string>
+    <string name="titleChangeNumber">Change number</string>
+    <string name="btnChangeNum">Next</string>
+    <string name="etHint">phone number</string>
+    <string name="etCode">+ 91</string>
+    <string name="oldTitle">Enter your old phone number with country code:</string>
+    <string name="newPhoneTitle">Enter your new phone number with country code:</string>
+    <string name="titleChangeNum">Change number</string>
 
 
 </resources>
