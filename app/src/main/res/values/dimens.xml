@@ -48,6 +48,13 @@
     <dimen name="dp46">46dp</dimen>
     <dimen name="dp4">4dp</dimen>
     <dimen name="dp68">68dp</dimen>
+    <dimen name="dp460">460dp</dimen>
+    <dimen name="dp470">470dp</dimen>
+    <dimen name="dp450">450dp</dimen>
+    <dimen name="dp90">90dp</dimen>
+    <dimen name="dp490">490dp</dimen>
+    <dimen name="dp480">480dp</dimen>
+    <dimen name="dp475">475dp</dimen>
 
 
 </resources>
