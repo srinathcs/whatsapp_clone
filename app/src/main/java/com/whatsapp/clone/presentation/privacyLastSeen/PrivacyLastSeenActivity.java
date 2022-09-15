@@ -110,5 +110,4 @@ public class PrivacyLastSeenActivity extends AppCompatActivity {
             }
         });
     }
-
 }

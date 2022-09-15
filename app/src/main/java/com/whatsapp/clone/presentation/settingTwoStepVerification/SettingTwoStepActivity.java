@@ -3,18 +3,23 @@ package com.whatsapp.clone.presentation.settingTwoStepVerification;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.LinearLayoutCompat;
 
 import com.whatsapp.clone.R;
+import com.whatsapp.clone.widgets.settingItemView.listener.ItemClickListener;
 import com.whatsapp.clone.widgets.settingTwoStepVerification.SettingTwoStepItem;
 import com.whatsapp.clone.widgets.settingTwoStepVerification.SettingTwoStepTop;
 import com.whatsapp.clone.widgets.settingTwoStepVerification.ui.utils.TwoStepItem;
 
 public class SettingTwoStepActivity extends AppCompatActivity {
     ActionBar actionBar;
+    LinearLayoutCompat llParent;
+    private ItemClickListener mItemClickListener;
     SettingTwoStepTop mSettingTwoStepTop;
     SettingTwoStepItem mSettingTwoStepDisable, mSettingTwoStepChangePin, mSettingTwoStepChangeEmail;
 
@@ -28,6 +33,7 @@ public class SettingTwoStepActivity extends AppCompatActivity {
     }
 
     private void initView() {
+        llParent= findViewById(R.id.llParent);
         mSettingTwoStepTop = findViewById(R.id.twoStepDescription);
         mSettingTwoStepDisable = findViewById(R.id.twoStepDisable);
         mSettingTwoStepChangePin = findViewById(R.id.twoStepChangePin);
@@ -39,7 +45,6 @@ public class SettingTwoStepActivity extends AppCompatActivity {
         mSettingTwoStepChangePin.setType(TwoStepItem.CHANGE_PIN);
         mSettingTwoStepChangeEmail.setType(TwoStepItem.CHANGE_EMAIL_ADDRESS);
     }
-
     private void onActionBarSetup() {
         actionBar = getSupportActionBar();
         ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#008069"));
