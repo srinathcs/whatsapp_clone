@@ -3,6 +3,7 @@ package com.whatsapp.clone.presentation.privacyGroup;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.CompoundButton;
 
 import androidx.annotation.Nullable;
@@ -49,6 +50,16 @@ public class PrivacyGroupActivity extends AppCompatActivity {
         actionBar.setBackgroundDrawable(colorDrawable);
         actionBar.setTitle(R.string.titleGroup);
         actionBar.setDisplayHomeAsUpEnabled(true);
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     public void onConfigSetup() {

@@ -3,6 +3,7 @@ package com.whatsapp.clone.presentation.settingTwoStepVerification;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 
 import androidx.annotation.Nullable;
@@ -52,4 +53,15 @@ public class SettingTwoStepActivity extends AppCompatActivity {
         actionBar.setTitle(R.string.titleSecurity);
         actionBar.setDisplayHomeAsUpEnabled(true);
     }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
 }

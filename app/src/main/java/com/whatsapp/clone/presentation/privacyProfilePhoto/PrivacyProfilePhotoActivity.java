@@ -3,6 +3,7 @@ package com.whatsapp.clone.presentation.privacyProfilePhoto;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.CompoundButton;
 
 import androidx.annotation.Nullable;
@@ -48,6 +49,16 @@ public class PrivacyProfilePhotoActivity extends AppCompatActivity {
         actionBar.setBackgroundDrawable(colorDrawable);
         actionBar.setTitle(R.string.profilephoto);
         actionBar.setDisplayHomeAsUpEnabled(true);
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     public void onConfigSetup() {

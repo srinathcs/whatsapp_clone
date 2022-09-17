@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
@@ -62,9 +63,8 @@ public class SettingActivity extends AppCompatActivity {
             actionBar.setBackgroundDrawable(colorDrawable);
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
+
     }
-
-
     private void onUserInfoSetup() {
         mUserInfo.setTitle(getString(R.string.name));
         mUserInfo.setDescription(getString(R.string.user_description));
@@ -76,7 +76,6 @@ public class SettingActivity extends AppCompatActivity {
         mItemView.setItemClickListener(new ItemClickListener() {
             @Override
             public void onClicked() {
-                Toast.makeText(SettingActivity.this, "Clicked", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(SettingActivity.this, AccountSettingActivity.class);
                 startActivity(intent);
             }
