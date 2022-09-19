@@ -47,7 +47,7 @@
 
     <com.whatsapp.clone.widgets.settingItemMeta.SettingItemMeta
         android:id="@+id/siMeta"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
 

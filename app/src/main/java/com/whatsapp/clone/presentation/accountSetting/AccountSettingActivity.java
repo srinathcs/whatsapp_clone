@@ -4,26 +4,18 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
-import android.util.AttributeSet;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.Toast;
 
-import androidx.annotation.NonNull;
+import android.view.MenuItem;
+import android.view.Window;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.LinearLayoutCompat;
 
 import com.whatsapp.clone.R;
-import com.whatsapp.clone.presentation.privacyLastSeen.PrivacyLastSeenActivity;
 import com.whatsapp.clone.presentation.privacySetting.PrivacySettingActivity;
-import com.whatsapp.clone.presentation.setting.SettingActivity;
-import com.whatsapp.clone.presentation.settingChangeNumCard.SettingChangeNumCardActivity;
 import com.whatsapp.clone.presentation.settingChangeNumber.ChangeNumberSettingActivity;
 import com.whatsapp.clone.presentation.settingRequestAcc.RequestAccountActivity;
 import com.whatsapp.clone.presentation.settingSecurity.SecuritySettingActivity;
@@ -68,6 +60,10 @@ public class AccountSettingActivity extends AppCompatActivity {
         actionBar.setBackgroundDrawable(colorDrawable);
         actionBar.setTitle(R.string.acc_setting);
         actionBar.setDisplayHomeAsUpEnabled(true);
+        if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP){
+            Window window= this.getWindow();
+            window.setStatusBarColor(this.getResources().getColor(R.color.green));
+        }
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

@@ -20,7 +20,9 @@
     <com.whatsapp.clone.widgets.settingPrivacyLastSeen.SettingPrivacyLastSeen
         android:id="@+id/rbMyContact"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:checkedButton="@id/rbMyContact"
+        />
 
     <com.whatsapp.clone.widgets.settingPrivacyLastSeen.SettingPrivacyLastSeen
         android:id="@+id/rbMyContactExcept"

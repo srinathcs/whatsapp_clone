@@ -108,6 +108,10 @@
     <string name="reqAccItemDescription">Ready by 17 September 2022</string>
     <string name="cardTitle">Please enter your phone number</string>
     <string name="cardBtn">OK</string>
+    <string name="settingTitle">Settings</string>
+    <string name="cancelTwoStepCard">CANCEL</string>
+    <string name="disableTwoStepCard">DISABLE</string>
+    <string name="twoStepCardTitle">Disable two-step verification?</string>
 
 
 </resources>
