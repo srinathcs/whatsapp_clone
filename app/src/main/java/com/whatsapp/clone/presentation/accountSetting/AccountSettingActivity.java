@@ -17,6 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.whatsapp.clone.R;
 import com.whatsapp.clone.presentation.privacySetting.PrivacySettingActivity;
 import com.whatsapp.clone.presentation.settingChangeNumber.ChangeNumberSettingActivity;
+import com.whatsapp.clone.presentation.settingDeleteMyAcc.DeleteMyAccActivity;
 import com.whatsapp.clone.presentation.settingRequestAcc.RequestAccountActivity;
 import com.whatsapp.clone.presentation.settingSecurity.SecuritySettingActivity;
 import com.whatsapp.clone.presentation.settingTwoStepVerification.SettingTwoStepActivity;
@@ -134,5 +135,13 @@ public class AccountSettingActivity extends AppCompatActivity {
 
     private void onDeleteMyAccountSetup() {
         mItemViewDeleteAcc.setItemInfo(AccountItem.DELETE_MY_ACCOUNT);
+        mItemViewDeleteAcc.setItemClickListener(new ItemClickListener() {
+            @Override
+            public void onClicked() {
+                Intent intent = new Intent(AccountSettingActivity.this, DeleteMyAccActivity.class);
+                startActivity(intent);
+
+            }
+        });
     }
 }

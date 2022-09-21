@@ -52,7 +52,7 @@
 
         <activity android:name=".presentation.settingRequestAcc.RequestAccountActivity" />
 
-        
+        <activity android:name=".presentation.settingDeleteMyAcc.DeleteMyAccActivity" />
 
 
     </application>

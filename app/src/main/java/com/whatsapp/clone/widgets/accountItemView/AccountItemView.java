@@ -92,6 +92,10 @@ public class AccountItemView extends LinearLayoutCompat {
             case DELETE_MY_ACCOUNT:
                 onDeleteMyAccount();
                 break;
+            case REQUEST_REPORT:
+                onRequestSentSetup();
+                break;
+
         }
     }
 
@@ -118,5 +122,9 @@ public class AccountItemView extends LinearLayoutCompat {
     private void onDeleteMyAccount(){
         setTitle(getContext().getString(R.string.title_delete));
         setIcon(ResourcesCompat.getDrawable(getResources(),R.drawable.ic_dlt,mContext.getTheme()));
+    }
+    public void onRequestSentSetup () {
+        setTitle(getContext().getString(R.string.reqAccItem));
+        setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_doucment,mContext.getTheme()));
     }
 }

@@ -4,34 +4,43 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.whatsapp.clone.widgets.settingSecurity.SecurityFirstWeb
-        android:id="@+id/reqWeb"
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/dp20">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civReqAcc"
+        android:layout_width="@dimen/dp110"
+        android:layout_height="@dimen/dp110"
+        android:layout_gravity="center" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <WebView
+        android:id="@+id/reqAccWeb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp15" />
+
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
+        android:layout_marginTop="@dimen/dp20"
         android:background="@color/gray_85" />
 
-    <com.whatsapp.clone.widgets.settingItemView.ui.SettingItemView
-        android:id="@+id/reqSent"
+    <com.whatsapp.clone.widgets.accountItemView.AccountItemView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10"
+        android:id="@+id/reqReport"/>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
+        android:layout_marginTop="@dimen/dp10"
         android:background="@color/gray_85" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/reqTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/reqDescription"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

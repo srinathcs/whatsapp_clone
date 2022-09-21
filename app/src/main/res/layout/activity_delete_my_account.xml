@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/dp20"
+    android:orientation="vertical">
+
+    <com.whatsapp.clone.widgets.settingDltAccNumber.SettingDltAccNumber
+        android:id="@+id/mDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.whatsapp.clone.widgets.setingDeleteAccItem.SettingDeleteAccItem
+        android:id="@+id/lineOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp40"
+        android:layout_marginTop="@dimen/dp15" />
+
+    <com.whatsapp.clone.widgets.setingDeleteAccItem.SettingDeleteAccItem
+        android:id="@+id/lineTwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp40" />
+
+    <com.whatsapp.clone.widgets.setingDeleteAccItem.SettingDeleteAccItem
+        android:id="@+id/lineThree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp40" />
+
+    <com.whatsapp.clone.widgets.setingDeleteAccItem.SettingDeleteAccItem
+        android:id="@+id/lineFour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp40" />
+
+    <com.whatsapp.clone.widgets.settingDeleteChangeNum.SettingChangeNumDeleteAcc
+        android:id="@+id/mChangeNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.whatsapp.clone.widgets.settingDeleteMyacc.DeleteMyAcc
+        android:id="@+id/mDeleteAcc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

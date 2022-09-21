@@ -112,6 +112,18 @@
     <string name="cancelTwoStepCard">CANCEL</string>
     <string name="disableTwoStepCard">DISABLE</string>
     <string name="twoStepCardTitle">Disable two-step verification?</string>
+    <string name="reqAccItem">Request report</string>
+    <string name="warningTitle">Deleting your acccount will:</string>
+    <string name="btDeleteAcc">CHANGE NUMBER</string>
+    <string name="deleteAccChangeNum">Change number instead?</string>
+    <string name="etCountry">Country</string>
+    <string name="phone">Phone</string>
+    <string name="etCountryCode">+91</string>
+    <string name="etPhoneNum">phone number</string>
+    <string name="btText">DELETE MY ACCOUNT</string>
+    <string name="etTextCountry">India</string>
+    <string name="tvDltTitle">To delete your account, confirm your country code and enter your phone number.</string>
+    <string name="titleDeleteMyAcc">Delete my account</string>
 
 
 </resources>

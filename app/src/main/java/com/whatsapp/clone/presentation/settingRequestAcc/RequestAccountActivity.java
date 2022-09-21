@@ -2,6 +2,7 @@ package com.whatsapp.clone.presentation.settingRequestAcc;
 
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -16,15 +17,19 @@ import androidx.appcompat.widget.AppCompatTextView;
 import androidx.core.content.res.ResourcesCompat;
 
 import com.whatsapp.clone.R;
+import com.whatsapp.clone.widgets.accountItemView.AccountItemView;
+import com.whatsapp.clone.widgets.accountItemView.ui.utils.AccountItem;
 import com.whatsapp.clone.widgets.settingItemView.ui.SettingItemView;
 import com.whatsapp.clone.widgets.settingItemView.ui.utils.SettingItemType;
 import com.whatsapp.clone.widgets.settingSecurity.SecurityFirstWeb;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class RequestAccountActivity extends AppCompatActivity {
     ActionBar actionBar;
-    SecurityFirstWeb mSecurityFirstWeb;
-    SettingItemView mSettingItemView;
-    AppCompatTextView tvTitle, tvDescription;
+    WebView wvReqAcc;
+    CircleImageView civReqIcon;
+    AccountItemView mAccountItemView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -33,61 +38,48 @@ public class RequestAccountActivity extends AppCompatActivity {
         initView();
         initWidget();
         onActionbarSetup();
+
     }
-
     private void initView() {
-        mSecurityFirstWeb =findViewById(R.id.reqWeb);
-        mSettingItemView = findViewById(R.id.reqSent);
-        tvTitle = findViewById(R.id.tvTitle);
-        tvDescription = findViewById(R.id.tvDescription);
-
+        wvReqAcc =findViewById(R.id.reqAccWeb);
+        civReqIcon=findViewById(R.id.civReqAcc);
+        mAccountItemView = findViewById(R.id.reqReport);
     }
     private void initWidget(){
-        mSecurityFirstWeb.SetIcon(ResourcesCompat.getDrawable(getResources(),R.drawable.ic_document,getTheme()));
         String str = " ";
-        str += "<font color='black'>" + "Message and calls in en-to-end encrypted chats stay between you and the people you choose.Not even WhatsApp can read or listen to them.</font>";
-        str += "<a href=\"https://www.whatsapp.com/security?lg=en&lc=IN&eea=0\"> <font color='027eb5'>Learn more</a></font>";
+        str += "<font color='black'>" + "Create a report of your WhatsApp account information and settings, Which you can access or port to another app. This report does not include your message.</font>";
+        str += "<a href=\"https://faq.whatsapp.com/565386554257543/?locale=en_US\"> <font color='027eb5'>Learn more</a></font>";
+        wvReqAcc.setWebChromeClient(new WebChromeClient());
+        wvReqAcc.getSettings().setJavaScriptEnabled(true);
+        wvReqAcc.loadData(str, "text/html", "UTF-8");
+        wvReqAcc.setVerticalScrollBarEnabled(false);
+        wvReqAcc.getSettings().setTextZoom(100);
+        mAccountItemView.setItemInfo(AccountItem.REQUEST_REPORT);
+        setIcon(ResourcesCompat.getDrawable(getResources(),R.drawable.ic_document,getTheme()));
 
     }
-    private void onActionbarSetup() {
-        actionBar = getSupportActionBar();
-        ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#008069"));
-        actionBar.setBackgroundDrawable(colorDrawable);
-        actionBar.setTitle(R.string.titleRequestAcc);
-        actionBar.setDisplayHomeAsUpEnabled(true);
-        if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP){
-            Window window= this.getWindow();
-            window.setStatusBarColor(this.getResources().getColor(R.color.green));
+
+    private void onActionbarSetup () {
+            actionBar = getSupportActionBar();
+            ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#008069"));
+            actionBar.setBackgroundDrawable(colorDrawable);
+            actionBar.setTitle(R.string.titleRequestAcc);
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                Window window = this.getWindow();
+                window.setStatusBarColor(this.getResources().getColor(R.color.green));
+            }
         }
-    }
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                onBackPressed();
-                return true;
+        @Override
+        public boolean onOptionsItemSelected (MenuItem item){
+            switch (item.getItemId()) {
+                case android.R.id.home:
+                    onBackPressed();
+                    return true;
+            }
+            return super.onOptionsItemSelected(item);
         }
-
-        return super.onOptionsItemSelected(item);
-    }
-    public void setTitle(String title){
-        tvTitle.setText(title);
-    }
-    public void setDescription(String description){
-        tvDescription.setText(description);
-    }
-    public void setType(SettingItemType type){
-        switch (type){
-            case REQUEST_SENT:
-                onRequestSentSetup();
-                break;
+        private void setIcon(Drawable drawable){
+        civReqIcon.setImageDrawable(drawable);
         }
-    }
-    private void onRequestSentSetup(){
-        setTitle(getString(R.string.reqAccItemTitle));
-        setDescription(getString(R.string.reqAccItemDescription));
-        mSettingItemView.setIcon(ResourcesCompat.getDrawable(getResources(),R.drawable.ic_time,getTheme()));
-    }
-
-
 }

@@ -15,6 +15,7 @@
     <color name="dark">#202c33</color>
     <color name="blue">#027eb5</color>
     <color name="lite">#1b252a</color>
+    <color name="red">#FF0000</color>
 
     <color name="disable_foreground_grey">#42221f1f</color>
     <color name="disable_thumb_grey">#1c000000</color>
