@@ -1,9 +1,14 @@
 package com.whatsapp.clone.presentation.settingChangeNumber;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.Window;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
@@ -13,10 +18,11 @@ import androidx.appcompat.widget.AppCompatTextView;
 import androidx.core.content.res.ResourcesCompat;
 
 import com.whatsapp.clone.R;
+import com.whatsapp.clone.presentation.settingPhoneNumChange.SettingPhoneNumChangeActivity;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class ChangeNumberSetting extends AppCompatActivity {
+public class ChangeNumberSettingActivity extends AppCompatActivity {
     private CircleImageView civIconChangeNum;
     private AppCompatTextView tvTitle,tvDescription,tvSettingDescription;
     private AppCompatButton btChangeNum;
@@ -39,6 +45,13 @@ public class ChangeNumberSetting extends AppCompatActivity {
     }
     public void setCivIconChangeNum(Drawable drawable){
         civIconChangeNum.setImageDrawable(drawable);
+        btChangeNum.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ChangeNumberSettingActivity.this, SettingPhoneNumChangeActivity.class);
+                startActivity(intent);
+            }
+        });
     }
     public void setTitle(String title){
         tvTitle.setText(title);
@@ -56,11 +69,26 @@ public class ChangeNumberSetting extends AppCompatActivity {
         setSettingDescription(getString(R.string.changeNumSettingDescription));
 
     }
+
     private void onActionbarSetup() {
         actionBar = getSupportActionBar();
         ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#008069"));
         actionBar.setBackgroundDrawable(colorDrawable);
         actionBar.setTitle(R.string.titleChangeNumber);
         actionBar.setDisplayHomeAsUpEnabled(true);
+        if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP){
+            Window window= this.getWindow();
+            window.setStatusBarColor(this.getResources().getColor(R.color.green));
+        }
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

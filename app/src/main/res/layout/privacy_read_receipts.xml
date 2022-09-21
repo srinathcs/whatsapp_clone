@@ -32,6 +32,8 @@
             android:id="@+id/scReceipts"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            app:trackTint="@drawable/switch_track_selector"
+            app:thumbTint="@drawable/switch_thumb_selector"
             android:layout_marginEnd="@dimen/dp12"
             android:paddingBottom="@dimen/dp28" />
     </androidx.appcompat.widget.LinearLayoutCompat>

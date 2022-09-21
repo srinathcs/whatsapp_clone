@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Last seen</string>
+    <string name="app_name">WhatsApp</string>
     <string name="tbSetting">Settings</string>
     <string name="name">SRINATH</string>
     <string name="user_description">Rest at the End not in the middl...</string>
@@ -15,7 +15,7 @@
     <string name="setting_help_description">Help centre, contact us, privacy policy</string>
     <string name="setting_invite">Invite a friend</string>
     <string name="acPrivacy">Privacy</string>
-    <string name="title_privacy">privacy</string>
+    <string name="title_privacy">Privacy</string>
     <string name="title_security">Security</string>
     <string name="title_verification">Two-step verification</string>
     <string name="title_change_num">Change number</string>
@@ -103,6 +103,27 @@
     <string name="oldTitle">Enter your old phone number with country code:</string>
     <string name="newPhoneTitle">Enter your new phone number with country code:</string>
     <string name="titleChangeNum">Change number</string>
+    <string name="titleRequestAcc">Request account info</string>
+    <string name="reqAccItemTitle">Request Sent</string>
+    <string name="reqAccItemDescription">Ready by 17 September 2022</string>
+    <string name="cardTitle">Please enter your phone number</string>
+    <string name="cardBtn">OK</string>
+    <string name="settingTitle">Settings</string>
+    <string name="cancelTwoStepCard">CANCEL</string>
+    <string name="disableTwoStepCard">DISABLE</string>
+    <string name="twoStepCardTitle">Disable two-step verification?</string>
+    <string name="reqAccItem">Request report</string>
+    <string name="warningTitle">Deleting your acccount will:</string>
+    <string name="btDeleteAcc">CHANGE NUMBER</string>
+    <string name="deleteAccChangeNum">Change number instead?</string>
+    <string name="etCountry">Country</string>
+    <string name="phone">Phone</string>
+    <string name="etCountryCode">+91</string>
+    <string name="etPhoneNum">phone number</string>
+    <string name="btText">DELETE MY ACCOUNT</string>
+    <string name="etTextCountry">India</string>
+    <string name="tvDltTitle">To delete your account, confirm your country code and enter your phone number.</string>
+    <string name="titleDeleteMyAcc">Delete my account</string>
 
 
 </resources>

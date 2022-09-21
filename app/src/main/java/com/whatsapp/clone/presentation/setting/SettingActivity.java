@@ -1,8 +1,13 @@
 package com.whatsapp.clone.presentation.setting;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.Window;
 import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBar;
@@ -10,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.res.ResourcesCompat;
 
 import com.whatsapp.clone.R;
+import com.whatsapp.clone.presentation.accountSetting.AccountSettingActivity;
 import com.whatsapp.clone.widgets.settingInviteView.SettingInviteView;
 import com.whatsapp.clone.widgets.settingItemMeta.SettingItemMeta;
 import com.whatsapp.clone.widgets.settingItemView.listener.ItemClickListener;
@@ -38,7 +44,6 @@ public class SettingActivity extends AppCompatActivity {
         onSettingHelpSetup();
         onSettingInviteSetup();
         onSettingMetaSetup();
-
     }
 
 
@@ -58,10 +63,14 @@ public class SettingActivity extends AppCompatActivity {
         if (actionBar != null) {
             ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#008069"));
             actionBar.setBackgroundDrawable(colorDrawable);
+            actionBar.setTitle(R.string.settingTitle);
             actionBar.setDisplayHomeAsUpEnabled(true);
+            if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP){
+                Window window= this.getWindow();
+                window.setStatusBarColor(this.getResources().getColor(R.color.green));
+            }
         }
     }
-
     private void onUserInfoSetup() {
         mUserInfo.setTitle(getString(R.string.name));
         mUserInfo.setDescription(getString(R.string.user_description));
@@ -73,7 +82,8 @@ public class SettingActivity extends AppCompatActivity {
         mItemView.setItemClickListener(new ItemClickListener() {
             @Override
             public void onClicked() {
-                Toast.makeText(SettingActivity.this, "Clicked", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(SettingActivity.this, AccountSettingActivity.class);
+                startActivity(intent);
             }
         });
     }

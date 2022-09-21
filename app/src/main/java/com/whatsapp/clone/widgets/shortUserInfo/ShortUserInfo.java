@@ -18,33 +18,30 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ShortUserInfo extends LinearLayoutCompat {
     Context mContext;
-    AppCompatTextView tvTitle,tvDescription;
+    AppCompatTextView tvTitle, tvDescription;
     CircleImageView ivProfile;
     AppCompatImageView ivScan;
 
     public ShortUserInfo(@NonNull Context mContext) {
-        this(mContext,null);
+        this(mContext, null);
     }
 
     public ShortUserInfo(@NonNull Context context, @Nullable AttributeSet attrs) {
-        this(context, attrs,0);
+        this(context, attrs, 0);
     }
 
     public ShortUserInfo(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        this.mContext=context;
+        this.mContext = context;
         intiView();
     }
 
     private void intiView() {
-        LayoutInflater inflater=LayoutInflater.from(mContext);
-        View mView= inflater.inflate(R.layout.activity_setting,this,true);
-        tvTitle =mView.findViewById(R.id.tvTitle);
-        tvDescription=mView.findViewById(R.id.tvDescription);
-        ivProfile=mView.findViewById(R.id.ivProfile);
-        ivScan=mView.findViewById(R.id.ivQr);
+        LayoutInflater inflater = LayoutInflater.from(mContext);
+        View mView = inflater.inflate(R.layout.activity_setting, this, true);
+        tvTitle = mView.findViewById(R.id.tvTitle);
+        tvDescription = mView.findViewById(R.id.tvDescription);
+        ivProfile = mView.findViewById(R.id.ivProfile);
+        ivScan = mView.findViewById(R.id.ivQr);
     }
-
-
-
 }

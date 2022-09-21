@@ -1,12 +1,15 @@
 package com.whatsapp.clone.widgets.settingPrivacyLastSeen;
 
 import android.content.Context;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.CompoundButton;
 
 
+import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatRadioButton;
@@ -39,6 +42,7 @@ public class SettingPrivacyLastSeen extends LinearLayoutCompat {
     }
     public void unSelectRadioButton(){
         mRbLastSeen.setChecked(false);
+
     }
     public void setRadioButtonListener(CompoundButton.OnCheckedChangeListener mListener){
         mRbLastSeen.setOnCheckedChangeListener(mListener);

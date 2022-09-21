@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/dp20"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="380dp"
+        android:layout_height="@dimen/dp110"
+        android:background="@color/white"
+        android:id="@+id/cvChangeNum">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cardTitle"
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_marginStart="@dimen/dp30"
+            android:textSize="@dimen/sp16"
+            android:id="@+id/tvCardTitle"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:id="@+id/btCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/dp70"
+            android:text="@string/cardBtn"
+            android:gravity="top"
+            android:textColor="@color/green"/>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

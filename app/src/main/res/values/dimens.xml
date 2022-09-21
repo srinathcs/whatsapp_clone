@@ -55,6 +55,7 @@
     <dimen name="dp490">490dp</dimen>
     <dimen name="dp480">480dp</dimen>
     <dimen name="dp475">475dp</dimen>
+    <dimen name="dp430">430dp</dimen>
 
 
 </resources>

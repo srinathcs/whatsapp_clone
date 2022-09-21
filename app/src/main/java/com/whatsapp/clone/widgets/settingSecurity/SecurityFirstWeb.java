@@ -20,7 +20,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class SecurityFirstWeb extends LinearLayoutCompat {
     Context mContext;
     CircleImageView civIcon;
-    WebView mWebView;
+    WebView wvSecurity;
 
     public SecurityFirstWeb(@NonNull Context mContext) {
         this(mContext, null);
@@ -37,24 +37,25 @@ public class SecurityFirstWeb extends LinearLayoutCompat {
         initWidget();
     }
 
-    private void initView() {
+    public void initView() {
         LayoutInflater inflater = LayoutInflater.from(mContext);
         View mView = inflater.inflate(R.layout.setting_security, this, true);
         civIcon = mView.findViewById(R.id.civSecurity);
-        mWebView = mView.findViewById(R.id.securityFirstLink);
+        wvSecurity = mView.findViewById(R.id.securityFirstLink);
 
     }
 
-    private void initWidget() {
+    public void initWidget() {
         SetIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_shield_lock, mContext.getTheme()));
+
         String str = " ";
         str += "<font color='black'>" + "Message and calls in en-to-end encrypted chats stay between you and the people you choose.Not even WhatsApp can read or listen to them.</font>";
         str += "<a href=\"https://www.whatsapp.com/security?lg=en&lc=IN&eea=0\"> <font color='027eb5'>Learn more</a></font>";
-        mWebView.setWebChromeClient(new WebChromeClient());
-        mWebView.getSettings().setJavaScriptEnabled(true);
-        mWebView.loadData(str, "text/html", "UTF-8");
-        mWebView.setVerticalScrollBarEnabled(false);
-        mWebView.getSettings().setTextZoom(98);
+        wvSecurity.setWebChromeClient(new WebChromeClient());
+        wvSecurity.getSettings().setJavaScriptEnabled(true);
+        wvSecurity.loadData(str, "text/html", "UTF-8");
+        wvSecurity.setVerticalScrollBarEnabled(false);
+        wvSecurity.getSettings().setTextZoom(98);
 
     }
 

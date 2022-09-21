@@ -2,7 +2,10 @@ package com.whatsapp.clone.presentation.privacySettingReadReceipts;
 
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.Window;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
@@ -32,5 +35,19 @@ public class PrivacySettingReadReceipts extends AppCompatActivity {
         actionBar.setBackgroundDrawable(colorDrawable);
         actionBar.setTitle(R.string.fingerprintTitlebar);
         actionBar.setDisplayHomeAsUpEnabled(true);
+        if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP){
+            Window window= this.getWindow();
+            window.setStatusBarColor(this.getResources().getColor(R.color.green));
+        }
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

@@ -18,11 +18,14 @@ import androidx.core.content.res.ResourcesCompat;
 
 import com.whatsapp.clone.R;
 import com.whatsapp.clone.widgets.accountItemView.ui.utils.AccountItem;
+import com.whatsapp.clone.widgets.settingItemView.listener.ItemClickListener;
 
 public class AccountItemView extends LinearLayoutCompat {
     private Context mContext;
     private AppCompatImageView ivASIcon;
     private AppCompatTextView tvASTitle;
+    private ItemClickListener mItemClickListener;
+    private LinearLayoutCompat llParent;
 
     public AccountItemView(@NonNull Context mContext) {
         this(mContext, null);
@@ -36,6 +39,7 @@ public class AccountItemView extends LinearLayoutCompat {
         super(context, attrs, defStyleAttr);
         this.mContext = context;
         initView();
+        setupEvent();
     }
 
     private void initView() {
@@ -43,6 +47,17 @@ public class AccountItemView extends LinearLayoutCompat {
         View mView = inflater.inflate(R.layout.account_item, this, true);
         ivASIcon = mView.findViewById(R.id.ivIcon);
         tvASTitle = mView.findViewById(R.id.tvTitle);
+        llParent= mView.findViewById(R.id.llParent);
+    }
+    private void setupEvent(){
+        llParent.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mItemClickListener!=null){
+                    mItemClickListener.onClicked();
+                }
+            }
+        });
     }
 
     public void setIcon(Drawable drawable) {
@@ -51,6 +66,10 @@ public class AccountItemView extends LinearLayoutCompat {
 
     public void setTitle(String title){
         tvASTitle.setText(title);
+    }
+
+    public void setItemClickListener(ItemClickListener listener){
+        this.mItemClickListener = listener;
     }
 
     public void setItemInfo(AccountItem type){
@@ -73,6 +92,10 @@ public class AccountItemView extends LinearLayoutCompat {
             case DELETE_MY_ACCOUNT:
                 onDeleteMyAccount();
                 break;
+            case REQUEST_REPORT:
+                onRequestSentSetup();
+                break;
+
         }
     }
 
@@ -99,5 +122,9 @@ public class AccountItemView extends LinearLayoutCompat {
     private void onDeleteMyAccount(){
         setTitle(getContext().getString(R.string.title_delete));
         setIcon(ResourcesCompat.getDrawable(getResources(),R.drawable.ic_dlt,mContext.getTheme()));
+    }
+    public void onRequestSentSetup () {
+        setTitle(getContext().getString(R.string.reqAccItem));
+        setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_doucment,mContext.getTheme()));
     }
 }

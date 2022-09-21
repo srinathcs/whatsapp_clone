@@ -2,7 +2,10 @@ package com.whatsapp.clone.presentation.privacyStatus;
 
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.Window;
 import android.widget.CompoundButton;
 
 import androidx.annotation.Nullable;
@@ -50,6 +53,20 @@ public class PrivacyStatusActivity extends AppCompatActivity {
         actionBar.setBackgroundDrawable(colorDrawable);
         actionBar.setTitle(R.string.statusPrivacy);
         actionBar.setDisplayHomeAsUpEnabled(true);
+        if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP){
+            Window window= this.getWindow();
+            window.setStatusBarColor(this.getResources().getColor(R.color.green));
+        }
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     public void onConfigSetup() {
