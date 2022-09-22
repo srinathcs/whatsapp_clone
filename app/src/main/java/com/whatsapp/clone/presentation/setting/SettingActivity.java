@@ -16,6 +16,7 @@ import androidx.core.content.res.ResourcesCompat;
 
 import com.whatsapp.clone.R;
 import com.whatsapp.clone.presentation.accountSetting.AccountSettingActivity;
+import com.whatsapp.clone.presentation.settingChat.SettingChatActivity;
 import com.whatsapp.clone.widgets.settingInviteView.SettingInviteView;
 import com.whatsapp.clone.widgets.settingItemMeta.SettingItemMeta;
 import com.whatsapp.clone.widgets.settingItemView.listener.ItemClickListener;
@@ -49,8 +50,8 @@ public class SettingActivity extends AppCompatActivity {
 
     private void intiView() {
         mUserInfo = findViewById(R.id.uiProfile);
-        mSettingInvite=findViewById(R.id.sInvite);
-        mSettingMeta=findViewById(R.id.siMeta);
+        mSettingInvite = findViewById(R.id.sInvite);
+        mSettingMeta = findViewById(R.id.siMeta);
         mItemView = findViewById(R.id.sivAccount);
         mSettingItemViewChat = findViewById(R.id.sivChat);
         mItemViewNotification = findViewById(R.id.sivNotification);
@@ -65,12 +66,13 @@ public class SettingActivity extends AppCompatActivity {
             actionBar.setBackgroundDrawable(colorDrawable);
             actionBar.setTitle(R.string.settingTitle);
             actionBar.setDisplayHomeAsUpEnabled(true);
-            if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP){
-                Window window= this.getWindow();
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                Window window = this.getWindow();
                 window.setStatusBarColor(this.getResources().getColor(R.color.green));
             }
         }
     }
+
     private void onUserInfoSetup() {
         mUserInfo.setTitle(getString(R.string.name));
         mUserInfo.setDescription(getString(R.string.user_description));
@@ -90,6 +92,13 @@ public class SettingActivity extends AppCompatActivity {
 
     private void onSettingChatSetup() {
         mSettingItemViewChat.setType(SettingItemType.CHAT);
+        mSettingItemViewChat.setItemClickListener(new ItemClickListener() {
+            @Override
+            public void onClicked() {
+                Intent intent = new Intent(SettingActivity.this, SettingChatActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void onSettingNotificationSetup() {
@@ -103,12 +112,14 @@ public class SettingActivity extends AppCompatActivity {
     private void onSettingHelpSetup() {
         mItemViewHelp.setType(SettingItemType.HELP);
     }
+
     private void onSettingInviteSetup() {
-        mSettingInvite.setIcon(ResourcesCompat.getDrawable(getResources(),R.drawable.ic_friend,getTheme()));
+        mSettingInvite.setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_friend, getTheme()));
         mSettingInvite.setTitle(getString(R.string.setting_invite));
     }
-    private void onSettingMetaSetup(){
-        mSettingMeta.setTvTitle(getString(R.string.meta_title) );
+
+    private void onSettingMetaSetup() {
+        mSettingMeta.setTvTitle(getString(R.string.meta_title));
         mSettingMeta.setTvDescription(getString(R.string.meta_descrpiton));
     }
 

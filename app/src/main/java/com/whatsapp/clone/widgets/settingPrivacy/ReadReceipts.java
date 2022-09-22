@@ -41,14 +41,14 @@ public class ReadReceipts extends LinearLayoutCompat {
         scSwitch = mView.findViewById(R.id.scReceipts);
     }
     public void initWidgets(){
-        SetTitle(mContext.getString(R.string.read_receipts));
-        SetDescription(mContext.getString(R.string.read_receipts_description));
+        setTitle(mContext.getString(R.string.read_receipts));
+        setDescription(mContext.getString(R.string.read_receipts_description));
     }
-    public void SetTitle(String title) {
+    public void setTitle(String title) {
         tvTitle.setText(title);
     }
 
-    public void SetDescription(String description) {
+    public void setDescription(String description) {
         tvDescription.setText(description);
     }
 }

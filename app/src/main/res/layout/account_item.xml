@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:textColor="@color/black"
         android:layout_marginStart="@dimen/dp20"
-        android:textSize="@dimen/sp15" />
+        android:textSize="@dimen/sp16" />
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>

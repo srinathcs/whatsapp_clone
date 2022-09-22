@@ -39,11 +39,11 @@ public class PrivacyItemView extends LinearLayoutCompat {
         tvDescription = mView.findViewById(R.id.tvDescription);
     }
 
-    public void setTvTitle(String title) {
+    public void setTitle(String title) {
         tvTitle.setText(title);
     }
 
-    public void setTvDescription(String description) {
+    public void setDescription(String description) {
         tvDescription.setText(description);
     }
 
@@ -77,42 +77,42 @@ public class PrivacyItemView extends LinearLayoutCompat {
     }
 
     private void onLastSeenSetup() {
-        setTvTitle(getContext().getString(R.string.last_seen));
-        setTvDescription(getContext().getString(R.string.my_contact));
+        setTitle(getContext().getString(R.string.last_seen));
+        setDescription(getContext().getString(R.string.my_contact));
     }
 
     private void onProfilePhotoSetup() {
-        setTvTitle(getContext().getString(R.string.profile_photo));
-        setTvDescription(getContext().getString(R.string.my_contact));
+        setTitle(getContext().getString(R.string.profile_photo));
+        setDescription(getContext().getString(R.string.my_contact));
     }
 
     private void onAboutSetup() {
-        setTvTitle(getContext().getString(R.string.about));
-        setTvDescription(getContext().getString(R.string.my_contact));
+        setTitle(getContext().getString(R.string.about));
+        setDescription(getContext().getString(R.string.my_contact));
     }
 
     private void onStatusSetup() {
-        setTvTitle(getContext().getString(R.string.status));
-        setTvDescription(getContext().getString(R.string.status_contacts));
+        setTitle(getContext().getString(R.string.status));
+        setDescription(getContext().getString(R.string.status_contacts));
     }
 
     private void onGroupSetup() {
-        setTvTitle(getContext().getString(R.string.groups));
-        setTvDescription(getContext().getString(R.string.grp_description));
+        setTitle(getContext().getString(R.string.groups));
+        setDescription(getContext().getString(R.string.grp_description));
     }
 
     private void onLiveLocationSetup() {
-        setTvTitle(getContext().getString(R.string.live_location));
-        setTvDescription(getContext().getString(R.string.location_description));
+        setTitle(getContext().getString(R.string.live_location));
+        setDescription(getContext().getString(R.string.location_description));
     }
 
     private void onBlockedContactSetup() {
-        setTvTitle(getContext().getString(R.string.blocked_contacts));
-        setTvDescription(getContext().getString(R.string.block_description));
+        setTitle(getContext().getString(R.string.blocked_contacts));
+        setDescription(getContext().getString(R.string.block_description));
     }
 
     private void onFingerPrintLockSetup() {
-        setTvTitle(getContext().getString(R.string.finger_print));
-        setTvDescription(getContext().getString(R.string.finger_description));
+        setTitle(getContext().getString(R.string.finger_print));
+        setDescription(getContext().getString(R.string.finger_description));
     }
 }
