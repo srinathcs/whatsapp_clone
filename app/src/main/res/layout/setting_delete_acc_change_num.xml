@@ -8,7 +8,8 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginTop="@dimen/dp20"
-        android:background="@color/gray_25" />
+        android:layout_marginStart="50dp"
+        android:background="@color/gray_85" />
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
@@ -18,7 +19,9 @@
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/ivIcon"
             android:layout_width="@dimen/dp30"
+            android:layout_marginStart="@dimen/dp20"
             android:src="@drawable/ic_change_num"
+            android:layout_marginTop="@dimen/dp10"
             android:layout_height="@dimen/dp30" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -26,17 +29,20 @@
             android:text="@string/deleteAccChangeNum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp16"
+            android:layout_marginTop="@dimen/dp10"
             android:layout_marginStart="@dimen/dp20" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="@dimen/dp160"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/dp40"
         android:id="@+id/btChangeNum"
-        android:layout_marginStart="@dimen/dp40"
+        android:layout_marginStart="@dimen/dp80"
         android:layout_marginTop="@dimen/dp15"
-        android:background="@color/green"
+        android:background="@drawable/round_button"
         android:text="@string/btDeleteAcc"
         android:textColor="@color/white" />
 
@@ -44,6 +50,6 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginTop="@dimen/dp20"
-        android:background="@color/gray_25" />
+        android:background="@color/gray_85" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

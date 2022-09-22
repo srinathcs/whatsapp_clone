@@ -8,14 +8,24 @@
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvTitle"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"/>
 
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/etCountry"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/etCountry"
-        android:text="@string/etTextCountry" />
+        android:layout_marginTop="20dp"
+        android:textAlignment="textStart"
+        android:hint="@string/etCountry">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etCountry"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="@dimen/dp5"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="@string/etTextCountry" />
+    </com.google.android.material.textfield.TextInputLayout>
 
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -41,18 +51,17 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp10"
             android:layout_weight="3"
-            android:hint="@string/etPhoneNum"
+            android:text="@string/etPhoneNum"
             android:inputType="phone" />
-
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btDeleteAcc"
         android:layout_width="@dimen/dp180"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/dp40"
         android:layout_marginTop="@dimen/dp20"
-        android:background="@color/red"
+        android:background="@drawable/rounded_button_red"
         android:text="@string/btText"
         android:textColor="@color/white" />
 
