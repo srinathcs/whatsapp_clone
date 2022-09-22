@@ -35,6 +35,7 @@ public class SettingChatActivity extends AppCompatActivity {
         mChatSetting = findViewById(R.id.chatSetting);
         mChatSettingArchived = findViewById(R.id.chatArchived);
     }
+
     private void onActionbarConfig() {
         actionBar = getSupportActionBar();
         ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#008069"));
@@ -46,6 +47,7 @@ public class SettingChatActivity extends AppCompatActivity {
             window.setStatusBarColor(this.getResources().getColor(R.color.green));
         }
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {

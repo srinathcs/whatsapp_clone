@@ -17,7 +17,7 @@ import androidx.cardview.widget.CardView;
 
 import com.whatsapp.clone.R;
 
-public class SettingChangeNumCardActivity extends AppCompatActivity {
+public class sSettingChangeNumCardActivity extends AppCompatActivity {
     CardView cvChangeNum;
     AppCompatTextView tvCardTitle;
     AppCompatButton btCard;

@@ -14,7 +14,7 @@ import androidx.core.content.res.ResourcesCompat;
 
 import com.whatsapp.clone.R;
 import com.whatsapp.clone.widgets.accountItemView.AccountItemView;
-import com.whatsapp.clone.presentation.chatSettingCardTheme.ChatSettingTheme;
+import com.whatsapp.clone.presentation.chatSettingCardTheme.ChatSettingThemeActivity;
 import com.whatsapp.clone.widgets.settingItemView.ui.SettingItemView;
 
 public class ChatSettingDisplay extends LinearLayoutCompat {
@@ -44,6 +44,7 @@ public class ChatSettingDisplay extends LinearLayoutCompat {
         mAccountItemView=mView.findViewById(R.id.chatWallpaper);
         tvTitle=mView.findViewById(R.id.tvTitle);
     }
+
     private void initWidget(){
         setTitle("Display");
         mSettingItemView.setTitle("Theme");
@@ -51,7 +52,7 @@ public class ChatSettingDisplay extends LinearLayoutCompat {
         mSettingItemView.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ChatSettingDisplay.this, ChatSettingTheme.class);
+                Intent intent = new Intent(ChatSettingDisplay.this, ChatSettingThemeActivity.class);
                 startActivity(intent);
             }
         });
@@ -59,6 +60,7 @@ public class ChatSettingDisplay extends LinearLayoutCompat {
         mAccountItemView.setTitle("Wallpaper");
         mAccountItemView.setIcon(ResourcesCompat.getDrawable(getResources(),R.drawable.ic_wallpaper, mContext.getTheme()));
     }
+
     public void setTitle(String title){
         tvTitle.setText(title);
     }

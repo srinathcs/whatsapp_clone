@@ -56,7 +56,6 @@
 
         <activity android:name=".presentation.settingChat.SettingChatActivity" />
 
-
     </application>
 
 </manifest>

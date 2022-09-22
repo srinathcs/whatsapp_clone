@@ -15,7 +15,7 @@ import androidx.appcompat.widget.AppCompatTextView;
 import com.whatsapp.clone.R;
 import com.whatsapp.clone.widgets.settingPrivacyLastSeen.SettingPrivacyLastSeen;
 
-public class ChatSettingTheme extends AppCompatActivity {
+public class ChatSettingThemeActivity extends AppCompatActivity {
     AppCompatTextView tvTitle;
     SettingPrivacyLastSeen mSettingPrivacySystem,mSettingPrivacyLight,mSettingPrivacyDark;
 
