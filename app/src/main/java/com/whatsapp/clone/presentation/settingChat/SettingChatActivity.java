@@ -6,14 +6,15 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 import android.view.Window;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 
 import com.whatsapp.clone.R;
+import com.whatsapp.clone.presentation.chatSettingCardTheme.ChatSettingThemeFragment;
 import com.whatsapp.clone.presentation.settingWallpaper.SettingWallpaperActivity;
 import com.whatsapp.clone.widgets.accountItemView.AccountItemView;
 import com.whatsapp.clone.widgets.chatSettingArchived.ChatSettingArchived;
@@ -21,7 +22,6 @@ import com.whatsapp.clone.widgets.chatSettingDisplay.ChatSettingDisplay;
 import com.whatsapp.clone.widgets.chatSettingItem.ChatSetting;
 import com.whatsapp.clone.widgets.settingItemView.listener.ItemClickListener;
 import com.whatsapp.clone.widgets.settingItemView.ui.SettingItemView;
-import com.whatsapp.clone.widgets.settingchatcarddialog.CardDialog;
 
 public class SettingChatActivity extends AppCompatActivity {
     ActionBar actionBar;
@@ -70,9 +70,15 @@ public class SettingChatActivity extends AppCompatActivity {
         });
     }
 
-    private void onPopup() {
+    /*private void onPopup() {
         CardDialog dialogFragment = new CardDialog();
         dialogFragment.show(getSupportFragmentManager(), "example");
+    }*/
+
+    private  void onPopup(){
+        ChatSettingThemeFragment chatSettingTheme = new ChatSettingThemeFragment();
+        chatSettingTheme.show(getSupportFragmentManager(),"example");
+
     }
 
     private void onWallpaperSetup() {

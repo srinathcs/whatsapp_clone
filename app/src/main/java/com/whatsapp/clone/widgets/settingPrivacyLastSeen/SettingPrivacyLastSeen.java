@@ -14,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatRadioButton;
 import androidx.appcompat.widget.LinearLayoutCompat;
+
 import com.whatsapp.clone.R;
 import com.whatsapp.clone.widgets.settingPrivacyLastSeen.ui.utils.LastSeenItem;
 
@@ -40,11 +41,13 @@ public class SettingPrivacyLastSeen extends LinearLayoutCompat {
         View mView = inflater.inflate(R.layout.privacy_lastseen, this, true);
         mRbLastSeen = mView.findViewById(R.id.rbLastSeen);
     }
-    public void unSelectRadioButton(){
+
+    public void unSelectRadioButton() {
         mRbLastSeen.setChecked(false);
 
     }
-    public void setRadioButtonListener(CompoundButton.OnCheckedChangeListener mListener){
+
+    public void setRadioButtonListener(CompoundButton.OnCheckedChangeListener mListener) {
         mRbLastSeen.setOnCheckedChangeListener(mListener);
     }
 
@@ -67,7 +70,7 @@ public class SettingPrivacyLastSeen extends LinearLayoutCompat {
             case NOBODY:
                 onNobodySetup();
                 break;
-            case  ONLY_SHARE_WITH:
+            case ONLY_SHARE_WITH:
                 onOnlyShareSetup();
                 break;
             case HOURS:
@@ -83,13 +86,13 @@ public class SettingPrivacyLastSeen extends LinearLayoutCompat {
                 onOff();
                 break;
             case SYSTEM_DEFAULT:
-                onSystemDefault();
+                onSystemDefaultSetup();
                 break;
             case LIGHT:
-                onLight();
+                onLightSetup();
                 break;
             case DARK:
-                onDark();
+                onDarkSetup();
                 break;
         }
     }
@@ -109,28 +112,33 @@ public class SettingPrivacyLastSeen extends LinearLayoutCompat {
     public void onNobodySetup() {
         setTitle(getContext().getString(R.string.rbNobody));
     }
-    public void onOnlyShareSetup(){
+
+    public void onOnlyShareSetup() {
         setTitle(getContext().getString(R.string.rbOnlyShare));
     }
-    public void onHourSetup(){
+
+    public void onHourSetup() {
         setTitle(getContext().getString(R.string.rbhours24));
     }
-    public void onDays(){
+
+    public void onDays() {
         setTitle((getContext().getString(R.string.rb7days)));
     }
-    public void onDay(){
+
+    public void onDay() {
         setTitle(getContext().getString(R.string.rbdays90));
     }
-    public void onOff(){
+
+    public void onOff() {
         setTitle(getContext().getString(R.string.rboff));
     }
-    public  void onSystemDefault(){
-        setTitle("System default");
+    public void onSystemDefaultSetup(){
+        setTitle(getContext().getString(R.string.chatSystemTheme));
     }
-    public void onLight(){
-        setTitle("Light");
+    public void onLightSetup(){
+        setTitle(getContext().getString(R.string.chatLightTheme));
     }
-    public void onDark(){
-        setTitle("Dark");
+    public void onDarkSetup(){
+        setTitle(getContext().getString(R.string.chatDarkTheme));
     }
 }

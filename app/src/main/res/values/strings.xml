@@ -129,6 +129,9 @@
     <string name="chatOkBt">ok</string>
     <string name="chat_wallpaper"><![CDATA[To change your wallpaper foe dark theme,turn on dark theme form Setting > chat > Theme.]]></string>
     <string name="titleTheme">Light Theme Wallpaper</string>
+    <string name="chatSystemTheme">System default</string>
+    <string name="chatLightTheme">Light</string>
+    <string name="chatDarkTheme">Dark</string>
 
 
 </resources>
