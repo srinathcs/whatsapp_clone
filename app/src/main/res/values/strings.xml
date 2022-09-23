@@ -124,6 +124,9 @@
     <string name="etTextCountry">India</string>
     <string name="tvDltTitle">To delete your account, confirm your country code and enter your phone number.</string>
     <string name="titleDeleteMyAcc">Delete my account</string>
+    <string name="chatTitle">Chats</string>
+    <string name="chatBtCancel">CANCEL</string>
+    <string name="chatOkBt">ok</string>
 
 
 </resources>

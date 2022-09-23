@@ -54,6 +54,7 @@
 
         <activity android:name=".presentation.settingDeleteMyAcc.DeleteMyAccActivity" />
 
+        <activity android:name=".presentation.settingChat.SettingChatActivity" />
 
     </application>
 

@@ -82,6 +82,15 @@ public class SettingPrivacyLastSeen extends LinearLayoutCompat {
             case OFF:
                 onOff();
                 break;
+            case SYSTEM_DEFAULT:
+                onSystemDefault();
+                break;
+            case LIGHT:
+                onLight();
+                break;
+            case DARK:
+                onDark();
+                break;
         }
     }
 
@@ -114,5 +123,14 @@ public class SettingPrivacyLastSeen extends LinearLayoutCompat {
     }
     public void onOff(){
         setTitle(getContext().getString(R.string.rboff));
+    }
+    public  void onSystemDefault(){
+        setTitle("System default");
+    }
+    public void onLight(){
+        setTitle("Light");
+    }
+    public void onDark(){
+        setTitle("Dark");
     }
 }

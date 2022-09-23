@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp15"
+        android:textStyle="bold" />
+
+    <com.whatsapp.clone.widgets.settingPrivacy.ReadReceipts
+        android:id="@+id/chatSettingSend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp60" />
+
+    <com.whatsapp.clone.widgets.settingPrivacy.ReadReceipts
+        android:id="@+id/chatSettingMedia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp60" />
+
+    <com.whatsapp.clone.widgets.settingPrivacy.PrivacyItemView
+        android:id="@+id/chatFont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp60"
+        android:layout_marginTop="@dimen/dp10" />
+</androidx.appcompat.widget.LinearLayoutCompat>

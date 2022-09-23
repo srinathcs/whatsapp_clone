@@ -31,9 +31,10 @@ public class PrivacyFingerPrintActivity extends AppCompatActivity {
         mReadReceipts=findViewById(R.id.fingerPrint);
     }
     private void initWidget() {
-        mReadReceipts.SetTitle(getString(R.string.fingerprintTitle));
-        mReadReceipts.SetDescription(getString(R.string.fingerprintDescription));
+        mReadReceipts.setTitle(getString(R.string.fingerprintTitle));
+        mReadReceipts.setDescription(getString(R.string.fingerprintDescription));
     }
+
     private void onActionBarConfig(){
         actionBar = getSupportActionBar();
         ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#008069"));
@@ -41,6 +42,7 @@ public class PrivacyFingerPrintActivity extends AppCompatActivity {
         actionBar.setTitle(R.string.fingerprintTitlebar);
         actionBar.setDisplayHomeAsUpEnabled(true);
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {

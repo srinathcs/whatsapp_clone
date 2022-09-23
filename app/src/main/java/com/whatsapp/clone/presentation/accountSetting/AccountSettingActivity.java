@@ -29,6 +29,7 @@ import com.whatsapp.clone.widgets.settingItemView.listener.ItemClickListener;
 public class AccountSettingActivity extends AppCompatActivity {
     ActionBar actionBar;
     private AccountItemView mItemViewPrivacy, mItemViewSecurity, mItemViewTwoStep, mItemViewChangeNum, mItemViewReqAccInfo, mItemViewDeleteAcc;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,11 +62,12 @@ public class AccountSettingActivity extends AppCompatActivity {
         actionBar.setBackgroundDrawable(colorDrawable);
         actionBar.setTitle(R.string.acc_setting);
         actionBar.setDisplayHomeAsUpEnabled(true);
-        if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP){
-            Window window= this.getWindow();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = this.getWindow();
             window.setStatusBarColor(this.getResources().getColor(R.color.green));
         }
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -82,7 +84,7 @@ public class AccountSettingActivity extends AppCompatActivity {
         mItemViewPrivacy.setItemClickListener(new ItemClickListener() {
             @Override
             public void onClicked() {
-                Intent intent = new Intent(AccountSettingActivity.this,PrivacySettingActivity.class);
+                Intent intent = new Intent(AccountSettingActivity.this, PrivacySettingActivity.class);
                 startActivity(intent);
             }
         });
@@ -94,7 +96,7 @@ public class AccountSettingActivity extends AppCompatActivity {
         mItemViewSecurity.setItemClickListener(new ItemClickListener() {
             @Override
             public void onClicked() {
-                Intent intent = new Intent(AccountSettingActivity.this,SecuritySettingActivity.class);
+                Intent intent = new Intent(AccountSettingActivity.this, SecuritySettingActivity.class);
                 startActivity(intent);
             }
         });

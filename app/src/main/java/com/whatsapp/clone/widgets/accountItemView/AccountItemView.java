@@ -6,7 +6,9 @@ import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+
 import androidx.appcompat.app.ActionBar;
+
 import android.view.View;
 
 import androidx.annotation.NonNull;
@@ -47,13 +49,14 @@ public class AccountItemView extends LinearLayoutCompat {
         View mView = inflater.inflate(R.layout.account_item, this, true);
         ivASIcon = mView.findViewById(R.id.ivIcon);
         tvASTitle = mView.findViewById(R.id.tvTitle);
-        llParent= mView.findViewById(R.id.llParent);
+        llParent = mView.findViewById(R.id.llParent);
     }
-    private void setupEvent(){
+
+    private void setupEvent() {
         llParent.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mItemClickListener!=null){
+                if (mItemClickListener != null) {
                     mItemClickListener.onClicked();
                 }
             }
@@ -64,16 +67,16 @@ public class AccountItemView extends LinearLayoutCompat {
         ivASIcon.setImageDrawable(drawable);
     }
 
-    public void setTitle(String title){
+    public void setTitle(String title) {
         tvASTitle.setText(title);
     }
 
-    public void setItemClickListener(ItemClickListener listener){
+    public void setItemClickListener(ItemClickListener listener) {
         this.mItemClickListener = listener;
     }
 
-    public void setItemInfo(AccountItem type){
-        switch(type){
+    public void setItemInfo(AccountItem type) {
+        switch (type) {
             case PRIVACY:
                 onPrivacySetup();
                 break;
@@ -99,32 +102,38 @@ public class AccountItemView extends LinearLayoutCompat {
         }
     }
 
-    public void onPrivacySetup(){
+    public void onPrivacySetup() {
         setTitle(getContext().getString(R.string.title_privacy));
-        setIcon(ResourcesCompat.getDrawable(getResources(),R.drawable.ic_lock,mContext.getTheme()));
+        setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_lock, mContext.getTheme()));
     }
+
     private void onSecuritySetup() {
         setTitle(getContext().getString(R.string.title_security));
-        setIcon(ResourcesCompat.getDrawable(getResources(),R.drawable.ic_sheild,mContext.getTheme()));
+        setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_sheild, mContext.getTheme()));
     }
-    private  void onTwoStepVerification(){
+
+    private void onTwoStepVerification() {
         setTitle(getContext().getString(R.string.title_verification));
-        setIcon(ResourcesCompat.getDrawable(getResources(),R.drawable.ic_two_step,mContext.getTheme()));
+        setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_two_step, mContext.getTheme()));
     }
-    private void onChangeNumber(){
+
+    private void onChangeNumber() {
         setTitle(getContext().getString(R.string.title_change_num));
-        setIcon(ResourcesCompat.getDrawable(getResources(),R.drawable.ic_change_num,mContext.getTheme()));
+        setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_change_num, mContext.getTheme()));
     }
-    private  void onRequestAccountInfo(){
+
+    private void onRequestAccountInfo() {
         setTitle(getContext().getString(R.string.title_reqAccInfo));
-        setIcon(ResourcesCompat.getDrawable(getResources(),R.drawable.ic_doucment,mContext.getTheme()));
+        setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_doucment, mContext.getTheme()));
     }
-    private void onDeleteMyAccount(){
+
+    private void onDeleteMyAccount() {
         setTitle(getContext().getString(R.string.title_delete));
-        setIcon(ResourcesCompat.getDrawable(getResources(),R.drawable.ic_dlt,mContext.getTheme()));
+        setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_dlt, mContext.getTheme()));
     }
-    public void onRequestSentSetup () {
+
+    public void onRequestSentSetup() {
         setTitle(getContext().getString(R.string.reqAccItem));
-        setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_doucment,mContext.getTheme()));
+        setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_doucment, mContext.getTheme()));
     }
 }
