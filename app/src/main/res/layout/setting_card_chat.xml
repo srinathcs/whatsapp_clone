@@ -2,51 +2,73 @@
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:orientation="vertical">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvcardChat"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:textSize="18sp" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvChangTheme"
+        android:layout_width="380dp"
+        android:layout_height="@dimen/dp240"
+        android:background="@color/white">
 
-    <com.whatsapp.clone.widgets.settingPrivacyLastSeen.SettingPrivacyLastSeen
-        android:id="@+id/chatSystem"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCardChat"
+            android:layout_marginHorizontal="@dimen/dp20"
+            android:layout_marginBottom="@dimen/dp40"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose theme"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-    <com.whatsapp.clone.widgets.settingPrivacyLastSeen.SettingPrivacyLastSeen
-        android:id="@+id/chatLight"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <com.whatsapp.clone.widgets.settingPrivacyLastSeen.SettingPrivacyLastSeen
+            android:id="@+id/chatSystem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp40" />
 
-    <com.whatsapp.clone.widgets.settingPrivacyLastSeen.SettingPrivacyLastSeen
-        android:id="@+id/chatDark"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="230dp"
-        android:orientation="horizontal">
+        <com.whatsapp.clone.widgets.settingPrivacyLastSeen.SettingPrivacyLastSeen
+            android:id="@+id/chatLight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp80" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btCancel"
-        style="@style/Widget.MaterialComponents.Button.TextButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/chatBtCancel"
-        android:textColor="@color/green" />
+        <com.whatsapp.clone.widgets.settingPrivacyLastSeen.SettingPrivacyLastSeen
+            android:id="@+id/chatDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp120" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btOk"
-        style="@style/Widget.MaterialComponents.Button.TextButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/chatOkBt"
-        android:textColor="@color/green" />
-    </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="220dp"
+            android:paddingRight="@dimen/dp10"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btCancel"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp180"
+                android:text="@string/chatBtCancel"
+                android:textColor="@color/green" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btOk"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp180"
+                android:text="@string/chatOkBt"
+                android:textColor="@color/green" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.cardview.widget.CardView>
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>

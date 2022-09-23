@@ -57,6 +57,9 @@
     <dimen name="dp475">475dp</dimen>
     <dimen name="dp430">430dp</dimen>
     <dimen name="dp1">1dp</dimen>
+    <dimen name="dp250">250dp</dimen>
+    <dimen name="dp240">240dp</dimen>
+    <dimen name="dp220">220dp</dimen>
 
 
 </resources>
