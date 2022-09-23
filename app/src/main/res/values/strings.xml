@@ -127,6 +127,8 @@
     <string name="chatTitle">Chats</string>
     <string name="chatBtCancel">CANCEL</string>
     <string name="chatOkBt">ok</string>
+    <string name="chat_wallpaper"><![CDATA[To change your wallpaper foe dark theme,turn on dark theme form Setting > chat > Theme.]]></string>
+    <string name="titleTheme">Light Theme Wallpaper</string>
 
 
 </resources>

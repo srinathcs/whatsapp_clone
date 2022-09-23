@@ -1,6 +1,7 @@
 package com.whatsapp.clone.widgets.chatSettingDisplay;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,7 @@ import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.core.content.res.ResourcesCompat;
 
 import com.whatsapp.clone.R;
+import com.whatsapp.clone.presentation.settingWallpaper.SettingWallpaperActivity;
 import com.whatsapp.clone.widgets.accountItemView.AccountItemView;
 import com.whatsapp.clone.widgets.settingItemView.listener.ItemClickListener;
 import com.whatsapp.clone.widgets.settingItemView.ui.SettingItemView;
@@ -63,6 +65,7 @@ public class ChatSettingDisplay extends LinearLayoutCompat {
                 }
             }
         });
+
     }
 
     public void setTitle(String title) {

@@ -1,6 +1,6 @@
 package com.whatsapp.clone.presentation.settingChat;
 
-import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
@@ -12,10 +12,10 @@ import android.view.Window;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatButton;
-import androidx.fragment.app.DialogFragment;
 
 import com.whatsapp.clone.R;
+import com.whatsapp.clone.presentation.settingWallpaper.SettingWallpaperActivity;
+import com.whatsapp.clone.widgets.accountItemView.AccountItemView;
 import com.whatsapp.clone.widgets.chatSettingArchived.ChatSettingArchived;
 import com.whatsapp.clone.widgets.chatSettingDisplay.ChatSettingDisplay;
 import com.whatsapp.clone.widgets.chatSettingItem.ChatSetting;
@@ -26,7 +26,8 @@ import com.whatsapp.clone.widgets.settingchatcarddialog.CardDialog;
 public class SettingChatActivity extends AppCompatActivity {
     ActionBar actionBar;
     ChatSettingDisplay mChatSettingDisplay;
-    SettingItemView mSettingItemView;
+    SettingItemView chatTheme;
+    AccountItemView chatWallpaper;
     ChatSetting mChatSetting;
     ChatSettingArchived mChatSettingArchived;
 
@@ -37,10 +38,12 @@ public class SettingChatActivity extends AppCompatActivity {
         initView();
         onActionbarConfig();
         initWidget();
+        onWallpaperSetup();
     }
 
     private void initView() {
-        mSettingItemView = findViewById(R.id.chatTheme);
+        chatTheme = findViewById(R.id.chatTheme);
+        chatWallpaper = findViewById(R.id.chatWallpaper);
         mChatSettingDisplay = findViewById(R.id.chatDisplay);
         mChatSetting = findViewById(R.id.chatSetting);
         mChatSettingArchived = findViewById(R.id.chatArchived);
@@ -59,7 +62,7 @@ public class SettingChatActivity extends AppCompatActivity {
     }
 
     private void initWidget() {
-        mSettingItemView.setItemClickListener(new ItemClickListener() {
+        chatTheme.setItemClickListener(new ItemClickListener() {
             @Override
             public void onClicked() {
                 onPopup();
@@ -67,9 +70,19 @@ public class SettingChatActivity extends AppCompatActivity {
         });
     }
 
-    private void onPopup(){
+    private void onPopup() {
         CardDialog dialogFragment = new CardDialog();
         dialogFragment.show(getSupportFragmentManager(), "example");
+    }
+
+    private void onWallpaperSetup() {
+        chatWallpaper.setItemClickListener(new ItemClickListener() {
+            @Override
+            public void onClicked() {
+                Intent intent = new Intent(SettingChatActivity.this,SettingWallpaperActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
