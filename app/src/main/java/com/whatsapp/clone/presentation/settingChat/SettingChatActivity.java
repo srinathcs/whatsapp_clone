@@ -11,10 +11,9 @@ import android.view.Window;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatButton;
 
 import com.whatsapp.clone.R;
-import com.whatsapp.clone.presentation.chatLanguage.SettingChatLanguageFragment;
+import com.whatsapp.clone.presentation.chatLanguageFragment.SettingChatLanguageFragment;
 import com.whatsapp.clone.presentation.chatSettingCardTheme.ChatSettingThemeFragment;
 import com.whatsapp.clone.presentation.settingChatFontFragment.SettingChatFontFragment;
 import com.whatsapp.clone.presentation.settingWallpaper.SettingWallpaperActivity;
