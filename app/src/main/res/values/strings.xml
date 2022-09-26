@@ -138,6 +138,17 @@
     <string name="fontSizeTtile">Font size</string>
     <string name="fontSize">Font Size</string>
     <string name="fontDescription">Medium</string>
+    <string name="langPhone">Phone,s language (English)</string>
+    <string name="langOne">हिन्दी</string>
+    <string name="langTwo">मराठी</string>
+    <string name="langThree">ગુજરાતી</string>
+    <string name="langFour">தமிழ்</string>
+    <string name="langFive">বাংলা</string>
+    <string name="langSix">తెలుగు</string>
+    <string name="langSeven">ಕನ್ನಡ</string>
+    <string name="langEight">മലയാളം</string>
+    <string name="langNine">ਪੰਜਾਬੀ</string>
+    <string name="langTen">اردو</string>
 
 
 </resources>

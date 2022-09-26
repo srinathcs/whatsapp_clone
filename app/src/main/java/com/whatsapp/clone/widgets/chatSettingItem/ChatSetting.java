@@ -22,7 +22,6 @@ public class ChatSetting extends LinearLayoutCompat {
     PrivacyItemView mFontSize;
     AppCompatTextView tvTitle;
     LinearLayoutCompat llParent;
-    ItemClickListener mItemClickListener;
 
     public ChatSetting(@NonNull Context mContext) {
         this(mContext, null);

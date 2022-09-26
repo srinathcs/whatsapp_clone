@@ -1,15 +1,12 @@
 package com.whatsapp.clone.widgets.settingPrivacyLastSeen;
 
 import android.content.Context;
-import android.content.res.ColorStateList;
-import android.graphics.Color;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.CompoundButton;
 
 
-import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatRadioButton;
@@ -103,6 +100,39 @@ public class SettingPrivacyLastSeen extends LinearLayoutCompat {
             case LARGE:
                 onLargeSetup();
                 break;
+            case PHONES_LANGUAGE:
+                onPhoneSetup();
+                break;
+            case LANGUAGE_ONE:
+                onLanguageOneSetup();
+                break;
+            case LANGUAGE_TWO:
+                onLanguageTwoSetup();
+                break;
+            case LANGUAGE_THREE:
+                onLanguageThreeSetup();
+                break;
+            case LANGUAGE_FOUR:
+                onLanguageFourSetup();
+                break;
+            case LANGUAGE_FIVE:
+                onLanguageFiveSetup();
+                break;
+            case LANGUAGE_SIX:
+                onLanguageSixSetup();
+                break;
+            case LANGUAGE_SEVEN:
+                onLanguageSevenSetup();
+                break;
+            case LANGUAGE_EIGHT:
+                onLanguageEightSetup();
+                break;
+            case LANGUAGE_NINE:
+                onLanguageNineSetup();
+                break;
+            case LANGUAGE_TEN:
+                onLanguageTenSetup();
+                break;
         }
     }
 
@@ -158,5 +188,38 @@ public class SettingPrivacyLastSeen extends LinearLayoutCompat {
     }
     public void onLargeSetup(){
         setTitle(getContext().getString(R.string.fontLarge));
+    }
+    public void onPhoneSetup(){
+        setTitle(getContext().getString(R.string.langPhone));
+    }
+    public void onLanguageOneSetup(){
+        setTitle(getContext().getString(R.string.langOne));
+    }
+    public void onLanguageTwoSetup(){
+        setTitle(getContext().getString(R.string.langTwo));
+    }
+    public void onLanguageThreeSetup(){
+        setTitle(getContext().getString(R.string.langThree));
+    }
+    public void onLanguageFourSetup(){
+        setTitle(getContext().getString(R.string.langFour));
+    }
+    public void onLanguageFiveSetup(){
+        setTitle(getContext().getString(R.string.langFive));
+    }
+    public void onLanguageSixSetup(){
+        setTitle(getContext().getString(R.string.langSix));
+    }
+    public void onLanguageSevenSetup(){
+        setTitle(getContext().getString(R.string.langSeven));
+    }
+    public void onLanguageEightSetup(){
+        setTitle(getContext().getString(R.string.langEight));
+    }
+    public void onLanguageNineSetup(){
+        setTitle(getContext().getString(R.string.langNine));
+    }
+    public void onLanguageTenSetup(){
+        setTitle(getContext().getString(R.string.langTen));
     }
 }

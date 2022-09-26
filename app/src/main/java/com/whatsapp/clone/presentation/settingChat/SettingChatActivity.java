@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
 import com.whatsapp.clone.R;
+import com.whatsapp.clone.presentation.chatLanguage.SettingChatLanguageFragment;
 import com.whatsapp.clone.presentation.chatSettingCardTheme.ChatSettingThemeFragment;
 import com.whatsapp.clone.presentation.settingChatFontFragment.SettingChatFontFragment;
 import com.whatsapp.clone.presentation.settingWallpaper.SettingWallpaperActivity;
@@ -28,7 +29,7 @@ import com.whatsapp.clone.widgets.settingPrivacy.PrivacyItemView;
 public class SettingChatActivity extends AppCompatActivity {
     ActionBar actionBar;
     ChatSettingDisplay mChatSettingDisplay;
-    SettingItemView chatTheme;
+    SettingItemView chatTheme, chatLanguage;
     AccountItemView chatWallpaper;
     ChatSetting mChatSetting;
     PrivacyItemView mFontSize;
@@ -46,10 +47,11 @@ public class SettingChatActivity extends AppCompatActivity {
     }
 
     private void initView() {
-        mFontSize =findViewById(R.id.chatFont);
+        mFontSize = findViewById(R.id.chatFont);
         chatTheme = findViewById(R.id.chatTheme);
+        chatLanguage = findViewById(R.id.chatAppLang);
         chatWallpaper = findViewById(R.id.chatWallpaper);
-        mFontSize= findViewById(R.id.chatFont);
+        mFontSize = findViewById(R.id.chatFont);
         mChatSettingDisplay = findViewById(R.id.chatDisplay);
         mChatSetting = findViewById(R.id.chatSetting);
         mChatSettingArchived = findViewById(R.id.chatArchived);
@@ -80,12 +82,23 @@ public class SettingChatActivity extends AppCompatActivity {
                 onFontPopup();
             }
         });
-
+        chatLanguage.setItemClickListener(new ItemClickListener() {
+            @Override
+            public void onClicked() {
+                onLanguageSetup();
+            }
+        });
 
     }
-    private void onFontPopup(){
+
+    private void onLanguageSetup() {
+        SettingChatLanguageFragment settingChatLanguageFragment = new SettingChatLanguageFragment();
+        settingChatLanguageFragment.show(getSupportFragmentManager(), "example");
+    }
+
+    private void onFontPopup() {
         SettingChatFontFragment chatFontFragment = new SettingChatFontFragment();
-        chatFontFragment.show(getSupportFragmentManager(),"example");
+        chatFontFragment.show(getSupportFragmentManager(), "example");
     }
 
     /*private void onPopup() {
@@ -93,9 +106,9 @@ public class SettingChatActivity extends AppCompatActivity {
         dialogFragment.show(getSupportFragmentManager(), "example");
     }*/
 
-    private  void onPopup(){
+    private void onPopup() {
         ChatSettingThemeFragment chatSettingTheme = new ChatSettingThemeFragment();
-        chatSettingTheme.show(getSupportFragmentManager(),"example");
+        chatSettingTheme.show(getSupportFragmentManager(), "example");
 
     }
 
@@ -103,7 +116,7 @@ public class SettingChatActivity extends AppCompatActivity {
         chatWallpaper.setItemClickListener(new ItemClickListener() {
             @Override
             public void onClicked() {
-                Intent intent = new Intent(SettingChatActivity.this,SettingWallpaperActivity.class);
+                Intent intent = new Intent(SettingChatActivity.this, SettingWallpaperActivity.class);
                 startActivity(intent);
             }
         });
