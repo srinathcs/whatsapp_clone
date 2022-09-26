@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.whatsapp.clone.R;
 import com.whatsapp.clone.presentation.chatLanguageFragment.SettingChatLanguageFragment;
+import com.whatsapp.clone.presentation.chatSettingBackup.ChatBackUpActivity;
 import com.whatsapp.clone.presentation.chatSettingCardTheme.ChatSettingThemeFragment;
 import com.whatsapp.clone.presentation.settingChatFontFragment.SettingChatFontFragment;
 import com.whatsapp.clone.presentation.settingWallpaper.SettingWallpaperActivity;
@@ -29,7 +30,7 @@ public class SettingChatActivity extends AppCompatActivity {
     ActionBar actionBar;
     ChatSettingDisplay mChatSettingDisplay;
     SettingItemView chatTheme, chatLanguage;
-    AccountItemView chatWallpaper;
+    AccountItemView chatWallpaper,mAccountBackUp;
     ChatSetting mChatSetting;
     PrivacyItemView mFontSize;
     ChatSettingArchived mChatSettingArchived;
@@ -46,6 +47,7 @@ public class SettingChatActivity extends AppCompatActivity {
     }
 
     private void initView() {
+        mAccountBackUp = findViewById(R.id.chatBackup);
         mFontSize = findViewById(R.id.chatFont);
         chatTheme = findViewById(R.id.chatTheme);
         chatLanguage = findViewById(R.id.chatAppLang);
@@ -85,6 +87,13 @@ public class SettingChatActivity extends AppCompatActivity {
             @Override
             public void onClicked() {
                 onLanguageSetup();
+            }
+        });
+        mAccountBackUp.setItemClickListener(new ItemClickListener() {
+            @Override
+            public void onClicked() {
+                Intent intent= new Intent(SettingChatActivity.this, ChatBackUpActivity.class);
+                startActivity(intent);
             }
         });
 

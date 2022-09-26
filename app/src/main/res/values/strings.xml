@@ -149,6 +149,18 @@
     <string name="langEight">മലയാളം</string>
     <string name="langNine">ਪੰਜਾਬੀ</string>
     <string name="langTen">اردو</string>
+    <string name="chatBackupTitle">Last Backup</string>
+    <string name="chatBackupDecription">Back up your messages and media to Google Drive. You can restore them when you reinstall WhatsApp. You message will also back up to your phone\'s internal storage</string>
+    <string name="chatEndToEndTitle">End-to-end encrypted backup</string>
+    <string name="chatEndToEndDescription">Off</string>
+    <string name="chatGoogleDriveTitle">Google Drive setting</string>
+    <string name="chatGoogleDriveDescription">Back up your chat history and media to Google Drive so if you change phones, your chat history is safe. For added security, you can protect your backup with end-to-end encryption.</string>
+    <string name="chatBackupData">Back up to using cellular</string>
+    <string name="chatBackupDescription">Never</string>
+    <string name="chatGoogleTitle">Google Account</string>
+    <string name="chatGoogleDescription">None selected</string>
+    <string name="chatBackupDataCell">Back up using cellular</string>
+    <string name="chatBackupVideos">Include videos</string>
 
 
 </resources>

@@ -19,7 +19,6 @@
 
     <com.whatsapp.clone.widgets.settingItemView.ui.SettingItemView
         android:id="@+id/sivChat"
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

@@ -39,14 +39,15 @@ public class PrivacyItemView extends LinearLayoutCompat {
         LayoutInflater inflater = LayoutInflater.from(mContext);
         View mView = inflater.inflate(R.layout.privacy_item, this, true);
         tvTitle = mView.findViewById(R.id.tvTitle);
-        llParent= mView.findViewById(R.id.llParent);
+        llParent = mView.findViewById(R.id.llParent);
         tvDescription = mView.findViewById(R.id.tvDescription);
     }
-    private void setupEvent(){
+
+    private void setupEvent() {
         llParent.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mItemClickListener!=null){
+                if (mItemClickListener != null) {
                     mItemClickListener.onClicked();
                 }
             }
@@ -62,7 +63,7 @@ public class PrivacyItemView extends LinearLayoutCompat {
         tvDescription.setText(description);
     }
 
-    public void setItemClickListener(ItemClickListener listener){
+    public void setItemClickListener(ItemClickListener listener) {
         this.mItemClickListener = listener;
     }
 
@@ -94,6 +95,12 @@ public class PrivacyItemView extends LinearLayoutCompat {
                 break;
             case FONT_SIZE:
                 onFontSizeSetup();
+                break;
+            case BACKUP_GOOGLE:
+                onBackupGoogleSetup();
+                break;
+            case GOOGLE_ACCOUNT:
+                onGoogleAccountSetup();
                 break;
         }
     }
@@ -138,8 +145,18 @@ public class PrivacyItemView extends LinearLayoutCompat {
         setDescription(getContext().getString(R.string.finger_description));
     }
 
-    private void onFontSizeSetup(){
+    private void onFontSizeSetup() {
         setTitle(getContext().getString(R.string.fontSize));
         setDescription(getContext().getString(R.string.fontDescription));
+    }
+
+    private void onBackupGoogleSetup() {
+        setTitle(getContext().getString(R.string.chatBackupData));
+        setDescription(getContext().getString(R.string.chatBackupDescription));
+    }
+
+    private void onGoogleAccountSetup() {
+        setTitle(getContext().getString(R.string.chatGoogleTitle));
+        setDescription(getContext().getString(R.string.chatGoogleDescription));
     }
 }
