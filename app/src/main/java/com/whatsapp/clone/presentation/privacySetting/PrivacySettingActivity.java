@@ -14,6 +14,7 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.LinearLayoutCompat;
 
 import com.whatsapp.clone.R;
 import com.whatsapp.clone.presentation.privacyAbout.PrivacyAboutActivity;
@@ -25,6 +26,7 @@ import com.whatsapp.clone.presentation.privacyProfilePhoto.PrivacyProfilePhotoAc
 import com.whatsapp.clone.presentation.privacySettingDefaultMessage.PrivacySettingDefaultMessageActivity;
 import com.whatsapp.clone.presentation.privacySettingReadReceipts.PrivacySettingReadReceipts;
 import com.whatsapp.clone.presentation.privacyStatus.PrivacyStatusActivity;
+import com.whatsapp.clone.widgets.settingItemView.listener.ItemClickListener;
 import com.whatsapp.clone.widgets.settingPrivacy.DisappearingMessage;
 import com.whatsapp.clone.widgets.settingPrivacy.PrivacyItemView;
 import com.whatsapp.clone.widgets.settingPrivacy.ReadReceipts;
@@ -37,6 +39,7 @@ public class PrivacySettingActivity extends AppCompatActivity {
     private ReadReceipts mReadReceipts;
     private DisappearingMessage mDisappearingMessage;
     ActionBar actionBar;
+    LinearLayoutCompat llParent;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -56,7 +59,6 @@ public class PrivacySettingActivity extends AppCompatActivity {
     }
 
     private void initView() {
-
         mPrivacyItemLastSeen = findViewById(R.id.last_seen);
         mPrivacyItemProfile = findViewById(R.id.profile_photo);
         mPrivacyItemAbout = findViewById(R.id.about);
@@ -70,19 +72,20 @@ public class PrivacySettingActivity extends AppCompatActivity {
     }
 
     private void LastSeenRedirection() {
-        mPrivacyItemLastSeen.setOnClickListener(new View.OnClickListener() {
+        mPrivacyItemLastSeen.setItemClickListener(new ItemClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClicked() {
                 Intent intent = new Intent(PrivacySettingActivity.this, PrivacyLastSeenActivity.class);
                 startActivity(intent);
             }
         });
+
     }
 
     private void ProfilePhotoRedirection() {
-        mPrivacyItemProfile.setOnClickListener(new View.OnClickListener() {
+        mPrivacyItemProfile.setItemClickListener(new ItemClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClicked() {
                 Intent intent = new Intent(PrivacySettingActivity.this, PrivacyProfilePhotoActivity.class);
                 startActivity(intent);
             }
@@ -90,9 +93,9 @@ public class PrivacySettingActivity extends AppCompatActivity {
     }
 
     private void AboutRedirection() {
-        mPrivacyItemAbout.setOnClickListener(new View.OnClickListener() {
+        mPrivacyItemAbout.setItemClickListener(new ItemClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClicked() {
                 Intent intent = new Intent(PrivacySettingActivity.this, PrivacyAboutActivity.class);
                 startActivity(intent);
             }
@@ -100,9 +103,9 @@ public class PrivacySettingActivity extends AppCompatActivity {
     }
 
     private void StatusRedirection() {
-        mPrivateItemStatus.setOnClickListener(new View.OnClickListener() {
+        mPrivateItemStatus.setItemClickListener(new ItemClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClicked() {
                 Intent intent = new Intent(PrivacySettingActivity.this, PrivacyStatusActivity.class);
                 startActivity(intent);
             }
@@ -120,9 +123,9 @@ public class PrivacySettingActivity extends AppCompatActivity {
     }
 
     private void GroupRedirection() {
-        mPrivacyItemGroups.setOnClickListener(new View.OnClickListener() {
+        mPrivacyItemGroups.setItemClickListener(new ItemClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClicked() {
                 Intent intent = new Intent(PrivacySettingActivity.this, PrivacyGroupActivity.class);
                 startActivity(intent);
             }
@@ -130,21 +133,20 @@ public class PrivacySettingActivity extends AppCompatActivity {
     }
 
     private void LiveLocationRedirection() {
-        mPrivacyItemLiveLocation.setOnClickListener(new View.OnClickListener() {
+        mPrivacyItemLiveLocation.setItemClickListener(new ItemClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClicked() {
                 Intent intent = new Intent(PrivacySettingActivity.this, PrivacyLiveLocationActivity.class);
                 startActivity(intent);
             }
         });
     }
     private void FingerPrintRedirection(){
-        mPrivacyFingerPrint.setOnClickListener(new View.OnClickListener() {
+        mPrivacyFingerPrint.setItemClickListener(new ItemClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClicked() {
                 Intent intent = new Intent(PrivacySettingActivity.this, PrivacyFingerPrintActivity.class);
                 startActivity(intent);
-
             }
         });
     }

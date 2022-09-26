@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvFontSize"
+        android:layout_width="350dp"
+        android:layout_height="@dimen/dp160">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Font size"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp10"
+            android:textColor="@color/black"/>
+
+        <com.whatsapp.clone.widgets.settingPrivacyLastSeen.SettingPrivacyLastSeen
+            android:id="@+id/fontSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp30"/>
+
+        <com.whatsapp.clone.widgets.settingPrivacyLastSeen.SettingPrivacyLastSeen
+            android:id="@+id/fontMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp70"/>
+
+        <com.whatsapp.clone.widgets.settingPrivacyLastSeen.SettingPrivacyLastSeen
+            android:id="@+id/fontLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp110"
+            />
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

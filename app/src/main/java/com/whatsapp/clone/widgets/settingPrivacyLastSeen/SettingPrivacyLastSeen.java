@@ -94,6 +94,15 @@ public class SettingPrivacyLastSeen extends LinearLayoutCompat {
             case DARK:
                 onDarkSetup();
                 break;
+            case SMALL:
+                onSmallSetup();
+                break;
+            case MEDIUM:
+                onMediumSetup();
+                break;
+            case LARGE:
+                onLargeSetup();
+                break;
         }
     }
 
@@ -140,5 +149,14 @@ public class SettingPrivacyLastSeen extends LinearLayoutCompat {
     }
     public void onDarkSetup(){
         setTitle(getContext().getString(R.string.chatDarkTheme));
+    }
+    public void onSmallSetup(){
+        setTitle(getContext().getString(R.string.fontSmall));
+    }
+    public void onMediumSetup(){
+        setTitle(getContext().getString(R.string.fontMedium));
+    }
+    public void onLargeSetup(){
+        setTitle(getContext().getString(R.string.fontLarge));
     }
 }

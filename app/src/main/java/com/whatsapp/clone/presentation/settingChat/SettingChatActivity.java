@@ -15,6 +15,7 @@ import androidx.appcompat.widget.AppCompatButton;
 
 import com.whatsapp.clone.R;
 import com.whatsapp.clone.presentation.chatSettingCardTheme.ChatSettingThemeFragment;
+import com.whatsapp.clone.presentation.settingChatFontFragment.SettingChatFontFragment;
 import com.whatsapp.clone.presentation.settingWallpaper.SettingWallpaperActivity;
 import com.whatsapp.clone.widgets.accountItemView.AccountItemView;
 import com.whatsapp.clone.widgets.chatSettingArchived.ChatSettingArchived;
@@ -22,6 +23,7 @@ import com.whatsapp.clone.widgets.chatSettingDisplay.ChatSettingDisplay;
 import com.whatsapp.clone.widgets.chatSettingItem.ChatSetting;
 import com.whatsapp.clone.widgets.settingItemView.listener.ItemClickListener;
 import com.whatsapp.clone.widgets.settingItemView.ui.SettingItemView;
+import com.whatsapp.clone.widgets.settingPrivacy.PrivacyItemView;
 
 public class SettingChatActivity extends AppCompatActivity {
     ActionBar actionBar;
@@ -29,7 +31,9 @@ public class SettingChatActivity extends AppCompatActivity {
     SettingItemView chatTheme;
     AccountItemView chatWallpaper;
     ChatSetting mChatSetting;
+    PrivacyItemView mFontSize;
     ChatSettingArchived mChatSettingArchived;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -42,8 +46,10 @@ public class SettingChatActivity extends AppCompatActivity {
     }
 
     private void initView() {
+        mFontSize =findViewById(R.id.chatFont);
         chatTheme = findViewById(R.id.chatTheme);
         chatWallpaper = findViewById(R.id.chatWallpaper);
+        mFontSize= findViewById(R.id.chatFont);
         mChatSettingDisplay = findViewById(R.id.chatDisplay);
         mChatSetting = findViewById(R.id.chatSetting);
         mChatSettingArchived = findViewById(R.id.chatArchived);
@@ -68,6 +74,18 @@ public class SettingChatActivity extends AppCompatActivity {
                 onPopup();
             }
         });
+        mFontSize.setItemClickListener(new ItemClickListener() {
+            @Override
+            public void onClicked() {
+                onFontPopup();
+            }
+        });
+
+
+    }
+    private void onFontPopup(){
+        SettingChatFontFragment chatFontFragment = new SettingChatFontFragment();
+        chatFontFragment.show(getSupportFragmentManager(),"example");
     }
 
     /*private void onPopup() {

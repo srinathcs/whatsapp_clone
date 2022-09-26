@@ -24,7 +24,6 @@ public class ChatSettingDisplay extends LinearLayoutCompat {
     SettingItemView mSettingItemView;
     AccountItemView mAccountItemView;
     AppCompatTextView tvTitle;
-    ItemClickListener mClickListener;
 
     public ChatSettingDisplay(@NonNull Context mContext) {
         this(mContext, null);
@@ -57,15 +56,6 @@ public class ChatSettingDisplay extends LinearLayoutCompat {
         mSettingItemView.setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_brightness, mContext.getTheme()));
         mAccountItemView.setTitle("Wallpaper");
         mAccountItemView.setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_wallpaper, mContext.getTheme()));
-        llParent.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (mClickListener != null) {
-                    mClickListener.onClicked();
-                }
-            }
-        });
-
     }
 
     public void setTitle(String title) {

@@ -132,6 +132,12 @@
     <string name="chatSystemTheme">System default</string>
     <string name="chatLightTheme">Light</string>
     <string name="chatDarkTheme">Dark</string>
+    <string name="fontSmall">Small</string>
+    <string name="fontMedium">Medium</string>
+    <string name="fontLarge">Large</string>
+    <string name="fontSizeTtile">Font size</string>
+    <string name="fontSize">Font Size</string>
+    <string name="fontDescription">Medium</string>
 
 
 </resources>

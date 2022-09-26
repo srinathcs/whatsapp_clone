@@ -11,14 +11,18 @@ import androidx.appcompat.widget.AppCompatTextView;
 import androidx.appcompat.widget.LinearLayoutCompat;
 
 import com.whatsapp.clone.R;
+import com.whatsapp.clone.widgets.settingItemView.listener.ItemClickListener;
 import com.whatsapp.clone.widgets.settingPrivacy.PrivacyItemView;
 import com.whatsapp.clone.widgets.settingPrivacy.ReadReceipts;
+import com.whatsapp.clone.widgets.settingPrivacy.ui.utils.PrivacyItem;
 
 public class ChatSetting extends LinearLayoutCompat {
     Context mContext;
     ReadReceipts mReadReceiptsSend, mReadReceiptsMedia;
-    PrivacyItemView mPrivacyItemView;
+    PrivacyItemView mFontSize;
     AppCompatTextView tvTitle;
+    LinearLayoutCompat llParent;
+    ItemClickListener mItemClickListener;
 
     public ChatSetting(@NonNull Context mContext) {
         this(mContext, null);
@@ -38,9 +42,10 @@ public class ChatSetting extends LinearLayoutCompat {
     private void initView() {
         LayoutInflater inflater = LayoutInflater.from(mContext);
         View mView = inflater.inflate(R.layout.setting_chat_setting, this, true);
+        llParent = mView.findViewById(R.id.llParent);
         mReadReceiptsSend = mView.findViewById(R.id.chatSettingSend);
         mReadReceiptsMedia = mView.findViewById(R.id.chatSettingMedia);
-        mPrivacyItemView = mView.findViewById(R.id.chatFont);
+        mFontSize = mView.findViewById(R.id.chatFont);
         tvTitle = mView.findViewById(R.id.tvTitle);
     }
 
@@ -49,8 +54,7 @@ public class ChatSetting extends LinearLayoutCompat {
         mReadReceiptsSend.setDescription("Enter key will send your message");
         mReadReceiptsMedia.setTitle("Media visibility");
         mReadReceiptsMedia.setDescription("Show newly download media in your phone's gallery");
-        mPrivacyItemView.setTitle("Font size");
-        mPrivacyItemView.setDescription("Medium");
+        mFontSize.setType(PrivacyItem.FONT_SIZE);
         setTitle("Chat setting");
     }
 

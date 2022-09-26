@@ -11,11 +11,14 @@ import androidx.appcompat.widget.AppCompatTextView;
 import androidx.appcompat.widget.LinearLayoutCompat;
 
 import com.whatsapp.clone.R;
+import com.whatsapp.clone.widgets.settingItemView.listener.ItemClickListener;
 import com.whatsapp.clone.widgets.settingPrivacy.ui.utils.PrivacyItem;
 
 public class PrivacyItemView extends LinearLayoutCompat {
     Context mContext;
     AppCompatTextView tvTitle, tvDescription;
+    LinearLayoutCompat llParent;
+    ItemClickListener mItemClickListener;
 
     public PrivacyItemView(@NonNull Context mContext) {
         this(mContext, null);
@@ -28,16 +31,28 @@ public class PrivacyItemView extends LinearLayoutCompat {
     public PrivacyItemView(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         this.mContext = context;
-
         initView();
+        setupEvent();
     }
 
     private void initView() {
         LayoutInflater inflater = LayoutInflater.from(mContext);
         View mView = inflater.inflate(R.layout.privacy_item, this, true);
         tvTitle = mView.findViewById(R.id.tvTitle);
+        llParent= mView.findViewById(R.id.llParent);
         tvDescription = mView.findViewById(R.id.tvDescription);
     }
+    private void setupEvent(){
+        llParent.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mItemClickListener!=null){
+                    mItemClickListener.onClicked();
+                }
+            }
+        });
+    }
+
 
     public void setTitle(String title) {
         tvTitle.setText(title);
@@ -45,6 +60,10 @@ public class PrivacyItemView extends LinearLayoutCompat {
 
     public void setDescription(String description) {
         tvDescription.setText(description);
+    }
+
+    public void setItemClickListener(ItemClickListener listener){
+        this.mItemClickListener = listener;
     }
 
     public void setType(PrivacyItem type) {
@@ -72,6 +91,9 @@ public class PrivacyItemView extends LinearLayoutCompat {
                 break;
             case FINGERPRINT_LOCK:
                 onFingerPrintLockSetup();
+                break;
+            case FONT_SIZE:
+                onFontSizeSetup();
                 break;
         }
     }
@@ -114,5 +136,10 @@ public class PrivacyItemView extends LinearLayoutCompat {
     private void onFingerPrintLockSetup() {
         setTitle(getContext().getString(R.string.finger_print));
         setDescription(getContext().getString(R.string.finger_description));
+    }
+
+    private void onFontSizeSetup(){
+        setTitle(getContext().getString(R.string.fontSize));
+        setDescription(getContext().getString(R.string.fontDescription));
     }
 }
