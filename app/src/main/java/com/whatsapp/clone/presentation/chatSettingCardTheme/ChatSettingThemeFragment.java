@@ -19,7 +19,6 @@ import com.whatsapp.clone.widgets.settingPrivacyLastSeen.SettingPrivacyLastSeen;
 import com.whatsapp.clone.widgets.settingPrivacyLastSeen.ui.utils.LastSeenItem;
 
 public class ChatSettingThemeFragment extends AppCompatDialogFragment {
-    AppCompatTextView tvTitle;
     SettingPrivacyLastSeen mSettingChatSystem, mSettingChatLight, mSettingChatDark;
     CardView cvChangeTheme;
     AppCompatButton btCancel, btOk;
@@ -28,6 +27,7 @@ public class ChatSettingThemeFragment extends AppCompatDialogFragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View mView = inflater.inflate(R.layout.setting_card_chat, container, false);
+        getDialog().setTitle("Choose theme");
         initView(mView);
         onConfigSetup();
         onRadioSetup();
@@ -35,7 +35,6 @@ public class ChatSettingThemeFragment extends AppCompatDialogFragment {
     }
 
     private void initView(View mView) {
-        tvTitle = mView.findViewById(R.id.tvCardChat);
         cvChangeTheme = mView.findViewById(R.id.cvChangTheme);
         btOk = mView.findViewById(R.id.btOk);
         btCancel = mView.findViewById(R.id.btCancel);

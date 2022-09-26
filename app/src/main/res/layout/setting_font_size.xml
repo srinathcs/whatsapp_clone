@@ -10,35 +10,23 @@
         android:layout_width="350dp"
         android:layout_height="@dimen/dp160">
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Font size"
-            android:textStyle="bold"
-            android:layout_marginStart="@dimen/dp10"
-            android:layout_marginTop="@dimen/dp10"
-            android:textColor="@color/black"/>
-
         <com.whatsapp.clone.widgets.settingPrivacyLastSeen.SettingPrivacyLastSeen
             android:id="@+id/fontSmall"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp30"/>
+            android:layout_height="wrap_content" />
 
         <com.whatsapp.clone.widgets.settingPrivacyLastSeen.SettingPrivacyLastSeen
             android:id="@+id/fontMedium"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp70"/>
+            android:layout_marginTop="@dimen/dp40"/>
 
         <com.whatsapp.clone.widgets.settingPrivacyLastSeen.SettingPrivacyLastSeen
             android:id="@+id/fontLarge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp110"
+            android:layout_marginTop="@dimen/dp80"
             />
-
 
     </androidx.cardview.widget.CardView>
 
