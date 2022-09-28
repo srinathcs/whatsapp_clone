@@ -127,6 +127,43 @@
     <string name="chatTitle">Chats</string>
     <string name="chatBtCancel">CANCEL</string>
     <string name="chatOkBt">ok</string>
+    <string name="chat_wallpaper"><![CDATA[To change your wallpaper foe dark theme,turn on dark theme form Setting > chat > Theme.]]></string>
+    <string name="titleTheme">Light Theme Wallpaper</string>
+    <string name="chatSystemTheme">System default</string>
+    <string name="chatLightTheme">Light</string>
+    <string name="chatDarkTheme">Dark</string>
+    <string name="fontSmall">Small</string>
+    <string name="fontMedium">Medium</string>
+    <string name="fontLarge">Large</string>
+    <string name="fontSizeTtile">Font size</string>
+    <string name="fontSize">Font Size</string>
+    <string name="fontDescription">Medium</string>
+    <string name="langPhone">Phone,s language (English)</string>
+    <string name="langOne">हिन्दी</string>
+    <string name="langTwo">मराठी</string>
+    <string name="langThree">ગુજરાતી</string>
+    <string name="langFour">தமிழ்</string>
+    <string name="langFive">বাংলা</string>
+    <string name="langSix">తెలుగు</string>
+    <string name="langSeven">ಕನ್ನಡ</string>
+    <string name="langEight">മലയാളം</string>
+    <string name="langNine">ਪੰਜਾਬੀ</string>
+    <string name="langTen">اردو</string>
+    <string name="chatBackupTitle">Last Backup</string>
+    <string name="chatBackupDecription">Back up your messages and media to Google Drive. You can restore them when you reinstall WhatsApp. You message will also back up to your phone\'s internal storage</string>
+    <string name="chatEndToEndTitle">End-to-end encrypted backup</string>
+    <string name="chatEndToEndDescription">Off</string>
+    <string name="chatGoogleDriveTitle">Google Drive setting</string>
+    <string name="chatGoogleDriveDescription">Back up your chat history and media to Google Drive so if you change phones, your chat history is safe. For added security, you can protect your backup with end-to-end encryption.</string>
+    <string name="chatBackupData">Back up to using cellular</string>
+    <string name="chatBackupDescription">Never</string>
+    <string name="chatGoogleTitle">Google Account</string>
+    <string name="chatGoogleDescription">None selected</string>
+    <string name="chatBackupDataCell">Back up using cellular</string>
+    <string name="chatBackupVideos">Include videos</string>
+    <string name="btnBackup">BACK UP</string>
+    <string name="chatBackupTime">Local: 8:09 am</string>
+    <string name="chatBackupTiming">Google Drive: Never</string>
 
 
 </resources>

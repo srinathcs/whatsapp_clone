@@ -93,6 +93,16 @@ public class SettingItemView extends LinearLayoutCompat {
             case HELP:
                 onHelp();
                 break;
+            case LAST_BACKUP:
+                onLastBackupSetup();
+                break;
+            case END_TO_END_ENCRYPTED_BACKUP:
+                onEndToEndEncryptedSetup();
+                break;
+            case GOOGLE_DRIVE:
+                onGoogleDriveSetup();
+                break;
+
         }
 
     }
@@ -122,5 +132,20 @@ public class SettingItemView extends LinearLayoutCompat {
         setTitle(mContext.getString(R.string.setting_help));
         setDescription(mContext.getString(R.string.setting_help_description));
         setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_help, mContext.getTheme()));
+    }
+    private void onLastBackupSetup(){
+        setTitle(getContext().getString(R.string.chatBackupTitle));
+        setDescription(getContext().getString(R.string.chatBackupDecription));
+        setIcon(ResourcesCompat.getDrawable(getResources(),R.drawable.ic_cloud_backup,mContext.getTheme()));
+    }
+    private void onEndToEndEncryptedSetup(){
+        setTitle(getContext().getString(R.string.chatEndToEndTitle));
+        setDescription(getContext().getString(R.string.chatEndToEndDescription));
+        setIcon(ResourcesCompat.getDrawable(getResources(),R.drawable.ic_lock,mContext.getTheme()));
+    }
+    private void onGoogleDriveSetup(){
+        setTitle(getContext().getString(R.string.chatGoogleDriveTitle));
+        setDescription(getContext().getString(R.string.chatGoogleDriveDescription));
+        setIcon(ResourcesCompat.getDrawable(getResources(),R.drawable.ic_drive,mContext.getTheme()));
     }
 }

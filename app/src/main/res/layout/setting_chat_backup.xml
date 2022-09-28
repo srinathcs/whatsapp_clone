@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.whatsapp.clone.widgets.settingItemView.ui.SettingItemView
+        android:id="@+id/chatLastBackup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp10" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitleBackup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp78"
+        android:layout_marginTop="@dimen/dp20"
+        android:textColor="@color/black" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDescriptionBackup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp78"
+        android:textColor="@color/black" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btBackup"
+        android:layout_width="@dimen/dp90"
+        android:layout_height="@dimen/dp40"
+        android:layout_marginStart="@dimen/dp78"
+        android:layout_marginTop="@dimen/dp20"
+        android:background="@drawable/round_button"
+        android:text="@string/btnBackup"
+        android:textColor="@color/white" />
+
+    <com.whatsapp.clone.widgets.settingItemView.ui.SettingItemView
+        android:id="@+id/chatEndToEnd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp15"
+        android:layout_marginHorizontal="@dimen/dp10" />
+
+    <com.whatsapp.clone.widgets.settingItemView.ui.SettingItemView
+        android:id="@+id/chatGoogleDrive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp15"
+        android:layout_marginHorizontal="@dimen/dp10" />
+
+    <com.whatsapp.clone.widgets.settingPrivacy.PrivacyItemView
+        android:id="@+id/chatBackupGoogle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp15"
+        android:layout_marginStart="@dimen/dp78" />
+
+    <com.whatsapp.clone.widgets.settingPrivacy.PrivacyItemView
+        android:id="@+id/chatGoogleAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp15"
+        android:layout_marginStart="@dimen/dp78" />
+
+    <com.whatsapp.clone.widgets.textAndSwitch.TextAndSwitch
+        android:id="@+id/chatBackupData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp15"
+        android:layout_marginStart="@dimen/dp78" />
+
+    <com.whatsapp.clone.widgets.textAndSwitch.TextAndSwitch
+        android:id="@+id/chatIncludeVideos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp15"
+        android:layout_marginStart="@dimen/dp78" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

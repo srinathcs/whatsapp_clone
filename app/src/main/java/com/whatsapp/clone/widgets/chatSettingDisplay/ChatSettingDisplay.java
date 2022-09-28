@@ -1,6 +1,7 @@
 package com.whatsapp.clone.widgets.chatSettingDisplay;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,7 @@ import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.core.content.res.ResourcesCompat;
 
 import com.whatsapp.clone.R;
+import com.whatsapp.clone.presentation.settingWallpaper.SettingWallpaperActivity;
 import com.whatsapp.clone.widgets.accountItemView.AccountItemView;
 import com.whatsapp.clone.widgets.settingItemView.listener.ItemClickListener;
 import com.whatsapp.clone.widgets.settingItemView.ui.SettingItemView;
@@ -22,7 +24,6 @@ public class ChatSettingDisplay extends LinearLayoutCompat {
     SettingItemView mSettingItemView;
     AccountItemView mAccountItemView;
     AppCompatTextView tvTitle;
-    ItemClickListener mClickListener;
 
     public ChatSettingDisplay(@NonNull Context mContext) {
         this(mContext, null);
@@ -55,14 +56,6 @@ public class ChatSettingDisplay extends LinearLayoutCompat {
         mSettingItemView.setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_brightness, mContext.getTheme()));
         mAccountItemView.setTitle("Wallpaper");
         mAccountItemView.setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_wallpaper, mContext.getTheme()));
-        llParent.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (mClickListener != null) {
-                    mClickListener.onClicked();
-                }
-            }
-        });
     }
 
     public void setTitle(String title) {

@@ -56,6 +56,10 @@
 
         <activity android:name=".presentation.settingChat.SettingChatActivity" />
 
+        <activity android:name=".presentation.settingWallpaper.SettingWallpaperActivity" />
+
+        <activity android:name=".presentation.chatSettingBackup.ChatBackUpActivity" />
+
     </application>
 
 </manifest>

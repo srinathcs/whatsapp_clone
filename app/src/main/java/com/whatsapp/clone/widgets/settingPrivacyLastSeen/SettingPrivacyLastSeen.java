@@ -1,19 +1,17 @@
 package com.whatsapp.clone.widgets.settingPrivacyLastSeen;
 
 import android.content.Context;
-import android.content.res.ColorStateList;
-import android.graphics.Color;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.CompoundButton;
 
 
-import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatRadioButton;
 import androidx.appcompat.widget.LinearLayoutCompat;
+
 import com.whatsapp.clone.R;
 import com.whatsapp.clone.widgets.settingPrivacyLastSeen.ui.utils.LastSeenItem;
 
@@ -40,11 +38,13 @@ public class SettingPrivacyLastSeen extends LinearLayoutCompat {
         View mView = inflater.inflate(R.layout.privacy_lastseen, this, true);
         mRbLastSeen = mView.findViewById(R.id.rbLastSeen);
     }
-    public void unSelectRadioButton(){
+
+    public void unSelectRadioButton() {
         mRbLastSeen.setChecked(false);
 
     }
-    public void setRadioButtonListener(CompoundButton.OnCheckedChangeListener mListener){
+
+    public void setRadioButtonListener(CompoundButton.OnCheckedChangeListener mListener) {
         mRbLastSeen.setOnCheckedChangeListener(mListener);
     }
 
@@ -67,7 +67,7 @@ public class SettingPrivacyLastSeen extends LinearLayoutCompat {
             case NOBODY:
                 onNobodySetup();
                 break;
-            case  ONLY_SHARE_WITH:
+            case ONLY_SHARE_WITH:
                 onOnlyShareSetup();
                 break;
             case HOURS:
@@ -83,13 +83,55 @@ public class SettingPrivacyLastSeen extends LinearLayoutCompat {
                 onOff();
                 break;
             case SYSTEM_DEFAULT:
-                onSystemDefault();
+                onSystemDefaultSetup();
                 break;
             case LIGHT:
-                onLight();
+                onLightSetup();
                 break;
             case DARK:
-                onDark();
+                onDarkSetup();
+                break;
+            case SMALL:
+                onSmallSetup();
+                break;
+            case MEDIUM:
+                onMediumSetup();
+                break;
+            case LARGE:
+                onLargeSetup();
+                break;
+            case PHONES_LANGUAGE:
+                onPhoneSetup();
+                break;
+            case LANGUAGE_ONE:
+                onLanguageOneSetup();
+                break;
+            case LANGUAGE_TWO:
+                onLanguageTwoSetup();
+                break;
+            case LANGUAGE_THREE:
+                onLanguageThreeSetup();
+                break;
+            case LANGUAGE_FOUR:
+                onLanguageFourSetup();
+                break;
+            case LANGUAGE_FIVE:
+                onLanguageFiveSetup();
+                break;
+            case LANGUAGE_SIX:
+                onLanguageSixSetup();
+                break;
+            case LANGUAGE_SEVEN:
+                onLanguageSevenSetup();
+                break;
+            case LANGUAGE_EIGHT:
+                onLanguageEightSetup();
+                break;
+            case LANGUAGE_NINE:
+                onLanguageNineSetup();
+                break;
+            case LANGUAGE_TEN:
+                onLanguageTenSetup();
                 break;
         }
     }
@@ -109,28 +151,75 @@ public class SettingPrivacyLastSeen extends LinearLayoutCompat {
     public void onNobodySetup() {
         setTitle(getContext().getString(R.string.rbNobody));
     }
-    public void onOnlyShareSetup(){
+
+    public void onOnlyShareSetup() {
         setTitle(getContext().getString(R.string.rbOnlyShare));
     }
-    public void onHourSetup(){
+
+    public void onHourSetup() {
         setTitle(getContext().getString(R.string.rbhours24));
     }
-    public void onDays(){
+
+    public void onDays() {
         setTitle((getContext().getString(R.string.rb7days)));
     }
-    public void onDay(){
+
+    public void onDay() {
         setTitle(getContext().getString(R.string.rbdays90));
     }
-    public void onOff(){
+
+    public void onOff() {
         setTitle(getContext().getString(R.string.rboff));
     }
-    public  void onSystemDefault(){
-        setTitle("System default");
+    public void onSystemDefaultSetup(){
+        setTitle(getContext().getString(R.string.chatSystemTheme));
     }
-    public void onLight(){
-        setTitle("Light");
+    public void onLightSetup(){
+        setTitle(getContext().getString(R.string.chatLightTheme));
     }
-    public void onDark(){
-        setTitle("Dark");
+    public void onDarkSetup(){
+        setTitle(getContext().getString(R.string.chatDarkTheme));
+    }
+    public void onSmallSetup(){
+        setTitle(getContext().getString(R.string.fontSmall));
+    }
+    public void onMediumSetup(){
+        setTitle(getContext().getString(R.string.fontMedium));
+    }
+    public void onLargeSetup(){
+        setTitle(getContext().getString(R.string.fontLarge));
+    }
+    public void onPhoneSetup(){
+        setTitle(getContext().getString(R.string.langPhone));
+    }
+    public void onLanguageOneSetup(){
+        setTitle(getContext().getString(R.string.langOne));
+    }
+    public void onLanguageTwoSetup(){
+        setTitle(getContext().getString(R.string.langTwo));
+    }
+    public void onLanguageThreeSetup(){
+        setTitle(getContext().getString(R.string.langThree));
+    }
+    public void onLanguageFourSetup(){
+        setTitle(getContext().getString(R.string.langFour));
+    }
+    public void onLanguageFiveSetup(){
+        setTitle(getContext().getString(R.string.langFive));
+    }
+    public void onLanguageSixSetup(){
+        setTitle(getContext().getString(R.string.langSix));
+    }
+    public void onLanguageSevenSetup(){
+        setTitle(getContext().getString(R.string.langSeven));
+    }
+    public void onLanguageEightSetup(){
+        setTitle(getContext().getString(R.string.langEight));
+    }
+    public void onLanguageNineSetup(){
+        setTitle(getContext().getString(R.string.langNine));
+    }
+    public void onLanguageTenSetup(){
+        setTitle(getContext().getString(R.string.langTen));
     }
 }

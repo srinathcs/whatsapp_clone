@@ -1,23 +1,18 @@
 package com.whatsapp.clone.presentation.settingTwoStepVerification;
 
-import android.app.Dialog;
-import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
+
 import android.view.Window;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.LinearLayoutCompat;
 
 import com.whatsapp.clone.R;
-import com.whatsapp.clone.widgets.settingTwoStepCard.TwoStepCard;
 import com.whatsapp.clone.widgets.settingTwoStepVerification.SettingTwoStepItem;
 import com.whatsapp.clone.widgets.settingTwoStepVerification.SettingTwoStepTop;
 import com.whatsapp.clone.widgets.settingTwoStepVerification.ui.utils.TwoStepItem;
@@ -58,17 +53,14 @@ public class SettingTwoStepActivity extends AppCompatActivity {
         actionBar.setBackgroundDrawable(colorDrawable);
         actionBar.setTitle(R.string.twoStepTitle);
         actionBar.setDisplayHomeAsUpEnabled(true);
-        if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP){
-            Window window= this.getWindow();
-            window.setStatusBarColor(this.getResources().getColor(R.color.green));
-        }
+        Window window= this.getWindow();
+        window.setStatusBarColor(this.getResources().getColor(R.color.green));
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                onBackPressed();
-                return true;
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+            return true;
         }
         return super.onOptionsItemSelected(item);
     }
