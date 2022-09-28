@@ -161,6 +161,9 @@
     <string name="chatGoogleDescription">None selected</string>
     <string name="chatBackupDataCell">Back up using cellular</string>
     <string name="chatBackupVideos">Include videos</string>
+    <string name="btnBackup">BACK UP</string>
+    <string name="chatBackupTime">Local: 8:09 am</string>
+    <string name="chatBackupTiming">Google Drive: Never</string>
 
 
 </resources>

@@ -3,18 +3,14 @@ package com.whatsapp.clone.presentation.privacySetting;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.os.Build;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 
-import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.LinearLayoutCompat;
 
 import com.whatsapp.clone.R;
 import com.whatsapp.clone.presentation.privacyAbout.PrivacyAboutActivity;
@@ -24,14 +20,12 @@ import com.whatsapp.clone.presentation.privacyLastSeen.PrivacyLastSeenActivity;
 import com.whatsapp.clone.presentation.privacyLiveLocation.PrivacyLiveLocationActivity;
 import com.whatsapp.clone.presentation.privacyProfilePhoto.PrivacyProfilePhotoActivity;
 import com.whatsapp.clone.presentation.privacySettingDefaultMessage.PrivacySettingDefaultMessageActivity;
-import com.whatsapp.clone.presentation.privacySettingReadReceipts.PrivacySettingReadReceipts;
 import com.whatsapp.clone.presentation.privacyStatus.PrivacyStatusActivity;
 import com.whatsapp.clone.widgets.settingItemView.listener.ItemClickListener;
 import com.whatsapp.clone.widgets.settingPrivacy.DisappearingMessage;
 import com.whatsapp.clone.widgets.settingPrivacy.PrivacyItemView;
 import com.whatsapp.clone.widgets.settingPrivacy.ReadReceipts;
 import com.whatsapp.clone.widgets.settingPrivacy.ui.utils.PrivacyItem;
-import com.whatsapp.clone.widgets.settingPrivacyLastSeen.ui.utils.LastSeenItem;
 
 public class PrivacySettingActivity extends AppCompatActivity {
 
@@ -39,7 +33,6 @@ public class PrivacySettingActivity extends AppCompatActivity {
     private ReadReceipts mReadReceipts;
     private DisappearingMessage mDisappearingMessage;
     ActionBar actionBar;
-    LinearLayoutCompat llParent;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -156,17 +149,15 @@ public class PrivacySettingActivity extends AppCompatActivity {
         ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#008069"));
         actionBar.setBackgroundDrawable(colorDrawable);
         actionBar.setDisplayHomeAsUpEnabled(true);
-        if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP){
-            Window window= this.getWindow();
-            window.setStatusBarColor(this.getResources().getColor(R.color.green));
-        }
+        actionBar.setTitle("Privacy");
+        Window window= this.getWindow();
+        window.setStatusBarColor(this.getResources().getColor(R.color.green));
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                onBackPressed();
-                return true;
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+            return true;
         }
 
         return super.onOptionsItemSelected(item);

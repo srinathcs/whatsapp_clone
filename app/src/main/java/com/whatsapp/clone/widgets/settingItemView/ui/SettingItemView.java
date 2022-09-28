@@ -102,6 +102,7 @@ public class SettingItemView extends LinearLayoutCompat {
             case GOOGLE_DRIVE:
                 onGoogleDriveSetup();
                 break;
+
         }
 
     }
