@@ -164,6 +164,8 @@
     <string name="btnBackup">BACK UP</string>
     <string name="chatBackupTime">Local: 8:09 am</string>
     <string name="chatBackupTiming">Google Drive: Never</string>
+    <string name="btClearChat">CLEAR CHATS</string>
+    <string name="btDeleteChats">DELETE CHATS</string>
 
 
 </resources>
