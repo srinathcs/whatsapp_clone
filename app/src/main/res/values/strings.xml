@@ -166,6 +166,9 @@
     <string name="chatBackupTiming">Google Drive: Never</string>
     <string name="btClearChat">CLEAR CHATS</string>
     <string name="btDeleteChats">DELETE CHATS</string>
+    <string name="chatDeteleAllTitle">Also delete media received in chats form the phone </string>
+    <string name="chatClearAllFirst">Also delete media received in chats form the phone gallery</string>
+    <string name="chatClearSecond">Delete starred message</string>
 
 
 </resources>

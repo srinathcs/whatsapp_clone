@@ -40,7 +40,7 @@ public class ChatDeleteAllChatFragment extends AppCompatDialogFragment {
 
     private void initWidget() {
         setTitle("Message will only be removed form this devices and your devices on the newer versions of WhatsApp.");
-        setCheckBoxTitleDelete("Also delete media received in chats form the phone ");
+        cbDeleteMedia.setText(R.string.chatDeteleAllTitle);
     }
 
     private void onConfigSetup() {
@@ -56,10 +56,6 @@ public class ChatDeleteAllChatFragment extends AppCompatDialogFragment {
                 getActivity().getSupportFragmentManager().beginTransaction().remove(ChatDeleteAllChatFragment.this).commit();
             }
         });
-    }
-
-    private void setCheckBoxTitleDelete(String titleCheck) {
-        cbDeleteMedia.setText(titleCheck);
     }
 
     private void setTitle(String title) {

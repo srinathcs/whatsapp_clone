@@ -41,8 +41,8 @@ public class ChatClearAllFragment extends AppCompatDialogFragment {
 
     private void initWidget() {
         setTitle("Message will only be removed form this device and your device on the never version of WhatsApp.");
-        setCheckBoxTitle("Also delete media received in chats form the phone gallery");
-        setCheckBoxTitleDelete("Delete starred message");
+        cbMedia.setText(R.string.chatClearAllFirst);
+        cbDeleteMessage.setText(R.string.chatClearSecond);
     }
 
     private void onConfigSetup() {
@@ -64,11 +64,4 @@ public class ChatClearAllFragment extends AppCompatDialogFragment {
         tvTitle.setText(title);
     }
 
-    private void setCheckBoxTitle(String cbTitle) {
-        cbMedia.setText(cbTitle);
-    }
-
-    private void setCheckBoxTitleDelete(String cbDeleteTitle) {
-        cbDeleteMessage.setText(cbDeleteTitle);
-    }
 }
