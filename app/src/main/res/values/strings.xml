@@ -164,6 +164,7 @@
     <string name="btnBackup">BACK UP</string>
     <string name="chatBackupTime">Local: 8:09 am</string>
     <string name="chatBackupTiming">Google Drive: Never</string>
+    <string name="menuTitleNotification">Rest notification setting</string>
 
 
 </resources>
