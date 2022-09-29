@@ -13,6 +13,7 @@ import androidx.core.content.res.ResourcesCompat;
 import com.whatsapp.clone.R;
 import com.whatsapp.clone.presentation.accountSetting.AccountSettingActivity;
 import com.whatsapp.clone.presentation.settingChat.SettingChatActivity;
+import com.whatsapp.clone.presentation.settingNotification.NotificationActivity;
 import com.whatsapp.clone.widgets.settingInviteView.SettingInviteView;
 import com.whatsapp.clone.widgets.settingItemMeta.SettingItemMeta;
 import com.whatsapp.clone.widgets.settingItemView.listener.ItemClickListener;
@@ -97,6 +98,13 @@ public class SettingActivity extends AppCompatActivity {
 
     private void onSettingNotificationSetup() {
         mItemViewNotification.setType(SettingItemType.NOTIFICATIONS);
+        mItemViewNotification.setItemClickListener(new ItemClickListener() {
+            @Override
+            public void onClicked() {
+                Intent intent = new Intent(SettingActivity.this, NotificationActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void onSettingDataSetup() {
