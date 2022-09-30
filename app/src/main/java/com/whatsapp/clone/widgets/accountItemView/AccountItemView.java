@@ -110,6 +110,15 @@ public class AccountItemView extends LinearLayoutCompat {
             case DELETE_ALL_CHATS:
                 onDeleteAllChats();
                 break;
+            case HELP_CENTRE:
+                onHelpCentreSetup();
+                break;
+            case POLICY:
+                onPolicySetup();
+                break;
+            case APP_INFO:
+                onAppInfoSetup();
+                break;
         }
     }
 
@@ -166,5 +175,20 @@ public class AccountItemView extends LinearLayoutCompat {
     public void onDeleteAllChats() {
         setTitle("Delete all chats");
         setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_dlt, mContext.getTheme()));
+    }
+
+    public void onHelpCentreSetup() {
+        setTitle("Help Centre");
+        setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_help, mContext.getTheme()));
+    }
+
+    public void onPolicySetup() {
+        setTitle("Terms and Privacy Policy");
+        setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_friend, mContext.getTheme()));
+    }
+
+    public void onAppInfoSetup() {
+        setTitle("App info");
+        setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_info, mContext.getTheme()));
     }
 }

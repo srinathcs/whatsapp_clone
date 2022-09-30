@@ -66,6 +66,8 @@
 
         <activity android:name=".presentation.storageAndData.StorageAndDataActivity" />
 
+        <activity android:name=".presentation.settingHelp.SettingHelpActivity" />
+
     </application>
 
 </manifest>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.whatsapp.clone.widgets.accountItemView.AccountItemView
+        android:id="@+id/helpCentre"
+        android:layout_width="match_parent"
+        android:autoLink="web"
+        android:layout_height="wrap_content" />
+
+    <com.whatsapp.clone.widgets.settingItemView.ui.SettingItemView
+        android:id="@+id/helpContact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.whatsapp.clone.widgets.accountItemView.AccountItemView
+        android:id="@+id/helpPolicy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.whatsapp.clone.widgets.accountItemView.AccountItemView
+        android:id="@+id/helpAppInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
