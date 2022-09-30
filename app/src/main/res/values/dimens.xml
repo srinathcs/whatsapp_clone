@@ -75,6 +75,10 @@
     <dimen name="dp500">500dp</dimen>
     <dimen name="dp78">78dp</dimen>
     <dimen name="dp170">170dp</dimen>
+    <dimen name="sp18">18sp</dimen>
+    <dimen name="dp230">230dp</dimen>
+    <dimen name="dp26">26dp</dimen>
+    <dimen name="dp420">420dp</dimen>
 
 
 </resources>
