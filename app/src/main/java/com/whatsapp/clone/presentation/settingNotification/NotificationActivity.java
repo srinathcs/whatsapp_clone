@@ -12,8 +12,12 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatTextView;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.whatsapp.clone.R;
+import com.whatsapp.clone.presentation.notificationLightFragment.NotificationLightFragment;
+import com.whatsapp.clone.presentation.notificationVibrateFragment.NotificationVibrateFragment;
+import com.whatsapp.clone.widgets.settingItemView.listener.ItemClickListener;
 import com.whatsapp.clone.widgets.settingPrivacy.PrivacyItemView;
 import com.whatsapp.clone.widgets.settingPrivacy.ReadReceipts;
 import com.whatsapp.clone.widgets.settingPrivacy.ui.utils.PrivacyItem;
@@ -31,6 +35,7 @@ public class NotificationActivity extends AppCompatActivity {
         initView();
         initWidget();
         onConfigSetup();
+        onSetupFragment();
         onActionbarSetup();
     }
 
@@ -89,6 +94,44 @@ public class NotificationActivity extends AppCompatActivity {
         mNotificationGroupLight.setType(PrivacyItem.LIGHT_GROUP);
         mNotificationCallRingtone.setType(PrivacyItem.RINGTONE_CALL);
         mNotificationCallVibrate.setType(PrivacyItem.VIBRATE_CALL);
+    }
+
+    private void onSetupFragment(){
+        mNotificationVibrate.setItemClickListener(new ItemClickListener() {
+            @Override
+            public void onClicked() {
+                NotificationVibrateFragment notificationVibrateFragment = new NotificationVibrateFragment();
+                notificationVibrateFragment.show(getSupportFragmentManager(),"example");
+            }
+        });
+        mNotificationLight.setItemClickListener(new ItemClickListener() {
+            @Override
+            public void onClicked() {
+                NotificationLightFragment notificationLightFragment = new NotificationLightFragment();
+                notificationLightFragment.show(getSupportFragmentManager(),"Example");
+            }
+        });
+        mNotificationGroupVibrate.setItemClickListener(new ItemClickListener() {
+            @Override
+            public void onClicked() {
+                NotificationVibrateFragment notificationVibrateFragment = new NotificationVibrateFragment();
+                notificationVibrateFragment.show(getSupportFragmentManager(),"Example");
+            }
+        });
+        mNotificationGroupLight.setItemClickListener(new ItemClickListener() {
+            @Override
+            public void onClicked() {
+                NotificationLightFragment notificationLightFragment = new NotificationLightFragment();
+                notificationLightFragment.show(getSupportFragmentManager(),"Example");
+            }
+        });
+        mNotificationCallVibrate.setItemClickListener(new ItemClickListener() {
+            @Override
+            public void onClicked() {
+                NotificationVibrateFragment notificationVibrateFragment = new NotificationVibrateFragment();
+                notificationVibrateFragment.show(getSupportFragmentManager(),"example");
+            }
+        });
     }
 
     private void onActionbarSetup() {

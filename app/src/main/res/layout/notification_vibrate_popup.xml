@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/dp350"
+        android:layout_height="@dimen/dp180">
+
+        <com.whatsapp.clone.widgets.settingPrivacyLastSeen.SettingPrivacyLastSeen
+            android:id="@+id/vOff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.whatsapp.clone.widgets.settingPrivacyLastSeen.SettingPrivacyLastSeen
+            android:id="@+id/vDefault"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp40"/>
+
+        <com.whatsapp.clone.widgets.settingPrivacyLastSeen.SettingPrivacyLastSeen
+            android:id="@+id/vShort"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp80"/>
+
+        <com.whatsapp.clone.widgets.settingPrivacyLastSeen.SettingPrivacyLastSeen
+            android:id="@+id/vLong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp120"/>
+    </androidx.cardview.widget.CardView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

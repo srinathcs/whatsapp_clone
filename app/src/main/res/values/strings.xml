@@ -170,6 +170,11 @@
     <string name="chatDeteleAllTitle">Also delete media received in chats form the phone </string>
     <string name="chatClearAllFirst">Also delete media received in chats form the phone gallery</string>
     <string name="chatClearSecond">Delete starred message</string>
+    <string name="storagePhoto">Photos</string>
+    <string name="storageAudio">Audio</string>
+    <string name="storageVideo">Videos</string>
+    <string name="storageDocument">Document</string>
+    <string name="photoUploadPopup">Best quality photos are lager and can take longer to send</string>
 
 
 </resources>

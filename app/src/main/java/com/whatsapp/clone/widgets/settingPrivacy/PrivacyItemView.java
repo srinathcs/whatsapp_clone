@@ -127,6 +127,18 @@ public class PrivacyItemView extends LinearLayoutCompat {
             case VIBRATE_CALL:
                 onCallVibrateSetUp();
                 break;
+            case USING_MOBILE_DATA:
+                onUsingMobileDataSetup();
+                break;
+            case CONNECTED_ON_WIFI:
+                onConnectedSetup();
+                break;
+            case ROAMING:
+                onRoamingSetup();
+                break;
+            case UPLOAD_QUALITY:
+                onUploadQualitySetup();
+                break;
         }
     }
 
@@ -225,4 +237,23 @@ public class PrivacyItemView extends LinearLayoutCompat {
         setDescription("Default");
     }
 
+    private void onUsingMobileDataSetup() {
+        setTitle("When using mobile data");
+        setDescription("No media");
+    }
+
+    private void onConnectedSetup() {
+        setTitle("When connected on Wi-Fi");
+        setDescription("No media");
+    }
+
+    private void onRoamingSetup() {
+        setTitle("When roaming");
+        setDescription("No roaming");
+    }
+
+    private void onUploadQualitySetup() {
+        setTitle("Photo upload quality");
+        setDescription("Auto (recommended");
+    }
 }
