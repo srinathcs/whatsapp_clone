@@ -15,6 +15,7 @@ import com.whatsapp.clone.R;
 import com.whatsapp.clone.presentation.chatLanguageFragment.SettingChatLanguageFragment;
 import com.whatsapp.clone.presentation.chatSettingBackup.ChatBackUpActivity;
 import com.whatsapp.clone.presentation.chatSettingCardTheme.ChatSettingThemeFragment;
+import com.whatsapp.clone.presentation.chatSettingHistory.ChatSettingHistoryActivity;
 import com.whatsapp.clone.presentation.settingChatFontFragment.SettingChatFontFragment;
 import com.whatsapp.clone.presentation.settingWallpaper.SettingWallpaperActivity;
 import com.whatsapp.clone.widgets.accountItemView.AccountItemView;
@@ -29,7 +30,7 @@ public class SettingChatActivity extends AppCompatActivity {
     ActionBar actionBar;
     ChatSettingDisplay mChatSettingDisplay;
     SettingItemView chatTheme, chatLanguage;
-    AccountItemView chatWallpaper,mAccountBackUp;
+    AccountItemView chatWallpaper, chatBackUp,chatHistory;
     ChatSetting mChatSetting;
     PrivacyItemView mFontSize;
     ChatSettingArchived mChatSettingArchived;
@@ -43,10 +44,12 @@ public class SettingChatActivity extends AppCompatActivity {
         onActionbarConfig();
         initWidget();
         onWallpaperSetup();
+        onChatHistory();
     }
 
     private void initView() {
-        mAccountBackUp = findViewById(R.id.chatBackup);
+        chatHistory=findViewById(R.id.chatHistory);
+        chatBackUp = findViewById(R.id.chatBackup);
         mFontSize = findViewById(R.id.chatFont);
         chatTheme = findViewById(R.id.chatTheme);
         chatLanguage = findViewById(R.id.chatAppLang);
@@ -86,7 +89,7 @@ public class SettingChatActivity extends AppCompatActivity {
                 onLanguageSetup();
             }
         });
-        mAccountBackUp.setItemClickListener(new ItemClickListener() {
+        chatBackUp.setItemClickListener(new ItemClickListener() {
             @Override
             public void onClicked() {
                 Intent intent= new Intent(SettingChatActivity.this, ChatBackUpActivity.class);
@@ -122,6 +125,16 @@ public class SettingChatActivity extends AppCompatActivity {
             @Override
             public void onClicked() {
                 Intent intent = new Intent(SettingChatActivity.this, SettingWallpaperActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void onChatHistory(){
+        chatHistory.setItemClickListener(new ItemClickListener() {
+            @Override
+            public void onClicked() {
+                Intent intent= new Intent(SettingChatActivity.this, ChatSettingHistoryActivity.class);
                 startActivity(intent);
             }
         });
