@@ -62,6 +62,8 @@
 
         <activity android:name=".presentation.settingNotification.NotificationActivity" />
 
+        <activity android:name=".presentation.storageAndData.StorageAndDataActivity" />
+
     </application>
 
 </manifest>

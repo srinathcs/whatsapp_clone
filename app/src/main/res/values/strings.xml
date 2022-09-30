@@ -165,6 +165,10 @@
     <string name="chatBackupTime">Local: 8:09 am</string>
     <string name="chatBackupTiming">Google Drive: Never</string>
     <string name="menuTitleNotification">Rest notification setting</string>
+    <string name="storagePhoto">Photos</string>
+    <string name="storageAudio">Audio</string>
+    <string name="storageVideo">Videos</string>
+    <string name="storageDocument">Document</string>
 
 
 </resources>
