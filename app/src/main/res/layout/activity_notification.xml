@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.whatsapp.clone.widgets.settingPrivacy.ReadReceipts
+            android:id="@+id/notificationTones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp20" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_85" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/notificationMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp10"
+            android:textColor="@color/notificationTitle"
+            android:textStyle="bold" />
+
+        <com.whatsapp.clone.widgets.settingPrivacy.PrivacyItemView
+            android:id="@+id/notificationTone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp10" />
+
+        <com.whatsapp.clone.widgets.settingPrivacy.PrivacyItemView
+            android:id="@+id/notificationVibrate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp20" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPopTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp10"
+            android:textColor="@color/disableColor" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPopDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp20"
+            android:textColor="@color/disableColor" />
+
+        <com.whatsapp.clone.widgets.settingPrivacy.PrivacyItemView
+            android:id="@+id/notificationLight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp10" />
+
+        <com.whatsapp.clone.widgets.settingPrivacy.ReadReceipts
+            android:id="@+id/notificationMessageHighPriority"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp20" />
+
+        <com.whatsapp.clone.widgets.settingPrivacy.ReadReceipts
+            android:id="@+id/notificationMessageReaction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp20" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_85" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/notificationGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp10"
+            android:textColor="@color/notificationTitle"
+            android:textStyle="bold" />
+
+        <com.whatsapp.clone.widgets.settingPrivacy.PrivacyItemView
+            android:id="@+id/notificationRingtone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp20" />
+
+        <com.whatsapp.clone.widgets.settingPrivacy.PrivacyItemView
+            android:id="@+id/notificationGroupVibrate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp20" />
+
+        <com.whatsapp.clone.widgets.settingPrivacy.PrivacyItemView
+            android:id="@+id/notificationGroupLight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp20" />
+
+        <com.whatsapp.clone.widgets.settingPrivacy.ReadReceipts
+            android:id="@+id/notificationGroupPriority"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp20" />
+
+        <com.whatsapp.clone.widgets.settingPrivacy.ReadReceipts
+            android:id="@+id/notificationGroupReaction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp20" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_85" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/notificationCall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp20"
+            android:textColor="@color/notificationTitle"
+            android:textStyle="bold" />
+
+        <com.whatsapp.clone.widgets.settingPrivacy.PrivacyItemView
+            android:id="@+id/notificationCallRingtone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp20" />
+
+        <com.whatsapp.clone.widgets.settingPrivacy.PrivacyItemView
+            android:id="@+id/notificationCallVibrate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp20" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</ScrollView>

@@ -15,6 +15,7 @@ import com.whatsapp.clone.widgets.settingItemView.listener.ItemClickListener;
 import com.whatsapp.clone.widgets.settingPrivacy.ui.utils.PrivacyItem;
 
 public class PrivacyItemView extends LinearLayoutCompat {
+
     Context mContext;
     AppCompatTextView tvTitle, tvDescription;
     LinearLayoutCompat llParent;
@@ -102,6 +103,30 @@ public class PrivacyItemView extends LinearLayoutCompat {
             case GOOGLE_ACCOUNT:
                 onGoogleAccountSetup();
                 break;
+            case NOTIFICATION_TONE_MESSAGE:
+                onMessageNotificationSetup();
+                break;
+            case VIBRATE_MESSAGE:
+                onMessageVibrateSetup();
+                break;
+            case LIGHT_MESSAGE:
+                onMessageLightSetup();
+                break;
+            case NOTIFICATION_TONE_GROUP:
+                onGroupNotificationSetup();
+                break;
+            case VIBRATE_GROUP:
+                onGroupVibrateSetup();
+                break;
+            case LIGHT_GROUP:
+                onGroupLightSetup();
+                break;
+            case RINGTONE_CALL:
+                onCallRingtoneSetup();
+                break;
+            case VIBRATE_CALL:
+                onCallVibrateSetUp();
+                break;
         }
     }
 
@@ -159,4 +184,45 @@ public class PrivacyItemView extends LinearLayoutCompat {
         setTitle(getContext().getString(R.string.chatGoogleTitle));
         setDescription(getContext().getString(R.string.chatGoogleDescription));
     }
+
+    private void onMessageNotificationSetup() {
+        setTitle("Notification tone");
+        setDescription("Default(WaterDrop_preview.ogg)");
+    }
+
+    private void onMessageVibrateSetup() {
+        setTitle("Vibrate");
+        setDescription("Default");
+    }
+
+    private void onMessageLightSetup() {
+        setTitle("Light");
+        setDescription("White");
+    }
+
+    private void onGroupNotificationSetup() {
+        setTitle("Notification tone");
+        setDescription("Default(WaterDrop_preview.ogg)");
+    }
+
+    private void onGroupVibrateSetup() {
+        setTitle("Vibrate");
+        setDescription("Default");
+    }
+
+    private void onGroupLightSetup() {
+        setTitle("Light");
+        setDescription("White");
+    }
+
+    private void onCallRingtoneSetup() {
+        setDescription("Default (Once upon A Time - Vikram ! Anirudh Ravichander ! English song.mp3");
+        setTitle("Ringtone");
+    }
+
+    private void onCallVibrateSetUp() {
+        setTitle("Vibrate");
+        setDescription("Default");
+    }
+
 }

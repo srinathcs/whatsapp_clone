@@ -164,6 +164,7 @@
     <string name="btnBackup">BACK UP</string>
     <string name="chatBackupTime">Local: 8:09 am</string>
     <string name="chatBackupTiming">Google Drive: Never</string>
+    <string name="menuTitleNotification">Rest notification setting</string>
     <string name="btClearChat">CLEAR CHATS</string>
     <string name="btDeleteChats">DELETE CHATS</string>
     <string name="chatDeteleAllTitle">Also delete media received in chats form the phone </string>

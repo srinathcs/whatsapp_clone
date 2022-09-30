@@ -60,6 +60,8 @@
 
         <activity android:name=".presentation.chatSettingBackup.ChatBackUpActivity" />
 
+        <activity android:name=".presentation.settingNotification.NotificationActivity" />
+
         <activity android:name=".presentation.chatSettingHistory.ChatSettingHistoryActivity" />
 
     </application>
