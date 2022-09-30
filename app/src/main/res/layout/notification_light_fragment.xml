@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/dp340"
+        android:layout_height="@dimen/dp420">
+
+        <com.whatsapp.clone.widgets.settingPrivacyLastSeen.SettingPrivacyLastSeen
+            android:id="@+id/lNone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.whatsapp.clone.widgets.settingPrivacyLastSeen.SettingPrivacyLastSeen
+            android:id="@+id/lWhite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp50" />
+
+        <com.whatsapp.clone.widgets.settingPrivacyLastSeen.SettingPrivacyLastSeen
+            android:id="@+id/lRed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp100" />
+
+        <com.whatsapp.clone.widgets.settingPrivacyLastSeen.SettingPrivacyLastSeen
+            android:id="@+id/lYellow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp150" />
+
+        <com.whatsapp.clone.widgets.settingPrivacyLastSeen.SettingPrivacyLastSeen
+            android:id="@+id/lGreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp200" />
+
+        <com.whatsapp.clone.widgets.settingPrivacyLastSeen.SettingPrivacyLastSeen
+            android:id="@+id/lCyan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp250" />
+
+        <com.whatsapp.clone.widgets.settingPrivacyLastSeen.SettingPrivacyLastSeen
+            android:id="@+id/lBlue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp300" />
+
+        <com.whatsapp.clone.widgets.settingPrivacyLastSeen.SettingPrivacyLastSeen
+            android:id="@+id/lPurple"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp350" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

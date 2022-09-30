@@ -16,6 +16,7 @@ import com.whatsapp.clone.R;
 public class StorageAndDataFragment extends AppCompatDialogFragment {
     AppCompatCheckBox cbPhoto, cbVideo, cbAudio, cbDocument;
     AppCompatButton btCancel, btOk;
+    String myStr;
 
     @Nullable
     @Override
@@ -23,6 +24,7 @@ public class StorageAndDataFragment extends AppCompatDialogFragment {
         View mView = inflater.inflate(R.layout.stroage_and_data_popup, container, false);
         initView(mView);
         initWidget();
+        onConfigSetup();
         return mView;
     }
 
@@ -40,5 +42,25 @@ public class StorageAndDataFragment extends AppCompatDialogFragment {
         cbAudio.setText(R.string.storageAudio);
         cbVideo.setText(R.string.storageVideo);
         cbDocument.setText(R.string.storageDocument);
+        Bundle data = getArguments();
+        if (data != null) {
+            myStr = data.getString("MyData");
+        }
+        getDialog().setTitle(myStr);
+    }
+
+    private void onConfigSetup() {
+        btCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dismiss();
+            }
+        });
+        btOk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dismiss();
+            }
+        });
     }
 }

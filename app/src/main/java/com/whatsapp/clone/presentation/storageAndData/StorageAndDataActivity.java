@@ -15,6 +15,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.whatsapp.clone.R;
 import com.whatsapp.clone.presentation.storageAndDataFragment.StorageAndDataFragment;
+import com.whatsapp.clone.presentation.storageDataPhotoFragment.StorageDataPhotoFragment;
 import com.whatsapp.clone.widgets.settingItemView.listener.ItemClickListener;
 import com.whatsapp.clone.widgets.settingItemView.ui.SettingItemView;
 import com.whatsapp.clone.widgets.settingItemView.ui.utils.SettingItemType;
@@ -66,20 +67,58 @@ public class StorageAndDataActivity extends AppCompatActivity {
         setUploadTitle("Media upload quality");
         setUploadDescription("Choose the quality of media files tto be sent");
     }
-    private void onConfigSetup(){
+
+    private void onConfigSetup() {
         mStorageMobile.setItemClickListener(new ItemClickListener() {
             @Override
             public void onClicked() {
                 StorageAndDataFragment storageAndDataFragment = new StorageAndDataFragment();
-                storageAndDataFragment.show(getSupportFragmentManager(),"example");
+                storageAndDataFragment.show(getSupportFragmentManager(), "example");
+                FragmentTransaction fragmentTransaction = getSupportFragmentManager()
+                        .beginTransaction();
+                Bundle data = new Bundle();
+                data.putString("MyData", "When using mobile data");
+                storageAndDataFragment.setArguments(data);
+                fragmentTransaction.commit();
             }
         });
         mStorageWIFI.setItemClickListener(new ItemClickListener() {
             @Override
             public void onClicked() {
                 StorageAndDataFragment storageAndDataFragment = new StorageAndDataFragment();
-                storageAndDataFragment.show(getSupportFragmentManager(),"example");
-
+                storageAndDataFragment.show(getSupportFragmentManager(), "example");
+                FragmentTransaction fragmentTransaction = getSupportFragmentManager()
+                        .beginTransaction();
+                Bundle data = new Bundle();
+                data.putString("MyData", "When connected on Wi-Fi");
+                storageAndDataFragment.setArguments(data);
+                fragmentTransaction.commit();
+            }
+        });
+        mStorageRoaming.setItemClickListener(new ItemClickListener() {
+            @Override
+            public void onClicked() {
+                StorageAndDataFragment storageAndDataFragment = new StorageAndDataFragment();
+                storageAndDataFragment.show(getSupportFragmentManager(), "example");
+                FragmentTransaction fragmentTransaction = getSupportFragmentManager()
+                        .beginTransaction();
+                Bundle data = new Bundle();
+                data.putString("MyData", "When roaming");
+                storageAndDataFragment.setArguments(data);
+                fragmentTransaction.commit();
+            }
+        });
+        mStoragePhoto.setItemClickListener(new ItemClickListener() {
+            @Override
+            public void onClicked() {
+                StorageDataPhotoFragment storageDataPhotoFragment = new StorageDataPhotoFragment();
+                storageDataPhotoFragment.show(getSupportFragmentManager(), "example");
+                FragmentTransaction fragmentTransaction = getSupportFragmentManager()
+                        .beginTransaction();
+                Bundle photo = new Bundle();
+                photo.putString("Photo", "Photo upload quality");
+                storageDataPhotoFragment.setArguments(photo);
+                fragmentTransaction.commit();
             }
         });
     }
