@@ -74,6 +74,7 @@
     <dimen name="dp350">350dp</dimen>
     <dimen name="dp500">500dp</dimen>
     <dimen name="dp78">78dp</dimen>
+    <dimen name="dp170">170dp</dimen>
 
 
 </resources>

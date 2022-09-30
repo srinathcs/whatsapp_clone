@@ -98,7 +98,18 @@ public class AccountItemView extends LinearLayoutCompat {
             case REQUEST_REPORT:
                 onRequestSentSetup();
                 break;
-
+            case EXPORT_CHAT:
+                onExportChatSetup();
+                break;
+            case ARCHIVED_ALL_CHAT:
+                onArchiveSetup();
+                break;
+            case CLEAR_ALL_CHATS:
+                onClearAllChatSetup();
+                break;
+            case DELETE_ALL_CHATS:
+                onDeleteAllChats();
+                break;
         }
     }
 
@@ -135,5 +146,25 @@ public class AccountItemView extends LinearLayoutCompat {
     public void onRequestSentSetup() {
         setTitle(getContext().getString(R.string.reqAccItem));
         setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_doucment, mContext.getTheme()));
+    }
+
+    public void onExportChatSetup() {
+        setTitle("Export chats");
+        setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_export, mContext.getTheme()));
+    }
+
+    public void onArchiveSetup() {
+        setTitle("Archive all chats");
+        setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_archive, mContext.getTheme()));
+    }
+
+    public void onClearAllChatSetup() {
+        setTitle("Clear all chats");
+        setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_circle, mContext.getTheme()));
+    }
+
+    public void onDeleteAllChats() {
+        setTitle("Delete all chats");
+        setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_dlt, mContext.getTheme()));
     }
 }
