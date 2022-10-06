@@ -8,6 +8,7 @@
         android:id="@+id/helpCentre"
         android:layout_width="match_parent"
         android:autoLink="web"
+        android:linksClickable="true"
         android:layout_height="wrap_content" />
 
     <com.whatsapp.clone.widgets.settingItemView.ui.SettingItemView

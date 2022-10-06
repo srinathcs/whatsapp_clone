@@ -68,6 +68,8 @@
 
         <activity android:name=".presentation.settingHelp.SettingHelpActivity" />
 
+        <activity android:name=".presentation.settingContactUs.SettingHelpContactUs" />
+
     </application>
 
 </manifest>

@@ -1,17 +1,20 @@
 package com.whatsapp.clone.presentation.settingHelp;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Bundle;
-import android.text.method.LinkMovementMethod;
+import android.view.MenuItem;
+import android.view.View;
 import android.view.Window;
-import android.webkit.WebView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.whatsapp.clone.R;
+import com.whatsapp.clone.presentation.settingContactUs.SettingHelpContactUs;
 import com.whatsapp.clone.widgets.accountItemView.AccountItemView;
 import com.whatsapp.clone.widgets.accountItemView.ui.utils.AccountItem;
 import com.whatsapp.clone.widgets.settingItemView.listener.ItemClickListener;
@@ -22,7 +25,7 @@ public class SettingHelpActivity extends AppCompatActivity {
     ActionBar actionBar;
     AccountItemView mHelpCentre,mPolicy,mInfo;
     SettingItemView mContact;
-    WebView mWebView;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -31,6 +34,7 @@ public class SettingHelpActivity extends AppCompatActivity {
         initView();
         initWidget();
         onActionbarConfig();
+        onSetup();
     }
 
     private void initView() {
@@ -40,15 +44,36 @@ public class SettingHelpActivity extends AppCompatActivity {
         mInfo = findViewById(R.id.helpAppInfo);
     }
 
-    private void initWidget(){
+    private void initWidget() {
         mHelpCentre.setItemInfo(AccountItem.HELP_CENTRE);
         mContact.setType(SettingItemType.CONTACT);
         mPolicy.setItemInfo(AccountItem.POLICY);
         mInfo.setItemInfo(AccountItem.APP_INFO);
+    }
+    private void onSetup() {
         mHelpCentre.setItemClickListener(new ItemClickListener() {
             @Override
             public void onClicked() {
-
+                String url = "https://faq.whatsapp.com/?cms_platform=android&expand_folders[0]=android&locale=en_US";
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);
+            }
+        });
+        mContact.setItemClickListener(new ItemClickListener() {
+            @Override
+            public void onClicked() {
+                Intent intent = new Intent(SettingHelpActivity.this, SettingHelpContactUs.class);
+                startActivity(intent);
+            }
+        });
+        mPolicy.setItemClickListener(new ItemClickListener() {
+            @Override
+            public void onClicked() {
+                String url = "https://www.whatsapp.com/legal/?lang=en";
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);
             }
         });
     }
@@ -61,5 +86,12 @@ public class SettingHelpActivity extends AppCompatActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
         Window window = this.getWindow();
         window.setStatusBarColor(this.getResources().getColor(R.color.green));
+    }
+    public boolean onOptionsItemSelected (MenuItem item){
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
