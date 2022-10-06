@@ -70,6 +70,9 @@
 
         <activity android:name=".presentation.settingContactUs.SettingHelpContactUs" />
 
+        <activity android:name=".presentation.helpAppInfo.HelpAppInfoActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+
     </application>
 
 </manifest>

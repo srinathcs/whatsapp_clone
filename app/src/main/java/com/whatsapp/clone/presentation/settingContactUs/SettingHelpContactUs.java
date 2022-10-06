@@ -6,6 +6,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
@@ -62,8 +63,9 @@ public class SettingHelpContactUs extends AppCompatActivity {
         wvLearnMore.setVerticalScrollBarEnabled(false);
         wvLearnMore.getSettings().setTextZoom(85);
         String myStr= "";
-        myStr+= ("<b> For support with payment</b>, go to <font color='027eb5'> Help in your payments home screen");
+        myStr+= ("<b> For support with payment</b>, go to <a href= \"SettingChatActivity\"<font color='027eb5'> Help in your payments home screen");
         wvSupport.getSettings().setJavaScriptEnabled(true);
+
         wvSupport.loadData(myStr,"text/html","UTF-8");
         wvSupport.setVerticalScrollBarEnabled(false);
         wvSupport.getSettings().setTextZoom(85);

@@ -14,6 +14,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.whatsapp.clone.R;
+import com.whatsapp.clone.presentation.helpAppInfo.HelpAppInfoActivity;
 import com.whatsapp.clone.presentation.settingContactUs.SettingHelpContactUs;
 import com.whatsapp.clone.widgets.accountItemView.AccountItemView;
 import com.whatsapp.clone.widgets.accountItemView.ui.utils.AccountItem;
@@ -74,6 +75,13 @@ public class SettingHelpActivity extends AppCompatActivity {
                 Intent i = new Intent(Intent.ACTION_VIEW);
                 i.setData(Uri.parse(url));
                 startActivity(i);
+            }
+        });
+        mInfo.setItemClickListener(new ItemClickListener() {
+            @Override
+            public void onClicked() {
+                Intent intent = new Intent(SettingHelpActivity.this, HelpAppInfoActivity.class);
+                startActivity(intent);
             }
         });
     }

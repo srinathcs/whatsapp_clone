@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvSentPayment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp100">
+
+        <com.whatsapp.clone.widgets.accountItemView.AccountItemView
+            android:id="@+id/aivPayment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.whatsapp.clone.widgets.accountItemView.AccountItemView
+            android:id="@+id/aivScanPayment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvHistory"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp150"
+        android:layout_marginTop="@dimen/dp20">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitleHistory"
+            android:textColor="@color/green"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivPaymentHistory"
+            android:layout_width="@dimen/dp50"
+            android:layout_height="@dimen/dp50"
+            android:layout_gravity="center" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPaymentHistoryDescription"
+            android:layout_width="match_parent"
+            android:textColor="@color/gray_25"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp120" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvPaymentMethod"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dp20"
+        android:layout_height="@dimen/dp180">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPayment"
+            android:textStyle="bold"
+            android:textColor="@color/green"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp50"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivPaymentMethod"
+                android:layout_width="@dimen/dp20"
+                android:layout_height="@dimen/dp20" />
+
+            <WebView
+                android:id="@+id/wvPaymentMethod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.whatsapp.clone.widgets.accountItemView.AccountItemView
+            android:id="@+id/aivAddPaymentMethod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp120"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvPaymentHelp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:layout_marginTop="@dimen/dp20">
+
+        <com.whatsapp.clone.widgets.accountItemView.AccountItemView
+            android:id="@+id/aivHelp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
