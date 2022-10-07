@@ -80,6 +80,7 @@
     <dimen name="dp26">26dp</dimen>
     <dimen name="dp420">420dp</dimen>
     <dimen name="dp290">290dp</dimen>
+    <dimen name="dp37">37dp</dimen>
 
 
 </resources>

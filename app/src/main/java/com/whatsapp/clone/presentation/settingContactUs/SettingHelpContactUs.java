@@ -1,17 +1,20 @@
 package com.whatsapp.clone.presentation.settingContactUs;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.net.Uri;
 import android.os.Bundle;
 import android.text.Html;
-import android.text.method.LinkMovementMethod;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,14 +24,16 @@ import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatCheckBox;
 import androidx.appcompat.widget.AppCompatEditText;
 import androidx.appcompat.widget.AppCompatTextView;
+import androidx.core.content.ContextCompat;
 
 import com.whatsapp.clone.R;
+import com.whatsapp.clone.presentation.helpPayment.HelpPaymentActivity;
 
 public class SettingHelpContactUs extends AppCompatActivity {
     ActionBar actionBar;
     private AppCompatEditText etHelp;
     private AppCompatTextView tvTitle, tvBottomTitle;
-    private WebView wvLearnMore,wvSupport;
+    private WebView wvLearnMore, wvSupport;
     private AppCompatCheckBox cbContactUs;
     private AppCompatButton btNext;
 
@@ -62,25 +67,37 @@ public class SettingHelpContactUs extends AppCompatActivity {
         wvLearnMore.loadData(str, "text/html", "UTF-8");
         wvLearnMore.setVerticalScrollBarEnabled(false);
         wvLearnMore.getSettings().setTextZoom(85);
-        String myStr= "";
-        myStr+= ("<b> For support with payment</b>, go to <a href= \"SettingChatActivity\"<font color='027eb5'> Help in your payments home screen");
+        String myStr = "";
+        myStr += "<b> For support with payment</b>, go to <a href=<font color='2394d4'> Help in your payments home screen</a></font>";
         wvSupport.getSettings().setJavaScriptEnabled(true);
-
-        wvSupport.loadData(myStr,"text/html","UTF-8");
+        wvSupport.setWebChromeClient(new WebChromeClient());
+        wvSupport.loadData(myStr, "text/html", "UTF-8");
         wvSupport.setVerticalScrollBarEnabled(false);
         wvSupport.getSettings().setTextZoom(85);
+        wvSupport.setWebViewClient(new WebViewClient() {
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                Intent intent = new Intent(SettingHelpContactUs.this, HelpPaymentActivity.class);
+                startActivity(intent);
+                return true;
+            }
+        });
     }
-    private void onActionbarConfig () {
+
+    private void onActionbarConfig() {
         actionBar = getSupportActionBar();
-        ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#FF000000"));
+        ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#FFFFFFFF"));
+        actionBar.setTitle(Html.fromHtml("<font color=\"black\">" + getString(R.string.contact_us) + "</font>"));
         actionBar.setBackgroundDrawable(colorDrawable);
-        actionBar.setTitle("Contact us");
+        //actionBar.setTitle(R.string.contact_us);
         actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
         Window window = this.getWindow();
         window.setStatusBarColor(this.getResources().getColor(R.color.helpAction));
     }
+
     @Override
-    public boolean onOptionsItemSelected (MenuItem item){
+    public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
             onBackPressed();
             return true;
@@ -90,7 +107,8 @@ public class SettingHelpContactUs extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(@NonNull Menu menu) {
-        getMenuInflater().inflate(R.menu.help_contact,menu);
+        getMenuInflater().inflate(R.menu.help_contact, menu);
+
         return true;
     }
 
@@ -98,8 +116,8 @@ public class SettingHelpContactUs extends AppCompatActivity {
         tvTitle.setText(title);
     }
 
-    private void setBottomTitle(String title) {
-        tvBottomTitle.setText(title);
+    private void setBottomTitle(String bottomTitle) {
+        tvBottomTitle.setText(bottomTitle);
     }
 
 }

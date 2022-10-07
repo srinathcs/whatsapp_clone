@@ -2,6 +2,8 @@
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:theme="@style/AppTheme"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="@dimen/dp20"
     android:orientation="vertical">
 
@@ -41,12 +43,19 @@
         android:layout_marginEnd="30dp"
         android:paddingTop="@dimen/dp10" />
 
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/dp340"
+        android:layout_height="@dimen/dp60"
+        android:layout_marginStart="5dp"
+        app:cardCornerRadius="7dp">
+
     <WebView
         android:id="@+id/wvSupport"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/border" />
-
+        android:background="@drawable/rectangel_box"
+        android:layout_marginEnd="@dimen/dp20"/>
+    </androidx.cardview.widget.CardView>
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"

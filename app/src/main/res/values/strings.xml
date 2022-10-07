@@ -178,6 +178,7 @@
     <string name="helpCentre">www.google.com </string>
     <string name="helpEtHint">Tell us how can help</string>
     <string name="menuContact">Send via email</string>
+    <string name="contact_us">Contact us</string>
 
 
 </resources>
