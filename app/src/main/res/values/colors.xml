@@ -19,6 +19,9 @@
     <color name="disableColor">#aebac1</color>
     <color name="notificationTitle">#667781</color>
     <color name="textColor">#757575</color>
+    <color name="threeDot">#667781</color>
+    <color name="licenses">#112d2e</color>
+    <color name="helpAction">#f7f8fa</color>
 
     <color name="disable_foreground_grey">#42221f1f</color>
     <color name="disable_thumb_grey">#1c000000</color>

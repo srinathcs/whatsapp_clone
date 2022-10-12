@@ -110,6 +110,27 @@ public class AccountItemView extends LinearLayoutCompat {
             case DELETE_ALL_CHATS:
                 onDeleteAllChats();
                 break;
+            case HELP_CENTRE:
+                onHelpCentreSetup();
+                break;
+            case POLICY:
+                onPolicySetup();
+                break;
+            case APP_INFO:
+                onAppInfoSetup();
+                break;
+            case SEND_PAYMENT:
+                onSendPaymentSetup();
+                break;
+            case SCAN_PAYMENT:
+                onScanPaymentSetup();
+                break;
+            case ADD_PAYMENT:
+                onAddPaymentSetup();
+                break;
+            case HELP:
+                onHelpSetup();
+                break;
         }
     }
 
@@ -166,5 +187,40 @@ public class AccountItemView extends LinearLayoutCompat {
     public void onDeleteAllChats() {
         setTitle("Delete all chats");
         setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_dlt, mContext.getTheme()));
+    }
+
+    public void onHelpCentreSetup() {
+        setTitle("Help Centre");
+        setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_help, mContext.getTheme()));
+    }
+
+    public void onPolicySetup() {
+        setTitle("Terms and Privacy Policy");
+        setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_friend, mContext.getTheme()));
+    }
+
+    public void onAppInfoSetup() {
+        setTitle("App info");
+        setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_info, mContext.getTheme()));
+    }
+
+    public void onSendPaymentSetup() {
+        setTitle("Send payment");
+        setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_rupee, mContext.getTheme()));
+    }
+
+    public void onScanPaymentSetup() {
+        setTitle("Scan payment QR code");
+        setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_qr_code, mContext.getTheme()));
+    }
+
+    public void onAddPaymentSetup() {
+        setTitle("Add payment method");
+        setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_plus, mContext.getTheme()));
+    }
+
+    public void onHelpSetup() {
+        setTitle("Help");
+        setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_help, mContext.getTheme()));
     }
 }

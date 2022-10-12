@@ -15,6 +15,8 @@ import androidx.appcompat.widget.LinearLayoutCompat;
 import com.whatsapp.clone.R;
 import com.whatsapp.clone.widgets.settingPrivacyLastSeen.ui.utils.LastSeenItem;
 
+import java.net.PortUnreachableException;
+
 public class SettingPrivacyLastSeen extends LinearLayoutCompat {
     Context mContext;
     private AppCompatRadioButton mRbLastSeen;
@@ -133,6 +135,48 @@ public class SettingPrivacyLastSeen extends LinearLayoutCompat {
             case LANGUAGE_TEN:
                 onLanguageTenSetup();
                 break;
+            case AUTO:
+                onAutoSetup();
+                break;
+            case BEST_QUALITY:
+                onBestQualitySetup();
+                break;
+            case DATA_SAVER:
+                onDataSaverSetup();
+                break;
+            case DEFAULT:
+                onDefaultSetup();
+                break;
+            case SHORT:
+                onShortSetup();
+                break;
+            case LONG:
+                onLongSetup();
+                break;
+            case NONE:
+                onNoneSetup();
+                break;
+            case WHITE:
+                onWhiteSetup();
+                break;
+            case RED:
+                onRedSetup();
+                break;
+            case YELLOW:
+                onYellowSetup();
+                break;
+            case GREEN:
+                onGreenSetup();
+                break;
+            case CYAN:
+                onCyanSetup();
+                break;
+            case BLUE:
+                onBlueSetup();
+                break;
+            case PURPLE:
+                onPurple();
+                break;
         }
     }
 
@@ -221,5 +265,47 @@ public class SettingPrivacyLastSeen extends LinearLayoutCompat {
     }
     public void onLanguageTenSetup(){
         setTitle(getContext().getString(R.string.langTen));
+    }
+    public void onAutoSetup(){
+        setTitle("Auto (recommended)");
+    }
+    public void onBestQualitySetup(){
+        setTitle("Best quality");
+    }
+    public void onDataSaverSetup(){
+        setTitle("Data saver");
+    }
+    public void onDefaultSetup(){
+        setTitle("Default");
+    }
+    public void onShortSetup(){
+        setTitle("Short");
+    }
+    public void onLongSetup(){
+        setTitle("Long");
+    }
+    public void onNoneSetup(){
+        setTitle("None");
+    }
+    public void onWhiteSetup(){
+        setTitle("White");
+    }
+    public void onRedSetup(){
+        setTitle("Red");
+    }
+    public void onYellowSetup(){
+        setTitle("Yellow");
+    }
+    public void onGreenSetup(){
+        setTitle("Green");
+    }
+    public void onCyanSetup(){
+        setTitle("Cyan");
+    }
+    public void onBlueSetup(){
+        setTitle("Blue");
+    }
+    public void onPurple(){
+        setTitle("Purple");
     }
 }

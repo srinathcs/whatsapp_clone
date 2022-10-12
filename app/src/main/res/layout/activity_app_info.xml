@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/ivWallpaper"
+            android:src="@drawable/wallpaper_"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:textSize="@dimen/sp18"
+            android:layout_marginTop="@dimen/dp290"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDescription"
+            android:textAlignment="center"
+            android:textColor="@color/gray_25"
+            android:layout_marginTop="@dimen/dp320"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivIcon"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_whatsapp"
+            android:layout_width="@dimen/dp100"
+            android:layout_height="@dimen/dp100" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvImageDescription"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textColor="@color/gray_25"
+            android:layout_marginTop="@dimen/dp70"
+            android:layout_height="wrap_content" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLicenses"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textSize="@dimen/sp18"
+            android:textColor="@color/blue"
+            android:layout_marginTop="@dimen/dp110"
+            android:layout_height="wrap_content" />
+
+    </FrameLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

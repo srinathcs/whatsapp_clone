@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.whatsapp.clone.widgets.settingItemView.ui.SettingItemView
+        android:id="@+id/storageManage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/dp10"
+        android:background="@color/gray_85" />
+
+    <com.whatsapp.clone.widgets.settingItemView.ui.SettingItemView
+        android:id="@+id/storageNetWork"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.whatsapp.clone.widgets.textAndSwitch.TextAndSwitch
+        android:id="@+id/storageUseDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp65" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/dp15"
+        android:background="@color/gray_85" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvStorageAutoTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp20"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvStorageAutoDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginStart="@dimen/dp20" />
+
+    <com.whatsapp.clone.widgets.settingPrivacy.PrivacyItemView
+        android:id="@+id/storageMobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp25"
+        android:layout_marginStart="@dimen/dp65" />
+
+    <com.whatsapp.clone.widgets.settingPrivacy.PrivacyItemView
+        android:id="@+id/storageWIFI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp25"
+        android:layout_marginStart="@dimen/dp65" />
+
+    <com.whatsapp.clone.widgets.settingPrivacy.PrivacyItemView
+        android:id="@+id/storageRoaming"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp25"
+        android:layout_marginStart="@dimen/dp65" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:layout_marginTop="@dimen/dp30"
+        android:background="@color/gray_85" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvStorageUploadTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp20"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvStorageUploadDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp20" />
+
+    <com.whatsapp.clone.widgets.settingPrivacy.PrivacyItemView
+        android:id="@+id/storagePhoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp20"
+        android:layout_marginStart="@dimen/dp65" />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
