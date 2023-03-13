@@ -49,11 +49,11 @@ public class SettingItemView extends LinearLayoutCompat {
 
     }
 
-    private void setupEvent(){
+    private void setupEvent() {
         llParent.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mItemClickListener!=null){
+                if (mItemClickListener != null) {
                     mItemClickListener.onClicked();
                 }
             }
@@ -72,12 +72,12 @@ public class SettingItemView extends LinearLayoutCompat {
         ivIcon.setImageDrawable(drawable);
     }
 
-    public void setItemClickListener(ItemClickListener listener){
+    public void setItemClickListener(ItemClickListener listener) {
         this.mItemClickListener = listener;
     }
 
-    public void setType(SettingItemType type){
-        switch (type){
+    public void setType(SettingItemType type) {
+        switch (type) {
             case ACCOUNT:
                 onAccountSetup();
                 break;
@@ -102,50 +102,73 @@ public class SettingItemView extends LinearLayoutCompat {
             case GOOGLE_DRIVE:
                 onGoogleDriveSetup();
                 break;
-
+            case MANAGE_STORAGE:
+                onManageStorageSetup();
+                break;
+            case NETWORK_USAGE:
+                onNetworkSetup();
+                break;
         }
 
     }
 
-    private void onAccountSetup(){
+    private void onAccountSetup() {
         setTitle(mContext.getString(R.string.setting_account));
         setDescription(mContext.getString(R.string.setting_account_description));
         setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_key, mContext.getTheme()));
     }
 
-    private void onChatSetup(){
+    private void onChatSetup() {
         setTitle(mContext.getString(R.string.setting_chat));
         setDescription(mContext.getString(R.string.setting_chat_description));
         setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_chat, mContext.getTheme()));
     }
-    private void onNotificationSetup(){
+
+    private void onNotificationSetup() {
         setTitle(mContext.getString(R.string.setting_notification));
         setDescription(mContext.getString(R.string.setting_notification_description));
-        setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_bell,mContext.getTheme()));
+        setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_bell, mContext.getTheme()));
     }
-    private void onStorageDataSetup(){
+
+    private void onStorageDataSetup() {
         setTitle(mContext.getString(R.string.setting_data));
         setDescription(mContext.getString(R.string.setting_data_description));
         setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_storage, mContext.getTheme()));
     }
-    private void onHelp(){
+
+    private void onHelp() {
         setTitle(mContext.getString(R.string.setting_help));
         setDescription(mContext.getString(R.string.setting_help_description));
         setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_help, mContext.getTheme()));
     }
-    private void onLastBackupSetup(){
+
+    private void onLastBackupSetup() {
         setTitle(getContext().getString(R.string.chatBackupTitle));
         setDescription(getContext().getString(R.string.chatBackupDecription));
-        setIcon(ResourcesCompat.getDrawable(getResources(),R.drawable.ic_cloud_backup,mContext.getTheme()));
+        setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_cloud_backup, mContext.getTheme()));
     }
-    private void onEndToEndEncryptedSetup(){
+
+    private void onEndToEndEncryptedSetup() {
         setTitle(getContext().getString(R.string.chatEndToEndTitle));
         setDescription(getContext().getString(R.string.chatEndToEndDescription));
-        setIcon(ResourcesCompat.getDrawable(getResources(),R.drawable.ic_lock,mContext.getTheme()));
+        setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_lock, mContext.getTheme()));
     }
-    private void onGoogleDriveSetup(){
+
+    private void onGoogleDriveSetup() {
         setTitle(getContext().getString(R.string.chatGoogleDriveTitle));
         setDescription(getContext().getString(R.string.chatGoogleDriveDescription));
-        setIcon(ResourcesCompat.getDrawable(getResources(),R.drawable.ic_drive,mContext.getTheme()));
+        setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_drive, mContext.getTheme()));
+    }
+
+    private void onManageStorageSetup() {
+        setTitle("Manage storage");
+        setDescription("477.5MB");
+        setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_folder, mContext.getTheme()));
+    }
+
+    private void onNetworkSetup() {
+        setTitle("Network usage");
+        setDescription("1.4 GB sent .8.8 GB received");
+        setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_storage, mContext.getTheme()));
     }
 }
