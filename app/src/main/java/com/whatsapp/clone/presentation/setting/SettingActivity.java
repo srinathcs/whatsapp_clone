@@ -13,6 +13,7 @@ import androidx.core.content.res.ResourcesCompat;
 import com.whatsapp.clone.R;
 import com.whatsapp.clone.presentation.accountSetting.AccountSettingActivity;
 import com.whatsapp.clone.presentation.settingChat.SettingChatActivity;
+import com.whatsapp.clone.presentation.settingHelp.SettingHelpActivity;
 import com.whatsapp.clone.presentation.settingNotification.NotificationActivity;
 import com.whatsapp.clone.presentation.storageAndData.StorageAndDataActivity;
 import com.whatsapp.clone.widgets.settingInviteView.SettingInviteView;
@@ -121,6 +122,13 @@ public class SettingActivity extends AppCompatActivity {
 
     private void onSettingHelpSetup() {
         mItemViewHelp.setType(SettingItemType.HELP);
+        mItemViewHelp.setItemClickListener(new ItemClickListener() {
+            @Override
+            public void onClicked() {
+                Intent intent = new Intent(SettingActivity.this, SettingHelpActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void onSettingInviteSetup() {

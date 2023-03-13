@@ -175,6 +175,10 @@
     <string name="storageVideo">Videos</string>
     <string name="storageDocument">Document</string>
     <string name="photoUploadPopup">Best quality photos are lager and can take longer to send</string>
+    <string name="helpCentre">www.google.com </string>
+    <string name="helpEtHint">Tell us how can help</string>
+    <string name="menuContact">Send via email</string>
+    <string name="contact_us">Contact us</string>
 
 
 </resources>

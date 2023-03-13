@@ -108,6 +108,9 @@ public class SettingItemView extends LinearLayoutCompat {
             case NETWORK_USAGE:
                 onNetworkSetup();
                 break;
+            case CONTACT:
+                onContactSetup();
+                break;
         }
 
     }
@@ -170,5 +173,11 @@ public class SettingItemView extends LinearLayoutCompat {
         setTitle("Network usage");
         setDescription("1.4 GB sent .8.8 GB received");
         setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_storage, mContext.getTheme()));
+    }
+
+    private void onContactSetup() {
+        setTitle("Contact us");
+        setDescription("Question? Need help?");
+        setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_doucment, mContext.getTheme()));
     }
 }
